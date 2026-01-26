@@ -23,7 +23,7 @@ body::before {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255,0,68,0.05) 0%, transparent 80%);
+    background: radial-gradient(circle, rgba(0,255,255,0.05) 0%, transparent 80%);
     animation: flicker 3s infinite;
     z-index: -1;
 }
@@ -78,6 +78,7 @@ ul.services {
 
 ul.services li {
     margin: 10px 0;
+    font-size: 15px;
 }
 
 .contact {
@@ -131,20 +132,20 @@ ul.services li {
 </head>
 <body>
 <div class="container">
-    <h1>PRO Online Services by MrKhan 🚀</h1>
-    <p>Apni website ya online service banwani hai? Check my services below:</p>
+    <h1>🚀 Level Up Your Online Game with MrKhan</h1>
+    <p>Want a website that stands out? Get services designed to attract attention & grow your brand fast!</p>
     <ul class="services">
-        <li>💻 Professional Websites & Bio-Link Pages</li>
-        <li>🔐 Firebase Login / Signup</li>
-        <li>🎬 Viral Video Editing (Reels, Shorts, YouTube)</li>
-        <li>🖼 Eye-Catching Thumbnails</li>
+        <li>💻 Stunning Websites & Bio-Link Pages</li>
+        <li>🔐 Secure Firebase Login / Signup</li>
+        <li>🎬 Viral Video Editing for Reels & YouTube</li>
+        <li>🖼 Eye-Catching Thumbnails & Branding</li>
     </ul>
     <div class="contact">
         <a class="btn" href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>
         <a class="btn" href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>
         <a class="btn" href="mailto:nazimkhan01123@gmail.com">Email</a>
     </div>
-    <p class="note">Fast Delivery • Low Budget • Clean & Modern Work</p>
+    <p class="note">Fast Delivery • Low Budget • Clean & Modern Work • Scroll-Stopping Design</p>
 </div>
 </body>
 </html>
