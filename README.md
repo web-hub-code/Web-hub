@@ -63,7 +63,7 @@ footer ul{list-style:disc;margin-left:15px;}
 <div class="hero reveal">
 <h1>🚀 Boost Your Online Presence</h1>
 <p>Websites, Videos & Branding by MrKhan</p>
-<video id="heroVideo" src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted autoplay loop></video>
+<video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted autoplay loop></video>
 </div>
 
 <h2 class="reveal">Services</h2>
@@ -76,10 +76,14 @@ footer ul{list-style:disc;margin-left:15px;}
 
 <h2 class="reveal">Portfolio</h2>
 <div class="portfolio reveal">
-<img src="https://via.placeholder.com/200x120?text=Website1" alt="Website Example">
-<img src="https://via.placeholder.com/200x120?text=Thumbnail1" alt="Thumbnail">
-<img src="https://via.placeholder.com/200x120?text=Video1" alt="Video">
-<img src="https://via.placeholder.com/200x120?text=Logo1" alt="Logo">
+<img src="https://picsum.photos/200/120?random=1" alt="Website Example">
+<img src="https://picsum.photos/200/120?random=2" alt="Thumbnail">
+<img src="https://picsum.photos/200/120?random=3" alt="Video">
+<img src="https://picsum.photos/200/120?random=4" alt="Logo">
+<img src="https://picsum.photos/200/120?random=5" alt="Website Example">
+<img src="https://picsum.photos/200/120?random=6" alt="Thumbnail">
+<img src="https://picsum.photos/200/120?random=7" alt="Video">
+<img src="https://picsum.photos/200/120?random=8" alt="Logo">
 </div>
 
 <h2 class="reveal">Our Stats</h2>
@@ -157,19 +161,6 @@ footer ul{list-style:disc;margin-left:15px;}
 </footer>
 
 <script>
-let videos = [
-"https://www.w3schools.com/html/mov_bbb.mp4",
-"https://www.w3schools.com/html/movie.mp4",
-"https://www.w3schools.com/html/mov_bbb.mp4",
-"https://www.w3schools.com/html/movie.mp4"
-];
-let currentVideo = 0;
-setInterval(() => {
-currentVideo = (currentVideo + 1) % videos.length;
-document.getElementById('heroVideo').src = videos[currentVideo];
-document.getElementById('heroVideo').play();
-}, 7000);
-
 function toggleAnswer(el){ let ans = el.querySelector(".answer"); ans.style.display = (ans.style.display==="block")?"none":"block";}
 window.addEventListener('scroll', ()=>{document.querySelectorAll('.reveal').forEach(el=>{let top = el.getBoundingClientRect().top;let height = window.innerHeight;if(top < height-50){el.classList.add('active');}});});
 </script>
