@@ -6,6 +6,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
+/* Body & Background */
 body {
     margin: 0;
     padding: 0;
@@ -33,13 +34,14 @@ body::before {
     20%,22%,24%,55% { opacity:0.15; }
 }
 
+/* Container */
 .container {
     background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: 25px 20px;
     text-align: center;
     max-width: 95%;
-    width: 400px;
+    width: 420px;
     box-shadow: 0 0 25px rgba(0,0,0,0.7);
     animation: glow 2s infinite alternate;
 }
@@ -50,11 +52,12 @@ body::before {
     100% { box-shadow: 0 0 15px #00f, 0 0 25px #f00; }
 }
 
+/* Headline */
 h1 {
     font-size: 24px;
     color: #00ffff;
     text-shadow: 0 0 8px #00ffff, 0 0 15px #ff00ff;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     animation: neon 1.5s infinite alternate;
 }
 
@@ -64,23 +67,38 @@ h1 {
     100% { text-shadow: 0 0 3px #00ffff, 0 0 8px #ff00ff; }
 }
 
-p, .services li {
+p {
     color: #fff;
     text-shadow: 0 0 4px #00f, 0 0 8px #f00;
     font-size: 14px;
+    margin: 5px 0 15px 0;
 }
 
-ul.services {
+/* Benefits Section */
+.benefits {
+    text-align: left;
+    margin: 15px 0;
+    padding: 0 10px;
+}
+
+.benefits li {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Services Section */
+.services {
     list-style: none;
     padding: 0;
     margin: 15px 0;
 }
 
-ul.services li {
+.services li {
     margin: 10px 0;
     font-size: 15px;
 }
 
+/* CTA Buttons */
 .contact {
     margin-top: 20px;
 }
@@ -114,6 +132,18 @@ ul.services li {
     100% { box-shadow: 0 0 8px #00f, 0 0 15px #ff0044; }
 }
 
+/* Testimonials Section */
+.testimonial {
+    background: rgba(255,255,255,0.05);
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 0 0 3px #00f, 0 0 5px #f00;
+}
+
+/* Note */
 .note {
     margin-top: 15px;
     font-size: 12px;
@@ -121,31 +151,55 @@ ul.services li {
     text-shadow: 0 0 4px #f00;
 }
 
-/* Responsive adjustments for mobile */
+/* Responsive adjustments */
 @media only screen and (max-width: 500px) {
     h1 { font-size: 20px; }
-    p, .services li { font-size: 13px; }
+    p, .services li, .benefits li { font-size: 13px; }
     .btn { font-size: 13px; padding: 12px; }
-    .container { padding: 25px 15px; }
+    .container { padding: 20px 15px; }
 }
 </style>
 </head>
 <body>
 <div class="container">
-    <h1>🚀 Level Up Your Online Game with MrKhan</h1>
-    <p>Want a website that stands out? Get services designed to attract attention & grow your brand fast!</p>
+    <!-- Hero Section -->
+    <h1>🚀 Boost Your Online Presence with MrKhan</h1>
+    <p>Professional websites & viral content to make your brand shine!</p>
+    
+    <!-- Benefits Section -->
+    <ul class="benefits">
+        <li>✔ Get noticed online instantly</li>
+        <li>✔ Save time with ready-to-use solutions</li>
+        <li>✔ Engage your audience like never before</li>
+    </ul>
+    
+    <!-- Services Section -->
     <ul class="services">
         <li>💻 Stunning Websites & Bio-Link Pages</li>
         <li>🔐 Secure Firebase Login / Signup</li>
         <li>🎬 Viral Video Editing for Reels & YouTube</li>
         <li>🖼 Eye-Catching Thumbnails & Branding</li>
     </ul>
+    
+    <!-- Testimonials Section -->
+    <div class="testimonial">
+        “MrKhan ne meri website aur content banaya — results amazing the!”  
+        <br>— Ahmed, Small Business Owner
+    </div>
+    <div class="testimonial">
+        “Viral videos aur thumbnails ne meri social reach double kar di!”  
+        <br>— Sana, Content Creator
+    </div>
+    
+    <!-- CTA Buttons -->
     <div class="contact">
         <a class="btn" href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>
         <a class="btn" href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>
         <a class="btn" href="mailto:nazimkhan01123@gmail.com">Email</a>
     </div>
-    <p class="note">Fast Delivery • Low Budget • Clean & Modern Work • Scroll-Stopping Design</p>
+    
+    <!-- Note -->
+    <p class="note">Fast Delivery • Low Budget • Scroll-Stopping Design • Premium Neon Style</p>
 </div>
 </body>
 </html>
