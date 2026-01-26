@@ -6,7 +6,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-/* Body */
+/* Basic Styles */
 body {
     margin: 0;
     padding: 0;
@@ -14,9 +14,9 @@ body {
     background: #0a0a0a;
     color: #fff;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* Container */
 .container {
     max-width: 420px;
     margin: 20px auto;
@@ -33,13 +33,20 @@ h1 {
     text-shadow: 0 0 10px #00ffff;
     font-size: 22px;
     margin-bottom: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
-
 p.tagline {
     text-align: center;
     font-size: 14px;
     margin-bottom: 20px;
     color: #aaa;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
 /* Section Titles */
@@ -52,16 +59,24 @@ h2 {
 }
 
 /* Services */
-.services, .benefits, .testimonials {
+.services, .benefits, .testimonials, .portfolio, .faq {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
-
-.services li, .benefits li, .testimonials li {
+.services li, .benefits li, .testimonials li, .portfolio li, .faq li {
     margin-bottom: 10px;
     font-size: 14px;
+    transition: transform 0.3s, color 0.3s;
 }
+.services li:hover, .portfolio li:hover {
+    transform: scale(1.05);
+    color: #00ffff;
+}
+
+/* FAQ Section */
+.faq li { cursor: pointer; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px; }
+.faq li span.answer { display: none; margin-top: 5px; font-size: 13px; color: #aaa; }
 
 /* CTA Buttons */
 .btn {
@@ -77,7 +92,6 @@ h2 {
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
 .btn:hover {
     transform: scale(1.05);
     background: linear-gradient(45deg, #ff0044, #00ffff);
@@ -91,7 +105,6 @@ form {
     gap: 10px;
     margin-bottom: 15px;
 }
-
 form input, form textarea {
     padding: 10px;
     border-radius: 8px;
@@ -99,7 +112,6 @@ form input, form textarea {
     outline: none;
     font-size: 14px;
 }
-
 form button {
     padding: 12px;
     border-radius: 10px;
@@ -110,10 +122,19 @@ form button {
     cursor: pointer;
     transition: 0.3s;
 }
-
 form button:hover {
     background: #ff00ff;
     color: #fff;
+}
+
+/* Portfolio Section */
+.portfolio li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    padding: 8px;
+    border-radius: 8px;
 }
 
 /* Testimonials */
@@ -123,7 +144,22 @@ form button:hover {
     border-radius: 10px;
 }
 
-/* Mobile Responsive */
+/* Floating WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+/* Responsive */
 @media only screen and (max-width: 500px) {
     h1 { font-size: 20px; }
     h2 { font-size: 16px; }
@@ -136,31 +172,47 @@ form button:hover {
 <div class="container">
     <!-- Hero Section -->
     <h1>🚀 Boost Your Online Presence</h1>
-    <p class="tagline">Professional Websites, Viral Videos & Branding by MrKhan</p>
+    <p class="tagline">Websites, Videos & Branding by MrKhan</p>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <h2>Services</h2>
     <ul class="services">
         <li>💻 Custom Websites & Bio-Link Pages</li>
         <li>🔐 Secure Firebase Login / Signup</li>
-        <li>🎬 Viral Video Editing for Reels & YouTube</li>
+        <li>🎬 Viral Video Editing</li>
         <li>🖼 Eye-Catching Thumbnails & Branding</li>
     </ul>
 
-    <!-- Benefits Section -->
+    <!-- Benefits -->
     <h2>Why Choose Me?</h2>
     <ul class="benefits">
-        <li>✔ Get noticed online instantly</li>
-        <li>✔ Professional & clean designs</li>
-        <li>✔ Boost social engagement</li>
-        <li>✔ Affordable & fast delivery</li>
+        <li>✔ Professional & Clean Designs</li>
+        <li>✔ Boost Social Engagement</li>
+        <li>✔ Fast Delivery & Affordable</li>
+        <li>✔ Mobile-Friendly & Modern</li>
     </ul>
 
-    <!-- Testimonials Section -->
+    <!-- Portfolio -->
+    <h2>Portfolio</h2>
+    <ul class="portfolio">
+        <li>Website Example 1 🌐</li>
+        <li>Thumbnail Example 🎨</li>
+        <li>Viral Video Sample 🎬</li>
+    </ul>
+
+    <!-- Testimonials -->
     <h2>Testimonials</h2>
     <ul class="testimonials">
-        <li>“MrKhan ne meri website aur content banaya — results amazing the!” — Ahmed</li>
-        <li>“Viral videos aur thumbnails ne meri social reach double kar di!” — Sana</li>
+        <li>“Amazing website & videos!” — Ahmed</li>
+        <li>“Social reach doubled!” — Sana</li>
+    </ul>
+
+    <!-- FAQ -->
+    <h2>FAQ</h2>
+    <ul class="faq">
+        <li onclick="toggleAnswer(this)">How fast can you deliver? <span class="answer">Usually 1-3 days depending on complexity.</span></li>
+        <li onclick="toggleAnswer(this)">Do you provide revisions? <span class="answer">Yes, free revisions until satisfaction.</span></li>
+        <li onclick="toggleAnswer(this)">Do you handle social media content? <span class="answer">Yes, Reels, Shorts & thumbnails included.</span></li>
     </ul>
 
     <!-- CTA Buttons -->
@@ -176,7 +228,17 @@ form button:hover {
         <textarea placeholder="Your Message" rows="3" required></textarea>
         <button type="submit">Send Message</button>
     </form>
-
 </div>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/923001234567" class="whatsapp" target="_blank">💬</a>
+
+<script>
+function toggleAnswer(element){
+    let ans = element.querySelector(".answer");
+    if(ans.style.display === "block") ans.style.display = "none";
+    else ans.style.display = "block";
+}
+</script>
 </body>
 </html>
