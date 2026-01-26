@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MrKhan PRO Services: Websites, Videos & Branding. Contact via Instagram, Facebook, or Email.">
+<meta name="description" content="MrKhan PRO Services: Websites, Videos & Branding. Contact via Instagram, Facebook, or Email. Premium services for specified clients.">
 <title>MrKhan PRO Services</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
@@ -101,6 +101,7 @@ h2 {
 .pricing { display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
 .pricing div { background: rgba(255,255,255,0.05); padding:12px; border-radius:10px; text-align:center; transition:0.3s; }
 .pricing div:hover { transform:scale(1.05); background:#ff00ff; color:#000; }
+.pricing div span { font-weight:bold; color:#00ffff; }
 
 /* Testimonials Carousel */
 .testimonials { overflow:hidden; height:120px; margin-bottom:15px; }
@@ -117,7 +118,7 @@ h2 {
 
 /* Contact Form */
 form { display:flex; flex-direction:column; gap:10px; margin-bottom:15px; }
-form input, form textarea { padding:10px; border-radius:8px; border:none; outline:none; font-size:14px; }
+form input, form textarea, form select { padding:10px; border-radius:8px; border:none; outline:none; font-size:14px; }
 form button { padding:12px; border-radius:10px; border:none; font-weight:bold; background:#00ffff; color:#000; cursor:pointer; transition:0.3s; }
 form button:hover { background:#ff00ff; color:#fff; }
 
@@ -132,7 +133,7 @@ form button:hover { background:#ff00ff; color:#fff; }
 .reveal.active { opacity:1; transform:translateY(0); }
 
 /* Responsive */
-@media only screen and (max-width:500px){h1{font-size:20px;} h2{font-size:16px;} .btn,form input,form textarea,form button{font-size:13px;} .container{padding:15px;}}
+@media only screen and (max-width:500px){h1{font-size:20px;} h2{font-size:16px;} .btn,form input,form textarea,form select,form button{font-size:13px;} .container{padding:15px;}}
 </style>
 </head>
 <body>
@@ -164,18 +165,18 @@ form button:hover { background:#ff00ff; color:#fff; }
 <!-- Portfolio -->
 <h2 class="reveal">Portfolio</h2>
 <ul class="portfolio reveal">
-<li>Website Example 1 🌐</li>
+<li>Website Example 🌐</li>
 <li>Thumbnail Sample 🎨</li>
 <li>Video Sample 🎬</li>
 <li>Brand Logo 🖌️</li>
 </ul>
 
-<!-- Pricing -->
-<h2 class="reveal">Pricing</h2>
+<!-- Pricing / Client Info -->
+<h2 class="reveal">Our Premium Packages</h2>
 <div class="pricing reveal">
-<div>Basic - $10</div>
-<div>Standard - $20</div>
-<div>Premium - $30</div>
+<div>Basic <span>Specified for Clients 5000+</span></div>
+<div>Standard <span>Specified for Clients 5000+</span></div>
+<div>Premium <span>Specified for Clients 5000+</span></div>
 </div>
 
 <!-- Testimonials -->
@@ -218,11 +219,18 @@ form button:hover { background:#ff00ff; color:#fff; }
 <a class="btn reveal" href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>
 <a class="btn reveal" href="mailto:nazimkhan01123@gmail.com">Email</a>
 
-<!-- Contact Form -->
-<h2 class="reveal">Contact Me</h2>
+<!-- Contact Form with Service Dropdown -->
+<h2 class="reveal">Contact / Request Service</h2>
 <form class="reveal">
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
+<select required>
+<option value="">Select Service</option>
+<option>Custom Website</option>
+<option>Firebase Login/Signup</option>
+<option>Video Editing</option>
+<option>Thumbnails & Branding</option>
+</select>
 <textarea placeholder="Your Message" rows="3" required></textarea>
 <button type="submit">Send Message</button>
 </form>
