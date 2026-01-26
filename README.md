@@ -29,12 +29,12 @@ body::before {
 }
 
 @keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.05; }
-    20%, 22%, 24%, 55% { opacity: 0.15; }
+    0%,19%,21%,23%,25%,54%,56%,100% { opacity:0.05; }
+    20%,22%,24%,55% { opacity:0.15; }
 }
 
 .container {
-    background: #0d0d0d;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
     border-radius: 20px;
     padding: 30px 20px;
     text-align: center;
@@ -89,7 +89,7 @@ ul.services li {
     width: 90%;
     margin: 10px auto;
     padding: 14px;
-    border-radius: 10px;
+    border-radius: 12px;
     background: linear-gradient(45deg, #00f, #ff0044);
     color: #fff;
     font-weight: bold;
@@ -120,7 +120,7 @@ ul.services li {
     text-shadow: 0 0 4px #f00;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for mobile */
 @media only screen and (max-width: 500px) {
     h1 { font-size: 20px; }
     p, .services li { font-size: 13px; }
