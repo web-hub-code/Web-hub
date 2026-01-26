@@ -15,87 +15,87 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255,0,68,0.1) 0%, transparent 80%);
+    background: radial-gradient(circle, rgba(255,0,68,0.05) 0%, transparent 80%);
     animation: flicker 3s infinite;
+    z-index: -1;
 }
 
 @keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.1; }
-    20%, 22%, 24%, 55% { opacity: 0.3; }
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.05; }
+    20%, 22%, 24%, 55% { opacity: 0.15; }
 }
 
 .container {
-    position: relative;
     background: #0d0d0d;
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: 30px 20px;
     text-align: center;
-    max-width: 500px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    max-width: 95%;
+    width: 400px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
     animation: glow 2s infinite alternate;
-    z-index: 1;
 }
 
 @keyframes glow {
-    0% { box-shadow: 0 0 20px #00f, 0 0 30px #f00; }
-    50% { box-shadow: 0 0 40px #00f, 0 0 60px #f00; }
-    100% { box-shadow: 0 0 20px #00f, 0 0 30px #f00; }
+    0% { box-shadow: 0 0 15px #00f, 0 0 25px #f00; }
+    50% { box-shadow: 0 0 30px #00f, 0 0 50px #f00; }
+    100% { box-shadow: 0 0 15px #00f, 0 0 25px #f00; }
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 24px;
     color: #00ffff;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
-    margin-bottom: 20px;
+    text-shadow: 0 0 8px #00ffff, 0 0 15px #ff00ff;
+    margin-bottom: 15px;
     animation: neon 1.5s infinite alternate;
 }
 
 @keyframes neon {
-    0% { text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff; }
-    50% { text-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff; }
-    100% { text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff; }
+    0% { text-shadow: 0 0 3px #00ffff, 0 0 8px #ff00ff; }
+    50% { text-shadow: 0 0 12px #00ffff, 0 0 20px #ff00ff; }
+    100% { text-shadow: 0 0 3px #00ffff, 0 0 8px #ff00ff; }
 }
 
 p, .services li {
     color: #fff;
-    text-shadow: 0 0 5px #00f, 0 0 10px #f00;
+    text-shadow: 0 0 4px #00f, 0 0 8px #f00;
+    font-size: 14px;
 }
 
 ul.services {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 ul.services li {
-    margin: 15px 0;
-    font-size: 16px;
+    margin: 10px 0;
 }
 
 .contact {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .btn {
     display: block;
-    width: 85%;
-    margin: 12px auto;
-    padding: 15px;
-    border-radius: 12px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 14px;
+    border-radius: 10px;
     background: linear-gradient(45deg, #00f, #ff0044);
     color: #fff;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
-    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 3px #fff;
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
 }
@@ -104,20 +104,28 @@ ul.services li {
     transform: scale(1.05);
     background: linear-gradient(45deg, #ff0044, #00ffff);
     color: #000;
-    text-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 8px #fff;
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 10px #00f, 0 0 20px #ff0044; }
-    50% { box-shadow: 0 0 20px #00f, 0 0 40px #ff0044; }
-    100% { box-shadow: 0 0 10px #00f, 0 0 20px #ff0044; }
+    0% { box-shadow: 0 0 8px #00f, 0 0 15px #ff0044; }
+    50% { box-shadow: 0 0 15px #00f, 0 0 30px #ff0044; }
+    100% { box-shadow: 0 0 8px #00f, 0 0 15px #ff0044; }
 }
 
 .note {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 15px;
+    font-size: 12px;
     color: #aaa;
-    text-shadow: 0 0 5px #f00;
+    text-shadow: 0 0 4px #f00;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 500px) {
+    h1 { font-size: 20px; }
+    p, .services li { font-size: 13px; }
+    .btn { font-size: 13px; padding: 12px; }
+    .container { padding: 25px 15px; }
 }
 </style>
 </head>
