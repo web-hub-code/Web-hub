@@ -2,7 +2,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MrKhan PRO Services: Premium Websites, Video Editing, Branding. Trusted by thousands of clients worldwide. Contact via Instagram, Facebook, or Email.">
 <title>MrKhan PRO Services</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
@@ -10,11 +9,10 @@ body{margin:0;padding:0;font-family:'Orbitron',sans-serif;background:#0a0a0a;col
 body.light{background:#f5f5f5;color:#111;}
 .container{max-width:460px;margin:20px auto;padding:20px;background:linear-gradient(135deg,#111,#1a1a2e);border-radius:15px;box-shadow:0 0 25px rgba(0,0,0,0.7);transition:0.3s;}
 body.light .container{background:#fff;color:#111;box-shadow:0 0 20px rgba(0,0,0,0.2);}
-.hero{text-align:center;padding:20px 0;background:linear-gradient(90deg,#00ffff,#ff00ff,#00ffff);background-size:200% 200%;animation:gradientShift 5s ease infinite;border-radius:10px;}
-@keyframes gradientShift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.hero{text-align:center;padding:20px 0;border-radius:10px;position:relative;overflow:hidden;}
 .hero h1{font-size:24px;margin:0 0 5px 0;text-shadow:0 0 10px #00ffff;}
 .hero p{font-size:14px;color:#ccc;}
-.hero video{max-width:100%;border-radius:10px;margin-top:10px;}
+.hero video{width:100%;border-radius:10px;}
 h2{font-size:18px;color:#ff00ff;border-bottom:1px solid #ff00ff;padding-bottom:5px;margin-bottom:10px;}
 .services li{margin-bottom:10px;font-size:14px;position:relative;cursor:pointer;}
 .services li span.tooltip{display:none;position:absolute;left:105%;top:50%;transform:translateY(-50%);background:rgba(255,0,255,0.9);padding:5px 8px;border-radius:5px;white-space:nowrap;font-size:12px;}
@@ -65,7 +63,7 @@ footer ul{list-style:disc;margin-left:15px;}
 <div class="hero reveal">
 <h1>🚀 Boost Your Online Presence</h1>
 <p>Websites, Videos & Branding by MrKhan</p>
-<video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted loop></video>
+<video id="heroVideo" src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted autoplay loop></video>
 </div>
 
 <h2 class="reveal">Services</h2>
@@ -78,10 +76,10 @@ footer ul{list-style:disc;margin-left:15px;}
 
 <h2 class="reveal">Portfolio</h2>
 <div class="portfolio reveal">
-<img src="https://via.placeholder.com/200x120?text=Website" alt="Website Example">
-<img src="https://via.placeholder.com/200x120?text=Thumbnail" alt="Thumbnail">
-<img src="https://via.placeholder.com/200x120?text=Video" alt="Video">
-<img src="https://via.placeholder.com/200x120?text=Logo" alt="Logo">
+<img src="https://via.placeholder.com/200x120?text=Website1" alt="Website Example">
+<img src="https://via.placeholder.com/200x120?text=Thumbnail1" alt="Thumbnail">
+<img src="https://via.placeholder.com/200x120?text=Video1" alt="Video">
+<img src="https://via.placeholder.com/200x120?text=Logo1" alt="Logo">
 </div>
 
 <h2 class="reveal">Our Stats</h2>
@@ -159,6 +157,19 @@ footer ul{list-style:disc;margin-left:15px;}
 </footer>
 
 <script>
+let videos = [
+"https://www.w3schools.com/html/mov_bbb.mp4",
+"https://www.w3schools.com/html/movie.mp4",
+"https://www.w3schools.com/html/mov_bbb.mp4",
+"https://www.w3schools.com/html/movie.mp4"
+];
+let currentVideo = 0;
+setInterval(() => {
+currentVideo = (currentVideo + 1) % videos.length;
+document.getElementById('heroVideo').src = videos[currentVideo];
+document.getElementById('heroVideo').play();
+}, 7000);
+
 function toggleAnswer(el){ let ans = el.querySelector(".answer"); ans.style.display = (ans.style.display==="block")?"none":"block";}
 window.addEventListener('scroll', ()=>{document.querySelectorAll('.reveal').forEach(el=>{let top = el.getBoundingClientRect().top;let height = window.innerHeight;if(top < height-50){el.classList.add('active');}});});
 </script>
