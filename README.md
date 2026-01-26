@@ -2,225 +2,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MrKhan PRO Services: Websites, Videos & Branding. Contact via Instagram, Facebook, or Email.">
 <title>MrKhan PRO Services</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
+/* Body */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    line-height: 1.6;
-    scroll-behavior: smooth;
+  margin:0;
+  padding:0;
+  font-family:'Orbitron', sans-serif;
+  background:#0a0a0a;
+  color:#fff;
+  scroll-behavior:smooth;
 }
 
+/* Container */
 .container {
-    max-width: 450px;
-    margin: 20px auto;
-    padding: 20px;
-    background: linear-gradient(135deg, #111, #1a1a2e);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  max-width: 460px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg,#111,#1a1a2e);
+  border-radius: 15px;
+  box-shadow:0 0 25px rgba(0,0,0,0.7);
 }
 
 /* Hero */
-h1 {
-    text-align: center;
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
-    font-size: 22px;
-    margin-bottom: 5px;
-    animation: fadeIn 1s forwards;
+.hero {
+  text-align:center;
+  padding:20px 0;
+  background: linear-gradient(90deg,#00ffff,#ff00ff,#00ffff);
+  background-size:200% 200%;
+  animation: gradientShift 5s ease infinite;
+  border-radius:10px;
 }
-p.tagline {
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #aaa;
-    animation: fadeIn 1.5s forwards;
+@keyframes gradientShift {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
-@keyframes fadeIn { to { opacity:1; } }
+.hero h1 {
+  font-size:24px;
+  margin:0 0 5px 0;
+  text-shadow:0 0 10px #00ffff;
+}
+.hero p {
+  font-size:14px;
+  color:#ccc;
+}
 
 /* Section Titles */
 h2 {
-    font-size: 18px;
-    color: #ff00ff;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ff00ff;
-    padding-bottom: 5px;
+  font-size:18px;
+  color:#ff00ff;
+  border-bottom:1px solid #ff00ff;
+  padding-bottom:5px;
+  margin-bottom:10px;
 }
 
 /* Services */
-.services, .benefits, .portfolio, .testimonials, .faq {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
+.services li {
+  margin-bottom:10px;
+  font-size:14px;
+  position:relative;
+  cursor:pointer;
 }
-.services li, .benefits li, .portfolio li, .faq li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    transition: transform 0.3s, color 0.3s;
+.services li span.tooltip {
+  display:none;
+  position:absolute;
+  left:105%;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(255,0,255,0.9);
+  padding:5px 8px;
+  border-radius:5px;
+  white-space:nowrap;
+  font-size:12px;
 }
-.services li:hover, .portfolio li:hover { transform: scale(1.05); color: #00ffff; }
-
-/* Testimonials Slider */
-.testimonials { position: relative; overflow: hidden; height: 100px; }
-.testimonials ul { display: flex; padding: 0; margin: 0; animation: slide 40s linear infinite; }
-.testimonials li { flex: 0 0 100%; list-style: none; padding: 10px; box-sizing: border-box; }
-
-/* Benefits */
-.benefits li { margin-bottom: 8px; font-size: 14px; }
+.services li:hover span.tooltip { display:block; }
 
 /* Portfolio */
 .portfolio li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255,255,255,0.05);
-    padding: 8px;
-    border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  padding:8px;
+  border-radius:8px;
+  margin-bottom:8px;
+  cursor:pointer;
 }
+.portfolio li:hover { background:#00ffff; color:#000; transition:0.3s; }
+
+/* Counters */
+.counters { display:flex; justify-content:space-between; margin:15px 0; }
+.counters div { text-align:center; }
+.counters div h3 { font-size:20px; margin:0; color:#00ffff; }
+.counters div p { font-size:12px; color:#ccc; }
+
+/* Pricing */
+.pricing { display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+.pricing div { background: rgba(255,255,255,0.05); padding:12px; border-radius:10px; text-align:center; transition:0.3s; }
+.pricing div:hover { transform:scale(1.05); background:#ff00ff; color:#000; }
+
+/* Testimonials Carousel */
+.testimonials { overflow:hidden; height:120px; margin-bottom:15px; }
+.testimonials ul { display:flex; animation: slide 60s linear infinite; padding:0; margin:0; }
+.testimonials li { flex:0 0 100%; list-style:none; padding:10px; box-sizing:border-box; }
 
 /* FAQ */
-.faq li { cursor: pointer; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px; }
-.faq li span.answer { display: none; margin-top: 5px; font-size: 13px; color: #aaa; }
+.faq li { cursor:pointer; background: rgba(255,255,255,0.05); padding:8px; border-radius:8px; margin-bottom:5px; }
+.faq li span.answer { display:none; font-size:13px; color:#ccc; margin-top:5px; }
 
-/* CTA Buttons */
-.btn {
-    display: block;
-    width: 90%;
-    margin: 10px auto;
-    padding: 12px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #00f, #ff0044);
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-.btn:hover { transform: scale(1.05); background: linear-gradient(45deg, #ff0044, #00ffff); color: #000; }
+/* Buttons */
+.btn { display:block; width:90%; margin:8px auto; padding:12px; border-radius:10px; background:linear-gradient(45deg,#00f,#ff0044); color:#fff; font-weight:bold; text-align:center; text-decoration:none; transition:0.3s;}
+.btn:hover { transform:scale(1.05); background:linear-gradient(45deg,#ff0044,#00ffff); color:#000; }
 
 /* Contact Form */
-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
-form input, form textarea { padding: 10px; border-radius: 8px; border: none; outline: none; font-size: 14px; }
-form button { padding: 12px; border-radius: 10px; border: none; font-weight: bold; background: #00ffff; color: #000; cursor: pointer; transition: 0.3s; }
-form button:hover { background: #ff00ff; color: #fff; }
+form { display:flex; flex-direction:column; gap:10px; margin-bottom:15px; }
+form input, form textarea { padding:10px; border-radius:8px; border:none; outline:none; font-size:14px; }
+form button { padding:12px; border-radius:10px; border:none; font-weight:bold; background:#00ffff; color:#000; cursor:pointer; transition:0.3s; }
+form button:hover { background:#ff00ff; color:#fff; }
 
 /* Floating Email Button */
-.floating-email {
-    position: fixed; bottom: 20px; right: 20px;
-    background: #ff0044; color: #fff; padding: 15px;
-    border-radius: 50%; text-align: center; font-size: 20px;
-    z-index: 1000; text-decoration: none;
-}
+.floating-email { position:fixed; bottom:20px; right:20px; background:#ff0044; color:#fff; padding:15px; border-radius:50%; text-align:center; font-size:20px; z-index:1000; text-decoration:none; }
 
 /* Animations */
-@keyframes slide { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+@keyframes slide {0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+
+/* Scroll Reveal */
+.reveal { opacity:0; transform:translateY(20px); transition:0.6s; }
+.reveal.active { opacity:1; transform:translateY(0); }
 
 /* Responsive */
-@media only screen and (max-width: 500px) {
-    h1 { font-size: 20px; }
-    h2 { font-size: 16px; }
-    .btn, form input, form textarea, form button { font-size: 13px; }
-    .container { padding: 15px; }
-}
+@media only screen and (max-width:500px){h1{font-size:20px;} h2{font-size:16px;} .btn,form input,form textarea,form button{font-size:13px;} .container{padding:15px;}}
 </style>
 </head>
 <body>
+
 <div class="container">
 
 <!-- Hero -->
+<div class="hero reveal">
 <h1>🚀 Boost Your Online Presence</h1>
-<p class="tagline">Websites, Videos & Branding by MrKhan</p>
+<p>Websites, Videos & Branding by MrKhan</p>
+</div>
 
 <!-- Services -->
-<h2>Services</h2>
-<ul class="services">
-<li>💻 Custom Websites & Bio-Link Pages</li>
-<li>🔐 Secure Firebase Login / Signup</li>
-<li>🎬 Viral Video Editing</li>
-<li>🖼 Eye-Catching Thumbnails & Branding</li>
+<h2 class="reveal">Services</h2>
+<ul class="services reveal">
+<li>💻 Custom Websites <span class="tooltip">Responsive & modern websites</span></li>
+<li>🔐 Firebase Login/Signup <span class="tooltip">Secure authentication system</span></li>
+<li>🎬 Video Editing <span class="tooltip">Reels, Shorts, YouTube</span></li>
+<li>🖼 Thumbnails & Branding <span class="tooltip">Eye-catching design</span></li>
 </ul>
 
-<!-- Benefits -->
-<h2>Why Choose Me?</h2>
-<ul class="benefits">
-<li>✔ Professional & Clean Designs</li>
-<li>✔ Boost Social Engagement</li>
-<li>✔ Fast Delivery & Affordable</li>
-<li>✔ Mobile-Friendly & Modern</li>
-</ul>
+<!-- Counters -->
+<div class="counters reveal">
+<div><h3>100+</h3><p>Satisfied Clients</p></div>
+<div><h3>50+</h3><p>Websites Delivered</p></div>
+<div><h3>200+</h3><p>Videos Edited</p></div>
+</div>
 
 <!-- Portfolio -->
-<h2>Portfolio</h2>
-<ul class="portfolio">
+<h2 class="reveal">Portfolio</h2>
+<ul class="portfolio reveal">
 <li>Website Example 1 🌐</li>
-<li>Thumbnail Example 🎨</li>
-<li>Viral Video Sample 🎬</li>
-<li>Brand Logo Sample 🖌️</li>
+<li>Thumbnail Sample 🎨</li>
+<li>Video Sample 🎬</li>
+<li>Brand Logo 🖌️</li>
 </ul>
 
-<!-- Testimonials Slider -->
-<h2>Testimonials</h2>
-<div class="testimonials">
+<!-- Pricing -->
+<h2 class="reveal">Pricing</h2>
+<div class="pricing reveal">
+<div>Basic - $10</div>
+<div>Standard - $20</div>
+<div>Premium - $30</div>
+</div>
+
+<!-- Testimonials -->
+<h2 class="reveal">Testimonials</h2>
+<div class="testimonials reveal">
 <ul>
-<li>“Amazing website & videos!” — Ahmed</li>
+<li>“Amazing website!” — Ahmed</li>
 <li>“Social reach doubled!” — Sana</li>
-<li>“Fast delivery & professional!” — Ali</li>
-<li>“Creative thumbnails, great work!” — Zara</li>
-<li>“Very affordable & clean design!” — Bilal</li>
-<li>“Loved the content quality!” — Fatima</li>
-<li>“Best video editing ever!” — Hamza</li>
-<li>“Highly recommend MrKhan!” — Aisha</li>
-<li>“Super fast & responsive!” — Omar</li>
-<li>“Engagement increased after posts!” — Hina</li>
-<li>“Great branding & logo!” — Sara</li>
-<li>“Excellent work ethic!” — Kamran</li>
-<li>“Professional & friendly!” — Mehreen</li>
-<li>“Boosted my social media!” — Usman</li>
-<li>“Very creative & unique!” — Noor</li>
-<li>“Reliable & fast delivery!” — Danish</li>
-<li>“Loved the thumbnails & videos!” — Maryam</li>
-<li>“Awesome work & attention to detail!” — Imran</li>
-<li>“Highly skilled & professional!” — Sana</li>
-<li>“Amazing support & guidance!” — Ahmed</li>
+<li>“Fast & professional!” — Ali</li>
+<li>“Creative thumbnails!” — Zara</li>
+<li>“Very affordable!” — Bilal</li>
+<li>“Loved the content!” — Fatima</li>
+<li>“Highly recommend!” — Hamza</li>
+<li>“Reliable & fast delivery!” — Maryam</li>
+<li>“Excellent branding!” — Sara</li>
+<li>“Awesome work!” — Imran</li>
+<li>“Great attention to detail!” — Noor</li>
+<li>“Professional & creative!” — Usman</li>
+<li>“Fast response!” — Aisha</li>
+<li>“Loved the videos!” — Ahmed</li>
+<li>“Best social media support!” — Sana</li>
+<li>“Amazing graphics!” — Kamran</li>
+<li>“Very skilled!” — Hina</li>
+<li>“Highly recommend MrKhan!” — Maryam</li>
+<li>“Super creative thumbnails!” — Danish</li>
+<li>“Excellent work ethic!” — Mehreen</li>
 </ul>
 </div>
 
 <!-- FAQ -->
-<h2>FAQ</h2>
-<ul class="faq">
-<li onclick="toggleAnswer(this)">Delivery Time? <span class="answer">Usually 1–3 days depending on complexity.</span></li>
-<li onclick="toggleAnswer(this)">Revisions? <span class="answer">Yes, free revisions until satisfaction.</span></li>
-<li onclick="toggleAnswer(this)">Do you handle social media content? <span class="answer">Yes, Reels, Shorts & thumbnails included.</span></li>
+<h2 class="reveal">FAQ</h2>
+<ul class="faq reveal">
+<li onclick="toggleAnswer(this)">Delivery Time? <span class="answer">1-3 days depending on complexity.</span></li>
+<li onclick="toggleAnswer(this)">Revisions? <span class="answer">Free revisions until satisfaction.</span></li>
+<li onclick="toggleAnswer(this)">Social Media Content? <span class="answer">Yes, Reels, Shorts & thumbnails included.</span></li>
 </ul>
 
 <!-- CTA Buttons -->
-<a class="btn" href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>
-<a class="btn" href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>
-<a class="btn" href="mailto:nazimkhan01123@gmail.com">Email</a>
+<a class="btn reveal" href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>
+<a class="btn reveal" href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>
+<a class="btn reveal" href="mailto:nazimkhan01123@gmail.com">Email</a>
 
 <!-- Contact Form -->
-<h2>Contact Me</h2>
-<form>
+<h2 class="reveal">Contact Me</h2>
+<form class="reveal">
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
 <textarea placeholder="Your Message" rows="3" required></textarea>
 <button type="submit">Send Message</button>
 </form>
+
 </div>
 
-<!-- Floating Email Button -->
+<!-- Floating Email -->
 <a href="mailto:nazimkhan01123@gmail.com" class="floating-email" target="_blank">📧</a>
 
 <script>
-function toggleAnswer(element){
-    let ans = element.querySelector(".answer");
-    ans.style.display = (ans.style.display === "block") ? "none" : "block";
+// FAQ toggle
+function toggleAnswer(el){
+  let ans = el.querySelector(".answer");
+  ans.style.display = (ans.style.display==="block")?"none":"block";
 }
+
+// Scroll reveal
+window.addEventListener('scroll', ()=>{
+  document.querySelectorAll('.reveal').forEach(el=>{
+    let top = el.getBoundingClientRect().top;
+    let height = window.innerHeight;
+    if(top < height-50){el.classList.add('active');}
+  });
+});
 </script>
 </body>
 </html>
