@@ -76,14 +76,14 @@ footer ul{list-style:disc;margin-left:15px;}
 
 <h2 class="reveal">Portfolio</h2>
 <div class="portfolio reveal">
-<img src="https://picsum.photos/200/120?random=1" alt="Website Example">
-<img src="https://picsum.photos/200/120?random=2" alt="Thumbnail">
-<img src="https://picsum.photos/200/120?random=3" alt="Video">
-<img src="https://picsum.photos/200/120?random=4" alt="Logo">
-<img src="https://picsum.photos/200/120?random=5" alt="Website Example">
-<img src="https://picsum.photos/200/120?random=6" alt="Thumbnail">
-<img src="https://picsum.photos/200/120?random=7" alt="Video">
-<img src="https://picsum.photos/200/120?random=8" alt="Logo">
+<img src="https://picsum.photos/300/150?random=101" alt="Custom Website Example">
+<img src="https://picsum.photos/300/150?random=102" alt="UI/UX Design Example">
+<img src="https://picsum.photos/300/150?random=103" alt="Logo & Branding Example">
+<img src="https://picsum.photos/300/150?random=104" alt="Video Editing Example">
+<img src="https://picsum.photos/300/150?random=105" alt="Thumbnail & Graphics Example">
+<img src="https://picsum.photos/300/150?random=106" alt="Landing Page Example">
+<img src="https://picsum.photos/300/150?random=107" alt="Mobile App UI Example">
+<img src="https://picsum.photos/300/150?random=108" alt="E-commerce Website Example">
 </div>
 
 <h2 class="reveal">Our Stats</h2>
