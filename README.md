@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MrKhan PRO Services: Websites, Videos & Branding. Premium services for specified clients. Contact via Instagram, Facebook, or Email.">
+<meta name="description" content="MrKhan PRO Services: Premium Websites, Video Editing, Branding. Trusted by thousands of clients worldwide. Contact via Instagram, Facebook, or Email.">
 <title>MrKhan PRO Services</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
@@ -41,8 +41,9 @@ form button:hover{background:#ff00ff;color:#fff;}
 @keyframes slide{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
 .reveal{opacity:0;transform:translateY(20px);transition:0.6s;}
 .reveal.active{opacity:1;transform:translateY(0);}
-footer{margin-top:20px;padding:15px;background:#111;border-radius:12px;text-align:center;font-size:12px;color:#ccc;}
+footer{margin-top:20px;padding:15px;background:#111;border-radius:12px;text-align:left;font-size:12px;color:#ccc;}
 footer a{color:#00ffff;text-decoration:none;}
+footer ul{list-style:disc;margin-left:15px;}
 @media only screen and (max-width:500px){h1{font-size:20px;}h2{font-size:16px;}.btn,form input,form textarea,form select,form button{font-size:13px;}.container{padding:15px;}}
 </style>
 </head>
@@ -64,9 +65,9 @@ footer a{color:#00ffff;text-decoration:none;}
 </ul>
 
 <div class="counters reveal">
-<div><h3>100+</h3><p>Satisfied Clients</p></div>
-<div><h3>50+</h3><p>Websites Delivered</p></div>
-<div><h3>200+</h3><p>Videos Edited</p></div>
+<div><h3>500+</h3><p>Satisfied Clients</p></div>
+<div><h3>150+</h3><p>Websites Delivered</p></div>
+<div><h3>300+</h3><p>Videos Edited</p></div>
 </div>
 
 <h2 class="reveal">Portfolio</h2>
@@ -142,7 +143,7 @@ footer a{color:#00ffff;text-decoration:none;}
 
 <footer class="reveal">
 <h3>About MrKhan PRO Services</h3>
-<p>We provide premium websites, video editing, thumbnails & branding services. Our work is trusted by over 5000 clients worldwide. Choosing us ensures quality, creativity, and reliability. Whether you need a website, a YouTube video, or a social media post, we deliver with professional results every time.</p>
+<p>We provide premium websites, video editing, thumbnails & branding services. Trusted by over 5000 clients worldwide, our professional services ensure top-notch results every time. Whether you need a custom website, social media content, or branding solutions, we deliver creativity, reliability & speed.</p>
 <p>Benefits:</p>
 <ul>
 <li>Responsive & modern websites</li>
@@ -150,23 +151,16 @@ footer a{color:#00ffff;text-decoration:none;}
 <li>Engaging video content & creative thumbnails</li>
 <li>Trusted by thousands of clients globally</li>
 <li>Fast delivery & free revisions</li>
+<li>Premium customer support</li>
+<li>High-quality branding solutions</li>
 </ul>
-<p>Contact us via <a href="mailto:nazimkhan01123@gmail.com">Email</a>, <a href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>, or <a href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>.</p>
+<p>Contact via <a href="mailto:nazimkhan01123@gmail.com">Email</a>, <a href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>, <a href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>.</p>
 <p>© 2026 MrKhan PRO Services. All Rights Reserved.</p>
 </footer>
 
 <script>
-function toggleAnswer(el){
-  let ans = el.querySelector(".answer");
-  ans.style.display = (ans.style.display==="block")?"none":"block";
-}
-window.addEventListener('scroll', ()=>{
-  document.querySelectorAll('.reveal').forEach(el=>{
-    let top = el.getBoundingClientRect().top;
-    let height = window.innerHeight;
-    if(top < height-50){el.classList.add('active');}
-  });
-});
+function toggleAnswer(el){ let ans = el.querySelector(".answer"); ans.style.display = (ans.style.display==="block")?"none":"block";}
+window.addEventListener('scroll', ()=>{document.querySelectorAll('.reveal').forEach(el=>{let top = el.getBoundingClientRect().top;let height = window.innerHeight;if(top < height-50){el.classList.add('active');}});});
 </script>
 
 </body>
