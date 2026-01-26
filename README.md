@@ -76,14 +76,8 @@ footer ul{list-style:disc;margin-left:15px;}
 
 <h2 class="reveal">Portfolio</h2>
 <div class="portfolio reveal">
-<img src="https://picsum.photos/id/1011/300/150" alt="Custom Website Example">
-<img src="https://picsum.photos/id/1012/300/150" alt="UI/UX Design Example">
-<img src="https://picsum.photos/id/1015/300/150" alt="Logo & Branding Example">
-<img src="https://picsum.photos/id/1016/300/150" alt="Video Editing Example">
-<img src="https://picsum.photos/id/1021/300/150" alt="Thumbnail & Graphics Example">
-<img src="https://picsum.photos/id/1024/300/150" alt="Landing Page Example">
-<img src="https://picsum.photos/id/1027/300/150" alt="Mobile App UI Example">
-<img src="https://picsum.photos/id/1030/300/150" alt="E-commerce Website Example">
+  <!-- Portfolio images removed as requested -->
+  <p style="text-align:center;color:#ccc;">Portfolio images will appear here after adding your own screenshots.</p>
 </div>
 
 <h2 class="reveal">Our Stats</h2>
