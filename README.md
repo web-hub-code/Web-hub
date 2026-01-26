@@ -14,12 +14,15 @@ body.light .container{background:#fff;color:#111;box-shadow:0 0 20px rgba(0,0,0,
 .hero p{font-size:14px;color:#ccc;}
 .hero video{width:100%;border-radius:10px;}
 h2{font-size:18px;color:#ff00ff;border-bottom:1px solid #ff00ff;padding-bottom:5px;margin-bottom:10px;}
-.services li{margin-bottom:10px;font-size:14px;position:relative;cursor:pointer;}
+.services li{margin-bottom:10px;font-size:14px;position:relative;cursor:pointer;transition:0.3s;}
 .services li span.tooltip{display:none;position:absolute;left:105%;top:50%;transform:translateY(-50%);background:rgba(255,0,255,0.9);padding:5px 8px;border-radius:5px;white-space:nowrap;font-size:12px;}
-.services li:hover span.tooltip{display:block;}
+.services li:hover span.tooltip{display:block;transform:scale(1.05);}
 .portfolio{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;}
 .portfolio img{width:100%;border-radius:8px;transition:0.3s;}
 .portfolio img:hover{transform:scale(1.05);}
+.filter-btns{text-align:center;margin-bottom:10px;}
+.filter-btns button{margin:3px;padding:5px 10px;border:none;border-radius:8px;background:#222;color:#fff;cursor:pointer;transition:0.3s;}
+.filter-btns button:hover{background:#ff00ff;color:#000;}
 .counters{display:flex;justify-content:space-between;margin:15px 0;}
 .counters div{text-align:center;}
 .counters div h3{font-size:20px;margin:0;color:#00ffff;}
@@ -27,14 +30,16 @@ h2{font-size:18px;color:#ff00ff;border-bottom:1px solid #ff00ff;padding-bottom:5
 .progress-bar{background:#222;border-radius:10px;overflow:hidden;height:10px;margin-top:5px;}
 .progress-bar span{display:block;height:100%;background:#00ffff;width:0;}
 .pricing{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
-.pricing div{background: rgba(255,255,255,0.05);padding:12px;border-radius:10px;text-align:center;transition:0.3s;}
+.pricing div{background: rgba(255,255,255,0.05);padding:12px;border-radius:10px;text-align:center;transition:0.3s;position:relative;}
 .pricing div:hover{transform:scale(1.05);background:#ff00ff;color:#000;}
-.pricing div span{font-weight:bold;color:#00ffff;}
-.testimonials{overflow:hidden;height:140px;margin-bottom:15px;}
-.testimonials ul{display:flex;animation:slide 60s linear infinite;padding:0;margin:0;}
+.pricing div span.tooltip{display:none;position:absolute;top:-35px;left:50%;transform:translateX(-50%);background:#00ffff;color:#000;padding:5px 8px;border-radius:5px;font-size:12px;}
+.pricing div:hover span.tooltip{display:block;}
+.testimonials{overflow:hidden;height:140px;margin-bottom:15px;position:relative;}
+.testimonials ul{display:flex;animation:slide 30s linear infinite;padding:0;margin:0;}
 .testimonials li{flex:0 0 100%;list-style:none;padding:10px;box-sizing:border-box;}
 .star{color:#ff0;}
-.faq li{cursor:pointer;background: rgba(255,255,255,0.05);padding:8px;border-radius:8px;margin-bottom:5px;}
+.faq li{cursor:pointer;background: rgba(255,255,255,0.05);padding:8px;border-radius:8px;margin-bottom:5px;transition:0.3s;}
+.faq li:hover{background:#ff00ff;color:#000;}
 .faq li span.answer{display:none;font-size:13px;color:#ccc;margin-top:5px;}
 .btn{display:block;width:90%;margin:8px auto;padding:12px;border-radius:10px;background:linear-gradient(45deg,#00f,#ff0044);color:#fff;font-weight:bold;text-align:center;text-decoration:none;transition:0.3s;}
 .btn:hover{transform:scale(1.05);background:linear-gradient(45deg,#ff0044,#00ffff);color:#000;}
@@ -75,23 +80,32 @@ footer ul{list-style:disc;margin-left:15px;}
 </ul>
 
 <h2 class="reveal">Portfolio</h2>
-<div class="portfolio reveal">
-  <!-- Portfolio images removed as requested -->
-  <p style="text-align:center;color:#ccc;">Portfolio images will appear here after adding your own screenshots.</p>
+<div class="filter-btns reveal">
+<button onclick="filterPortfolio('all')">All</button>
+<button onclick="filterPortfolio('web')">Websites</button>
+<button onclick="filterPortfolio('video')">Video</button>
+<button onclick="filterPortfolio('branding')">Branding</button>
+</div>
+<div class="portfolio reveal" id="portfolio">
+  <img class="web" src="images/web1.jpg" alt="Custom Website Example">
+  <img class="video" src="images/video1.jpg" alt="Video Editing Example">
+  <img class="branding" src="images/logo1.jpg" alt="Branding Example">
+  <img class="web" src="images/web2.jpg" alt="Website Design Example">
+  <img class="video" src="images/video2.jpg" alt="Video Editing Example">
 </div>
 
 <h2 class="reveal">Our Stats</h2>
 <div class="counters reveal">
-<div><h3>500+</h3><p>Satisfied Clients</p><div class="progress-bar"><span style="width:80%"></span></div></div>
-<div><h3>150+</h3><p>Websites Delivered</p><div class="progress-bar"><span style="width:75%"></span></div></div>
-<div><h3>300+</h3><p>Videos Edited</p><div class="progress-bar"><span style="width:90%"></span></div></div>
+<div><h3 class="count" data-target="500">0</h3><p>Satisfied Clients</p><div class="progress-bar"><span style="width:0;"></span></div></div>
+<div><h3 class="count" data-target="150">0</h3><p>Websites Delivered</p><div class="progress-bar"><span style="width:0;"></span></div></div>
+<div><h3 class="count" data-target="300">0</h3><p>Videos Edited</p><div class="progress-bar"><span style="width:0;"></span></div></div>
 </div>
 
 <h2 class="reveal">Premium Packages</h2>
 <div class="pricing reveal">
-<div>Basic <span>Specified for Clients 5000+</span></div>
-<div>Standard <span>Specified for Clients 5000+</span></div>
-<div>Premium <span>Specified for Clients 5000+</span></div>
+<div>Basic <span class="tooltip">Specified for Clients 5000+</span></div>
+<div>Standard <span class="tooltip">Specified for Clients 5000+</span></div>
+<div>Premium <span class="tooltip">Specified for Clients 5000+</span></div>
 </div>
 
 <h2 class="reveal">Testimonials</h2>
@@ -155,8 +169,30 @@ footer ul{list-style:disc;margin-left:15px;}
 </footer>
 
 <script>
-function toggleAnswer(el){ let ans = el.querySelector(".answer"); ans.style.display = (ans.style.display==="block")?"none":"block";}
+// Reveal animations
 window.addEventListener('scroll', ()=>{document.querySelectorAll('.reveal').forEach(el=>{let top = el.getBoundingClientRect().top;let height = window.innerHeight;if(top < height-50){el.classList.add('active');}});});
+
+// FAQ toggle
+function toggleAnswer(el){ let ans = el.querySelector(".answer"); ans.style.display = (ans.style.display==="block")?"none":"block";}
+
+// Portfolio filter
+function filterPortfolio(category){
+document.querySelectorAll('#portfolio img').forEach(img=>{
+if(category==='all'){img.style.display='block';} else {img.style.display=(img.classList.contains(category))?'block':'none';}
+});
+
+// Animate counters on scroll
+let counters = document.querySelectorAll('.count');
+counters.forEach(counter=>{
+let target = +counter.getAttribute('data-target');
+let count = 0;
+let step = target / 50;
+let interval = setInterval(()=>{count+=step;if(count>=target){count=target;clearInterval(interval);}counter.innerText=Math.floor(count);},30);
+});
+
+// Animate progress bars
+document.querySelectorAll('.progress-bar span').forEach(span=>{span.style.width='80%';});
+}
 </script>
 
 </body>
