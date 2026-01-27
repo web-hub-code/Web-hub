@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title>Mr Khan Pro Services | Website & Video Editing</title>
   <meta name="description" content="Professional website development, video editing, thumbnails & digital services by Mr Khan. Trusted by 5000+ clients worldwide.">
@@ -44,9 +44,9 @@
 </header>
 
 <!-- About Section -->
-<section id="about">
+<section id="about-mrkhan-pro-services">
   <h2>About Me</h2>
-  <p style="text-align:center;">Professional digital services including website development, video editing, thumbnail design and branding. Trusted by thousands of clients worldwide.</p>
+  <p style="text-align:center;">Professional digital services including website development, video editing, thumbnail design, and branding. Trusted by thousands of clients worldwide.</p>
 </section>
 
 <!-- Services Section -->
@@ -71,7 +71,7 @@
     <div class="card">
       <img src="assets/images/branding1.jpg" alt="Branding">
       <h3>Branding</h3>
-      <p>Logo, social media design and complete digital branding solutions.</p>
+      <p>Logo, social media design, and complete digital branding solutions.</p>
     </div>
   </div>
 </section>
