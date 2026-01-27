@@ -12,17 +12,10 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
+body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth;padding-bottom:70px;}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 section{padding:80px 0}
-
-/* NAVIGATION */
-nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;}
-nav .logo{font-size:28px;color:#22c55e;font-weight:700}
-nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
-nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
-nav ul li a:hover{color:#22c55e}
 
 /* HERO */
 .hero{
@@ -98,7 +91,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 .floating-social {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 90px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -121,36 +114,23 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 .instagram {background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
 .facebook {background:#1877f2;}
 
+/* Bottom Sticky Navigation */
+.bottom-nav {
+position:fixed;bottom:0;left:0;width:100%;background:#0f172a;display:flex;justify-content:space-around;align-items:center;padding:10px 0;box-shadow:0 -4px 15px rgba(0,0,0,.5);z-index:999;
+}
+.bottom-nav a{color:#e5e7eb;font-size:16px;text-align:center;flex:1;transition:.3s}
+.bottom-nav a:hover{color:#22c55e;transform:scale(1.1);}
+
 /* Animations */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
 
 /* Back-to-top */
-#topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none;}
+#topBtn{position:fixed;bottom:160px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none;}
 #topBtn:hover{background:#16a34a;transform:scale(1.1)}
-
-/* ABOUT SECTION */
-#about{background:#0f172a;padding:80px 0;text-align:center;color:#e5e7eb}
-#about p{max-width:800px;margin:auto}
 </style>
 </head>
 <body>
-
-<!-- NAVIGATION -->
-<nav>
-<div class="logo">Web-Hub</div>
-<ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#testimonials">Testimonials</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#technologies">Technologies</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
 
 <!-- HERO -->
 <section id="hero" class="hero">
@@ -229,16 +209,6 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- STATS -->
-<section>
-<div class="container grid grid-4 center stats">
-<div><h3 class="counter">250</h3><p>Projects</p></div>
-<div><h3 class="counter">120</h3><p>Clients</p></div>
-<div><h3 class="counter">5</h3><p>Years Experience</p></div>
-<div><h3 class="counter">24</h3><p>Support</p></div>
-</div>
-</section>
-
 <!-- FAQ -->
 <section id="faq">
 <div class="container">
@@ -250,7 +220,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
 <details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
 <details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
-<details><summary>Is the contact form secure?</summary><p>Yes, uses default email client, safe & secure.</p></details>
+<details><summary>Is the contact form secure?</summary><p>Yes, clicking send will open your default email client safely.</p></details>
 <details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
 </div>
 </div>
@@ -282,7 +252,6 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <p>Click send and your default email client will open with message ready.</p>
 </div>
 
-<!-- Direct Email Form -->
 <form class="card" onsubmit="sendEmail(event)">
 <input type="text" id="name" placeholder="Your Name" required>
 <input type="email" id="email" placeholder="Your Email" required>
@@ -292,25 +261,27 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- BACK TO TOP -->
-<button id="topBtn" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
-
-<!-- FOOTER -->
-<footer>
-<h3>Web-Hub</h3>
-<div class="social">
-<a href="https://www.facebook.com/profile.php?id=100084218946114"><i class="fab fa-facebook"></i></a>
-<a href="https://www.instagram.com/mr_nazim073"><i class="fab fa-instagram"></i></a>
-<a href="mailto:rock.earn92@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-</div>
-<p>© 2026 Web-Hub. All Rights Reserved.</p>
-</footer>
-
 <!-- FLOATING SOCIAL -->
 <div class="floating-social">
 <a href="mailto:rock.earn92@gmail.com" class="email" title="Email"><i class="fa-solid fa-envelope"></i></a>
 <a href="https://www.instagram.com/mr_nazim073" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
 <a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
+
+<!-- BOTTOM NAVIGATION -->
+<div class="bottom-nav">
+<a href="#hero"><i class="fa-solid fa-house"></i><br>Home</a>
+<a href="#about"><i class="fa-solid fa-circle-info"></i><br>About</a>
+<a href="#services"><i class="fa-solid fa-briefcase"></i><br>Services</a>
+<a href="#portfolio"><i class="fa-solid fa-image"></i><br>Portfolio</a>
+<a href="#pricing"><i class="fa-solid fa-tag"></i><br>Pricing</a>
+<a href="#testimonials"><i class="fa-solid fa-star"></i><br>Reviews</a>
+<a href="#faq"><i class="fa-solid fa-question"></i><br>FAQ</a>
+<a href="#technologies"><i class="fa-solid fa-code"></i><br>Tech</a>
+<a href="#contact"><i class="fa-solid fa-envelope"></i><br>Contact</a>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -342,36 +313,21 @@ $('.counter').each(function(){
 $(this).prop('Counter',0).animate({Counter:$(this).text()},{duration:2000,easing:'swing',step:function(now){$(this).text(Math.ceil(now));}});
 });
 
-// Direct Email JS
+// Direct Email Function
 function sendEmail(event){
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Subject aur body encode karte hain
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
-    // Mailto link
-    window.location.href = `mailto:rock.earn92@gmail.com?subject=${subject}&body=${body}`;
+event.preventDefault();
+const name=document.getElementById('name').value;
+const email=document.getElementById('email').value;
+const message=document.getElementById('message').value;
+const subject=encodeURIComponent(`Message from ${name}`);
+const body=encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+window.location.href=`mailto:rock.earn92@gmail.com?subject=${subject}&body=${body}`;
 }
 
-// Back-to-top button
-const topBtn = document.getElementById("topBtn");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-}
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
+// Back-to-top
+window.onscroll=function(){scrollFunction()};
+function scrollFunction(){document.getElementById("topBtn").style.display=(document.body.scrollTop>300||document.documentElement.scrollTop>300)?"block":"none";}
+function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0;}
 </script>
 </body>
 </html>
