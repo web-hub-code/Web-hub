@@ -1,199 +1,127 @@
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MrKhan PRO Services</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-body{margin:0;padding:0;font-family:'Orbitron',sans-serif;background:#0a0a0a;color:#fff;scroll-behavior:smooth;transition:0.3s;}
-body.light{background:#f5f5f5;color:#111;}
-.container{max-width:460px;margin:20px auto;padding:20px;background:linear-gradient(135deg,#111,#1a1a2e);border-radius:15px;box-shadow:0 0 25px rgba(0,0,0,0.7);transition:0.3s;}
-body.light .container{background:#fff;color:#111;box-shadow:0 0 20px rgba(0,0,0,0.2);}
-.hero{text-align:center;padding:20px 0;border-radius:10px;position:relative;overflow:hidden;}
-.hero h1{font-size:24px;margin:0 0 5px 0;text-shadow:0 0 10px #00ffff;}
-.hero p{font-size:14px;color:#ccc;}
-.hero video{width:100%;border-radius:10px;}
-h2{font-size:18px;color:#ff00ff;border-bottom:1px solid #ff00ff;padding-bottom:5px;margin-bottom:10px;}
-.services li{margin-bottom:10px;font-size:14px;position:relative;cursor:pointer;transition:0.3s;}
-.services li span.tooltip{display:none;position:absolute;left:105%;top:50%;transform:translateY(-50%);background:rgba(255,0,255,0.9);padding:5px 8px;border-radius:5px;white-space:nowrap;font-size:12px;}
-.services li:hover span.tooltip{display:block;transform:scale(1.05);}
-.portfolio{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;}
-.portfolio img{width:100%;border-radius:8px;transition:0.3s;}
-.portfolio img:hover{transform:scale(1.05);}
-.filter-btns{text-align:center;margin-bottom:10px;}
-.filter-btns button{margin:3px;padding:5px 10px;border:none;border-radius:8px;background:#222;color:#fff;cursor:pointer;transition:0.3s;}
-.filter-btns button:hover{background:#ff00ff;color:#000;}
-.counters{display:flex;justify-content:space-between;margin:15px 0;}
-.counters div{text-align:center;}
-.counters div h3{font-size:20px;margin:0;color:#00ffff;}
-.counters div p{font-size:12px;color:#ccc;}
-.progress-bar{background:#222;border-radius:10px;overflow:hidden;height:10px;margin-top:5px;}
-.progress-bar span{display:block;height:100%;background:#00ffff;width:0;}
-.pricing{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
-.pricing div{background: rgba(255,255,255,0.05);padding:12px;border-radius:10px;text-align:center;transition:0.3s;position:relative;}
-.pricing div:hover{transform:scale(1.05);background:#ff00ff;color:#000;}
-.pricing div span.tooltip{display:none;position:absolute;top:-35px;left:50%;transform:translateX(-50%);background:#00ffff;color:#000;padding:5px 8px;border-radius:5px;font-size:12px;}
-.pricing div:hover span.tooltip{display:block;}
-.testimonials{overflow:hidden;height:140px;margin-bottom:15px;position:relative;}
-.testimonials ul{display:flex;animation:slide 30s linear infinite;padding:0;margin:0;}
-.testimonials li{flex:0 0 100%;list-style:none;padding:10px;box-sizing:border-box;}
-.star{color:#ff0;}
-.faq li{cursor:pointer;background: rgba(255,255,255,0.05);padding:8px;border-radius:8px;margin-bottom:5px;transition:0.3s;}
-.faq li:hover{background:#ff00ff;color:#000;}
-.faq li span.answer{display:none;font-size:13px;color:#ccc;margin-top:5px;}
-.btn{display:block;width:90%;margin:8px auto;padding:12px;border-radius:10px;background:linear-gradient(45deg,#00f,#ff0044);color:#fff;font-weight:bold;text-align:center;text-decoration:none;transition:0.3s;}
-.btn:hover{transform:scale(1.05);background:linear-gradient(45deg,#ff0044,#00ffff);color:#000;}
-form{display:flex;flex-direction:column;gap:10px;margin-bottom:15px;}
-form input, form textarea, form select{padding:10px;border-radius:8px;border:none;outline:none;font-size:14px;}
-form button{padding:12px;border-radius:10px;border:none;font-weight:bold;background:#00ffff;color:#000;cursor:pointer;transition:0.3s;}
-form button:hover{background:#ff00ff;color:#fff;}
-.floating-email{position:fixed;bottom:20px;right:20px;background:#ff0044;color:#fff;padding:15px;border-radius:50%;text-align:center;font-size:20px;z-index:1000;text-decoration:none;}
-.sticky-cta{position:fixed;bottom:0;left:0;width:100%;background:#111;color:#fff;text-align:center;padding:10px;font-weight:bold;cursor:pointer;z-index:999;border-top:3px solid #00ffff;}
-@keyframes slide{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-.reveal{opacity:0;transform:translateY(20px);transition:0.6s;}
-.reveal.active{opacity:1;transform:translateY(0);}
-footer{margin-top:20px;padding:15px;background:#111;border-radius:12px;text-align:left;font-size:12px;color:#ccc;}
-footer a{color:#00ffff;text-decoration:none;}
-footer ul{list-style:disc;margin-left:15px;}
-.light-toggle{position:fixed;top:20px;right:20px;background:#00ffff;color:#000;padding:10px;border-radius:50%;cursor:pointer;z-index:1000;}
-@media only screen and (max-width:500px){h1{font-size:20px;}h2{font-size:16px;}.btn,form input,form textarea,form select,form button{font-size:13px;}.container{padding:15px;}.portfolio{grid-template-columns:1fr;}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Mr Khan Pro Services | Website & Video Editing</title>
+  <meta name="description" content="Professional website development, video editing, thumbnails & digital services by Mr Khan. Trusted by 5000+ clients worldwide.">
+  <meta name="keywords" content="website development, video editing, thumbnail design, Pakistan web developer">
+  <meta name="author" content="Mr Khan Pro Services">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="google8073cfacc72a7cb3" />
+
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#0a0a0a; color:#fff;}
+    header { position:relative; height:70vh; overflow:hidden;}
+    header video { width:100%; height:100%; object-fit:cover; }
+    header h1 { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:3em; color:#00f0ff; text-shadow: 2px 2px 10px #000; }
+    section { padding:50px 20px; max-width:1200px; margin:auto;}
+    h2 { color:#00f0ff; text-align:center; margin-bottom:30px; }
+    .services, .portfolio { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .card { background:#111; padding:20px; border-radius:10px; flex:1 1 250px; text-align:center; box-shadow: 0 0 15px #00f0ff; }
+    .card img { max-width:100%; border-radius:10px; }
+    form { display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto; }
+    input, select, textarea { padding:10px; border-radius:5px; border:none; }
+    button { padding:15px; border:none; border-radius:5px; background:#00f0ff; color:#000; font-weight:bold; cursor:pointer; transition:0.3s; }
+    button:hover { background:#0ff; }
+    footer { background:#111; padding:30px 20px; text-align:center; margin-top:50px; color:#aaa;}
+    footer a { color:#00f0ff; text-decoration:none; }
+    @media(max-width:768px){ .services,.portfolio{flex-direction:column;} header h1{font-size:2em;} }
+  </style>
 </head>
 <body>
 
-<div class="light-toggle" onclick="document.body.classList.toggle('light')">🌞/🌙</div>
+<!-- Hero Video -->
+<header>
+  <video autoplay muted loop>
+    <source src="assets/video/hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h1>Mr Khan Pro Services</h1>
+</header>
 
-<div class="container">
+<!-- About Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p style="text-align:center;">Professional digital services including website development, video editing, thumbnail design and branding. Trusted by thousands of clients worldwide.</p>
+</section>
 
-<div class="hero reveal">
-<h1>🚀 Boost Your Online Presence</h1>
-<p>Websites, Videos & Branding by MrKhan</p>
-<video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted autoplay loop></video>
-</div>
+<!-- Services Section -->
+<section id="services">
+  <h2>My Services</h2>
+  <div class="services">
+    <div class="card">
+      <img src="assets/images/web1.jpg" alt="Website Development">
+      <h3>Website Development</h3>
+      <p>Modern, responsive and custom websites for businesses and individuals.</p>
+    </div>
+    <div class="card">
+      <img src="assets/images/video1.jpg" alt="Video Editing">
+      <h3>Video Editing</h3>
+      <p>Professional video editing, effects, and slow/fast motion edits.</p>
+    </div>
+    <div class="card">
+      <img src="assets/images/thumbnail1.jpg" alt="Thumbnail Design">
+      <h3>Thumbnail Design</h3>
+      <p>Attractive thumbnails that increase clicks & engagement.</p>
+    </div>
+    <div class="card">
+      <img src="assets/images/branding1.jpg" alt="Branding">
+      <h3>Branding</h3>
+      <p>Logo, social media design and complete digital branding solutions.</p>
+    </div>
+  </div>
+</section>
 
-<h2 class="reveal">Services</h2>
-<ul class="services reveal">
-<li>💻 Custom Websites <span class="tooltip">Responsive & modern websites</span></li>
-<li>🔐 Firebase Login/Signup <span class="tooltip">Secure authentication system</span></li>
-<li>🎬 Video Editing <span class="tooltip">Reels, Shorts, YouTube</span></li>
-<li>🖼 Thumbnails & Branding <span class="tooltip">Eye-catching design</span></li>
-</ul>
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio">
+    <div class="card"><img src="assets/images/web1.jpg" alt="Web Project 1"><p>Website Example 1</p></div>
+    <div class="card"><img src="assets/images/web2.jpg" alt="Web Project 2"><p>Website Example 2</p></div>
+    <div class="card"><img src="assets/images/video1.jpg" alt="Video Project 1"><p>Video Editing 1</p></div>
+    <div class="card"><img src="assets/images/video2.jpg" alt="Video Project 2"><p>Video Editing 2</p></div>
+  </div>
+</section>
 
-<h2 class="reveal">Portfolio</h2>
-<div class="filter-btns reveal">
-<button onclick="filterPortfolio('all')">All</button>
-<button onclick="filterPortfolio('web')">Websites</button>
-<button onclick="filterPortfolio('video')">Video</button>
-<button onclick="filterPortfolio('branding')">Branding</button>
-</div>
-<div class="portfolio reveal" id="portfolio">
-  <img class="web" src="images/web1.jpg" alt="Custom Website Example">
-  <img class="video" src="images/video1.jpg" alt="Video Editing Example">
-  <img class="branding" src="images/logo1.jpg" alt="Branding Example">
-  <img class="web" src="images/web2.jpg" alt="Website Design Example">
-  <img class="video" src="images/video2.jpg" alt="Video Editing Example">
-</div>
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="mailto:rock.earn92@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <select name="Service">
+      <option>Website Development</option>
+      <option>Video Editing</option>
+      <option>Thumbnail Design</option>
+      <option>Other Service</option>
+    </select>
+    <textarea name="Message" placeholder="Describe your project" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
-<h2 class="reveal">Our Stats</h2>
-<div class="counters reveal">
-<div><h3 class="count" data-target="500">0</h3><p>Satisfied Clients</p><div class="progress-bar"><span style="width:0;"></span></div></div>
-<div><h3 class="count" data-target="150">0</h3><p>Websites Delivered</p><div class="progress-bar"><span style="width:0;"></span></div></div>
-<div><h3 class="count" data-target="300">0</h3><p>Videos Edited</p><div class="progress-bar"><span style="width:0;"></span></div></div>
-</div>
+<!-- Stats Section -->
+<section id="stats">
+  <h2>Our Achievements</h2>
+  <div class="services">
+    <div class="card"><h3>8000+</h3><p>Satisfied Clients</p></div>
+    <div class="card"><h3>1200+</h3><p>Websites Delivered</p></div>
+    <div class="card"><h3>3500+</h3><p>Videos Edited</p></div>
+  </div>
+</section>
 
-<h2 class="reveal">Premium Packages</h2>
-<div class="pricing reveal">
-<div>Basic <span class="tooltip">Specified for Clients 5000+</span></div>
-<div>Standard <span class="tooltip">Specified for Clients 5000+</span></div>
-<div>Premium <span class="tooltip">Specified for Clients 5000+</span></div>
-</div>
-
-<h2 class="reveal">Testimonials</h2>
-<div class="testimonials reveal">
-<ul>
-<li>“Amazing website!” <span class="star">★★★★★</span> — Ahmed</li>
-<li>“Social reach doubled!” <span class="star">★★★★★</span> — Sana</li>
-<li>“Fast & professional!” <span class="star">★★★★★</span> — Ali</li>
-<li>“Creative thumbnails!” <span class="star">★★★★★</span> — Zara</li>
-<li>“Very affordable!” <span class="star">★★★★★</span> — Bilal</li>
-</ul>
-</div>
-
-<h2 class="reveal">FAQ</h2>
-<ul class="faq reveal">
-<li onclick="toggleAnswer(this)">Delivery Time? <span class="answer">1-3 days depending on complexity.</span></li>
-<li onclick="toggleAnswer(this)">Revisions? <span class="answer">Free revisions until satisfaction.</span></li>
-<li onclick="toggleAnswer(this)">Social Media Content? <span class="answer">Yes, Reels, Shorts & thumbnails included.</span></li>
-</ul>
-
-<h2 class="reveal">Contact / Request Service</h2>
-<form class="reveal" action="mailto:nazimkhan01123@gmail.com" method="post" enctype="text/plain">
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="email" name="Email" placeholder="Your Email" required>
-<select name="Service" required>
-<option value="">Select Service</option>
-<option>Custom Website</option>
-<option>Firebase Login/Signup</option>
-<option>Video Editing</option>
-<option>Thumbnails & Branding</option>
-</select>
-<textarea name="Message" placeholder="Your Message" rows="3" required></textarea>
-<button type="submit">Send Message</button>
-</form>
-
-<a class="btn reveal" href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>
-<a class="btn reveal" href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>
-<a class="btn reveal" href="mailto:nazimkhan01123@gmail.com">Email</a>
-
-</div>
-
-<div class="sticky-cta reveal" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆ Back to Top / Request Service</div>
-
-<a href="mailto:nazimkhan01123@gmail.com" class="floating-email" target="_blank">📧</a>
-
-<footer class="reveal">
-<h3>About MrKhan PRO Services</h3>
-<p>We provide premium websites, video editing, thumbnails & branding services. Trusted by over 5000 clients worldwide, our professional services ensure top-notch results every time.</p>
-<p>Benefits:</p>
-<ul>
-<li>Responsive & modern websites</li>
-<li>Secure Firebase login/signup integration</li>
-<li>Engaging video content & creative thumbnails</li>
-<li>Trusted by thousands of clients globally</li>
-<li>Fast delivery & free revisions</li>
-<li>Premium customer support</li>
-<li>High-quality branding solutions</li>
-</ul>
-<p>Contact via <a href="mailto:nazimkhan01123@gmail.com">Email</a>, <a href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>, <a href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a>.</p>
-<p>© 2026 MrKhan PRO Services. All Rights Reserved.</p>
+<!-- Footer -->
+<footer>
+  <h3>Mr Khan Pro Services</h3>
+  <p>Providing professional digital services including websites, video editing, thumbnails & branding. Trusted by thousands of clients worldwide.</p>
+  <p>Email: <a href="mailto:rock.earn92@gmail.com">rock.earn92@gmail.com</a></p>
+  <p>Facebook | Instagram</p>
+  <p>© 2026 Mr Khan Pro Services. All Rights Reserved.</p>
 </footer>
-
-<script>
-// Reveal animations
-window.addEventListener('scroll', ()=>{document.querySelectorAll('.reveal').forEach(el=>{let top = el.getBoundingClientRect().top;let height = window.innerHeight;if(top < height-50){el.classList.add('active');}});});
-
-// FAQ toggle
-function toggleAnswer(el){ let ans = el.querySelector(".answer"); ans.style.display = (ans.style.display==="block")?"none":"block";}
-
-// Portfolio filter
-function filterPortfolio(category){
-document.querySelectorAll('#portfolio img').forEach(img=>{
-if(category==='all'){img.style.display='block';} else {img.style.display=(img.classList.contains(category))?'block':'none';}
-});
-
-// Animate counters on scroll
-let counters = document.querySelectorAll('.count');
-counters.forEach(counter=>{
-let target = +counter.getAttribute('data-target');
-let count = 0;
-let step = target / 50;
-let interval = setInterval(()=>{count+=step;if(count>=target){count=target;clearInterval(interval);}counter.innerText=Math.floor(count);},30);
-});
-
-// Animate progress bars
-document.querySelectorAll('.progress-bar span').forEach(span=>{span.style.width='80%';});
-}
-</script>
 
 </body>
 </html>
