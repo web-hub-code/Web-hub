@@ -110,6 +110,10 @@ footer{background:#020617;padding:50px 0;text-align:center}
 /* Animations */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* Back-to-top */
+#topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none;}
+#topBtn:hover{background:#16a34a}
 </style>
 </head>
 
@@ -133,6 +137,8 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs</p></div>
 <div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Rank higher on search engines</p></div>
 <div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
+<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
+<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
 </div>
 </div>
 </section>
@@ -146,6 +152,8 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
 <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
 </div>
 </div>
 </section>
@@ -158,6 +166,9 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <div class="card"><p>"Great service! Highly recommended."</p><strong>- John D.</strong></div>
 <div class="card"><p>"Professional & fast delivery."</p><strong>- Sarah K.</strong></div>
 <div class="card"><p>"Our website looks amazing thanks to Web-Hub."</p><strong>- Mike L.</strong></div>
+<div class="card"><p>"Excellent communication and support."</p><strong>- Linda P.</strong></div>
+<div class="card"><p>"Creative designs, very happy."</p><strong>- Kevin R.</strong></div>
+<div class="card"><p>"Fast, reliable & professional."</p><strong>- Emma W.</strong></div>
 </div>
 </div>
 </section>
@@ -179,6 +190,29 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <div class="grid grid-2">
 <details><summary>Are images showing correctly?</summary><p>Yes, all images are stock CDN links for guaranteed display.</p></details>
 <details><summary>Is the site mobile-friendly?</summary><p>Yes, fully responsive on all devices.</p></details>
+<details><summary>Do you provide SEO services?</summary><p>Yes, our SEO experts improve your search rankings.</p></details>
+<details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
+<details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
+<details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
+<details><summary>Is the contact form secure?</summary><p>Yes, integrated with EmailJS and HTTPS recommended.</p></details>
+<details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
+</div>
+</div>
+</section>
+
+<!-- TECHNOLOGIES / SKILLS -->
+<section>
+<div class="container">
+<h2>Technologies & Tools</h2>
+<div class="grid grid-4 center">
+<div class="card"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+<div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
+<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+<div class="card"><i class="fa-brands fa-php"></i><p>PHP</p></div>
+<div class="card"><i class="fa-brands fa-react"></i><p>React</p></div>
+<div class="card"><i class="fa-brands fa-node"></i><p>Node.js</p></div>
+<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress</p></div>
+<div class="card"><i class="fa-brands fa-shopify"></i><p>Shopify</p></div>
 </div>
 </div>
 </section>
@@ -200,6 +234,9 @@ footer{background:#020617;padding:50px 0;text-align:center}
 </form>
 </div>
 </section>
+
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
 
 <!-- FOOTER -->
 <footer>
@@ -236,6 +273,10 @@ event.preventDefault();
 emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',this)
 .then(function(){alert("Message sent successfully!");},function(err){alert("Error sending message: "+JSON.stringify(err));});
 });
+// Back to top
+window.onscroll=function(){scrollFunction()};
+function scrollFunction(){document.getElementById("topBtn").style.display=(document.body.scrollTop>300||document.documentElement.scrollTop>300)?"block":"none";}
+function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0;}
 </script>
 </body>
 </html>
