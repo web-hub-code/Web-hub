@@ -3,6 +3,12 @@
 <meta charset="UTF-8">
 <title>Web-Hub | Pro Digital Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Web-Hub provides professional web development, UI/UX design, SEO, and digital marketing solutions worldwide.">
+<meta property="og:title" content="Web-Hub | Pro Digital Solutions">
+<meta property="og:description" content="Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<meta property="og:url" content="https://web-hub-code.github.io/Web-hub/">
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- Google Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -11,86 +17,87 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
-body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth;}
-a{text-decoration:none;color:inherit;}
-.container{width:90%;max-width:1200px;margin:auto;}
-section{padding:80px 0;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1200px;margin:auto}
+section{padding:80px 0}
 
 /* NAVIGATION */
-nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;}
-nav .logo{font-size:28px;color:#22c55e;font-weight:700;}
-nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap;}
-nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s;}
-nav ul li a:hover{color:#22c55e;}
+nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;transition:0.3s}
+nav.scrolled{background:rgba(15,23,42,1)}
+nav .logo{font-size:28px;color:#22c55e;font-weight:700}
+nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
+nav ul li a:hover{color:#22c55e}
 
 /* HERO */
-.hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover;padding:140px 0;text-align:center;animation: fadeIn 2s ease;}
-.hero h1{font-size:52px;color:#22c55e;animation: slideIn 1.5s ease;}
-.hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto;}
-.btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s;}
-.btn:hover{background:#16a34a;cursor:pointer;transform:scale(1.05);}
+.hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;padding:140px 0;text-align:center;animation:fadeIn 2s ease}
+.hero h1{font-size:52px;color:#22c55e;animation:slideIn 1.5s ease}
+.hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
+.btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s}
+.btn:hover{background:#16a34a;cursor:pointer;transform:scale(1.05)}
 
 /* GRID */
-.grid{display:grid;gap:25px;}
-.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
-.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
-.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
+.grid{display:grid;gap:25px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 
 /* CARDS */
-.card{background:#1e293b;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.4);text-align:center;transition:transform .3s, box-shadow .3s;cursor:pointer;}
-.card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.5);}
-.card i{font-size:36px;color:#38bdf8;margin-bottom:15px;}
+.card{background:#1e293b;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.4);text-align:center;transition:transform .3s, box-shadow .3s;cursor:pointer}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.5)}
+.card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
 
 /* TITLES */
-h2{text-align:center;font-size:38px;margin-bottom:50px;}
-.center{text-align:center;}
+h2{text-align:center;font-size:38px;margin-bottom:50px}
+.center{text-align:center}
 
 /* PORTFOLIO ITEMS */
-.portfolio-item{position:relative;overflow:hidden;border-radius:16px;}
-.portfolio-item img{width:100%;transition:transform .3s;}
-.portfolio-item:hover img{transform:scale(1.05);}
-.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s;}
-.portfolio-item:hover .overlay{opacity:1;}
+.portfolio-item{position:relative;overflow:hidden;border-radius:16px}
+.portfolio-item img{width:100%;transition:transform .3s}
+.portfolio-item:hover img{transform:scale(1.05)}
+.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
+.portfolio-item:hover .overlay{opacity:1}
 
 /* STATS */
-.stats h3{font-size:40px;color:#22c55e;}
-.counter{font-weight:bold;color:#22c55e;font-size:32px;}
+.stats h3{font-size:40px;color:#22c55e}
+.counter{font-weight:bold;color:#22c55e;font-size:32px}
 
 /* FAQ */
-details{background:#1e293b;padding:18px;border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.3s;}
-details:hover{background:#273449;}
-details summary{cursor:pointer;font-weight:600;}
+details{background:#1e293b;padding:18px;border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.3s}
+details:hover{background:#273449}
+details summary{cursor:pointer;font-weight:600}
 
 /* CONTACT FORM */
-input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb;}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
 
 /* FOOTER */
-footer{background:#1e293b;padding:50px 0;text-align:center;}
-.social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s;}
-.social i:hover{transform:scale(1.2);}
+footer{background:#1e293b;padding:50px 0;text-align:center}
+.social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
+.social i:hover{transform:scale(1.2)}
 
 /* FLOATING SOCIAL BUTTONS */
-.floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999;}
-.floating-social a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .3s;}
-.floating-social a:hover{transform:scale(1.1);}
-.email{background:#22c55e;}
-.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
-.facebook{background:#1877f2;}
+.floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
+.floating-social a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .3s}
+.floating-social a:hover{transform:scale(1.1)}
+.email{background:#22c55e}
+.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
+.facebook{background:#1877f2}
 
 /* Animations */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
 
 /* Back-to-top */
-#topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none;}
-#topBtn:hover{background:#16a34a;transform:scale(1.1);}
+#topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
+#topBtn:hover{background:#16a34a;transform:scale(1.1)}
 </style>
 </head>
 <body>
 
 <!-- NAVIGATION -->
-<nav>
+<nav id="navbar">
 <div class="logo">Web-Hub</div>
 <ul>
 <li><a href="#hero">Home</a></li>
@@ -264,19 +271,40 @@ footer{background:#1e293b;padding:50px 0;text-align:center;}
 <!-- BACK TO TOP -->
 <button id="topBtn" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
 
+<!-- JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
 // Portfolio slider
-$('.portfolio-slider').slick({slidesToShow:3,slidesToScroll:1,autoplay:true,autoplaySpeed:2000,dots:true,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
-// Testimonial slider
-$('.testimonial-slider').slick({slidesToShow:2,slidesToScroll:1,autoplay:true,autoplaySpeed:2500,dots:true,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
-// Counters
-$('.counter').each(function(){$(this).prop('Counter',0).animate({Counter:$(this).text()},{duration:2000,easing:'swing',step:function(now){$(this).text(Math.ceil(now));}});});
-// Back to top button continuation
-window.onscroll = function() {scrollFunction()};
+$('.testimonial-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  arrows: false,
+  dots: true,
+  responsive: [
+    { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    { breakpoint: 768, settings: { slidesToShow: 1 } }
+  ]
+});
+
+// Counter Animation
+$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.text();
+  $({ countNum: 0 }).animate({ countNum: countTo }, {
+    duration: 2000,
+    easing: 'swing',
+    step: function() { $this.text(Math.floor(this.countNum)); },
+    complete: function() { $this.text(this.countNum); }
+  });
+});
+
+// Back to top
+var topBtn = document.getElementById("topBtn");
+window.onscroll = function() { scrollFunction(); navbarScroll(); };
 function scrollFunction() {
-  const topBtn = document.getElementById("topBtn");
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     topBtn.style.display = "block";
   } else {
@@ -284,56 +312,27 @@ function scrollFunction() {
   }
 }
 function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Contact form send
-function sendEmail(event) {
+// Navbar background on scroll
+function navbarScroll() {
+  var navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) { navbar.classList.add("scrolled"); }
+  else { navbar.classList.remove("scrolled"); }
+}
+
+// Contact Form
+function sendEmail(event){
   event.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  if(name && email && message) {
-    const mailtoLink = `mailto:rock.earn92@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message + "\n\nFrom: " + name + " (" + email + ")")}`;
-    window.location.href = mailtoLink;
-  }
-  return false;
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
+  var mailtoLink = `mailto:rock.earn92@gmail.com?subject=Contact from ${name}&body=${message}%0D%0AEmail: ${email}`;
+  window.location.href = mailtoLink;
+  alert("Your default email client will open to send the message!");
 }
-
-// Initialize sliders after page load
-$(document).ready(function(){
-  $('.testimonial-slider').slick({
-    slidesToShow:2,
-    slidesToScroll:1,
-    autoplay:true,
-    autoplaySpeed:2500,
-    dots:true,
-    responsive:[{breakpoint:768, settings:{slidesToShow:1}}]
-  });
-
-  // Portfolio slider if needed
-  if($('.portfolio-slider').length){
-    $('.portfolio-slider').slick({
-      slidesToShow:3,
-      slidesToScroll:1,
-      autoplay:true,
-      autoplaySpeed:2000,
-      dots:true,
-      responsive:[{breakpoint:768, settings:{slidesToShow:1}}]
-    });
-  }
-
-  // Animated counters
-  $('.counter').each(function(){
-    $(this).prop('Counter',0).animate({
-      Counter: $(this).text()
-    },{
-      duration:2000,
-      easing:'swing',
-      step:function(now){ $(this).text(Math.ceil(now)); }
-    });
-  });
-});
 </script>
+
 </body>
 </html>
