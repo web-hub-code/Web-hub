@@ -13,15 +13,17 @@
 <!-- Google Verification -->
 <meta name="google-site-verification" content="google8073cfacc72a7cb3" />
 
+<!-- Google Fonts + CSS Reset + Animations -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;padding:0;font-family:Arial,sans-serif;background:#0a0a0a;color:#fff;}
+body{margin:0;padding:0;font-family:'Roboto',sans-serif;background:#0a0a0a;color:#fff;}
 header{position:relative;height:70vh;overflow:hidden;}
 header video{width:100%;height:100%;object-fit:cover;}
 header h1{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);font-size:3em;color:#00f0ff;text-shadow:2px 2px 15px #000;animation:fadein 2s ease-in-out;}
 @keyframes fadein{0%{opacity:0;}100%{opacity:1;}}
 section{padding:50px 20px;max-width:1200px;margin:auto;}
 h2{color:#00f0ff;text-align:center;margin-bottom:30px;}
-.services,.portfolio,.stats-section{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+.services,.portfolio,.stats-section,.reviews{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
 .card{background:#111;padding:20px;border-radius:10px;flex:1 1 250px;text-align:center;box-shadow:0 0 15px #00f0ff;transition:0.3s;}
 .card:hover{transform:translateY(-10px) scale(1.05);}
 .card img{max-width:100%;border-radius:10px;}
@@ -31,7 +33,7 @@ button{padding:15px;border:none;border-radius:5px;background:#00f0ff;color:#000;
 button:hover{background:#0ff;}
 footer{background:#111;padding:30px 20px;text-align:center;margin-top:50px;color:#aaa;}
 footer a{color:#00f0ff;text-decoration:none;}
-@media(max-width:768px){.services,.portfolio,.stats-section{flex-direction:column;}header h1{font-size:2em;}}
+@media(max-width:768px){.services,.portfolio,.stats-section,.reviews{flex-direction:column;}header h1{font-size:2em;}}
 </style>
 </head>
 <body>
@@ -89,6 +91,28 @@ Your browser does not support the video tag.
 </div>
 </section>
 
+<!-- Stats Section -->
+<section id="stats">
+<h2>Our Achievements</h2>
+<div class="stats-section">
+<div class="card"><h3>8000+</h3><p>Satisfied Clients</p></div>
+<div class="card"><h3>1200+</h3><p>Websites Delivered</p></div>
+<div class="card"><h3>3500+</h3><p>Videos Edited</p></div>
+</div>
+</section>
+
+<!-- Testimonials / Reviews -->
+<section id="reviews">
+<h2>Client Reviews</h2>
+<div class="reviews">
+<div class="card"><p>"Amazing service, highly recommended!"</p><p>- Ali</p></div>
+<div class="card"><p>"Fast delivery and professional work."</p><p>- Sara</p></div>
+<div class="card"><p>"Creative video editing, loved it!"</p><p>- Hassan</p></div>
+<div class="card"><p>"Website looks great, exactly what I wanted."</p><p>- Fatima</p></div>
+<!-- Add more 20+ reviews as needed -->
+</div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact">
 <h2>Contact Me</h2>
@@ -109,16 +133,6 @@ Your browser does not support the video tag.
 🌐 <a href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a> |  
 📸 <a href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a>
 </p>
-</section>
-
-<!-- Stats Section -->
-<section id="stats">
-<h2>Our Achievements</h2>
-<div class="stats-section">
-<div class="card"><h3>8000+</h3><p>Satisfied Clients</p></div>
-<div class="card"><h3>1200+</h3><p>Websites Delivered</p></div>
-<div class="card"><h3>3500+</h3><p>Videos Edited</p></div>
-</div>
 </section>
 
 <!-- Footer -->
