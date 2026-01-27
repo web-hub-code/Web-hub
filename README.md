@@ -12,28 +12,28 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#0b1120;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
+body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 section{padding:80px 0}
 
 /* NAVIGATION */
-nav{position:fixed;width:100%;top:0;left:0;background:rgba(2,6,23,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;}
+nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;}
 nav .logo{font-size:28px;color:#22c55e;font-weight:700}
-nav ul{display:flex;gap:25px;list-style:none}
+nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
 nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
 nav ul li a:hover{color:#22c55e}
 
 /* HERO */
 .hero{
-background:linear-gradient(to right,rgba(2,6,23,.9),rgba(2,6,23,.6)),
+background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),
 url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover;
 padding:140px 0;text-align:center;animation: fadeIn 2s ease;
 }
 .hero h1{font-size:52px;color:#22c55e;animation: slideIn 1.5s ease;}
 .hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
-.btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block}
-.btn:hover{background:#16a34a;cursor:pointer}
+.btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s}
+.btn:hover{background:#16a34a;cursor:pointer;transform:scale(1.05)}
 
 /* GRID */
 .grid{display:grid;gap:25px}
@@ -43,15 +43,15 @@ padding:140px 0;text-align:center;animation: fadeIn 2s ease;
 
 /* CARDS */
 .card{
-background:#020617;
+background:#1e293b;
 padding:30px;
 border-radius:16px;
 box-shadow:0 10px 25px rgba(0,0,0,.4);
 text-align:center;
-transition:transform .3s;
+transition:transform .3s, box-shadow .3s;
 cursor:pointer;
 }
-.card:hover{transform:translateY(-10px);}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.5);}
 .card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
 
 /* TITLES */
@@ -59,7 +59,8 @@ h2{text-align:center;font-size:38px;margin-bottom:50px}
 .center{text-align:center}
 
 /* IMAGES */
-img{width:100%;border-radius:16px;cursor:pointer;}
+img{width:100%;border-radius:16px;cursor:pointer;transition:.3s}
+img:hover{transform:scale(1.05)}
 
 /* STATS */
 .stats h3{font-size:40px;color:#22c55e}
@@ -67,12 +68,14 @@ img{width:100%;border-radius:16px;cursor:pointer;}
 
 /* FAQ */
 details{
-background:#020617;
+background:#1e293b;
 padding:18px;
 border-radius:12px;
 margin-bottom:10px;
 cursor:pointer;
+transition:.3s
 }
+details:hover{background:#273449;}
 details summary{cursor:pointer;font-weight:600}
 
 /* CONTACT FORM */
@@ -82,11 +85,14 @@ padding:12px;
 border-radius:10px;
 border:none;
 margin-bottom:10px;
+background:#0f172a;
+color:#e5e7eb;
 }
 
 /* FOOTER */
-footer{background:#020617;padding:50px 0;text-align:center}
-.social i{font-size:22px;margin:0 10px;color:#38bdf8}
+footer{background:#1e293b;padding:50px 0;text-align:center}
+.social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
+.social i:hover{transform:scale(1.2)}
 
 /* FLOATING SOCIAL BUTTONS */
 .floating-social {
@@ -121,14 +127,13 @@ footer{background:#020617;padding:50px 0;text-align:center}
 
 /* Back-to-top */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none;}
-#topBtn:hover{background:#16a34a}
+#topBtn:hover{background:#16a34a;transform:scale(1.1)}
 
 /* ABOUT SECTION */
-#about{background:#0a0f1c;padding:80px 0;text-align:center;color:#e5e7eb}
+#about{background:#0f172a;padding:80px 0;text-align:center;color:#e5e7eb}
 #about p{max-width:800px;margin:auto}
 </style>
 </head>
-
 <body>
 
 <!-- NAVIGATION -->
@@ -160,7 +165,7 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <section id="about">
 <div class="container">
 <h2>About Web-Hub</h2>
-<p>Web-Hub is a premium digital solutions company offering modern, innovative, and scalable website development, UI/UX design, SEO optimization, and digital marketing services for businesses worldwide.</p>
+<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. Our goal is to deliver scalable, fast, and visually stunning projects that drive results for every client.</p>
 </div>
 </section>
 
@@ -175,6 +180,8 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
 <div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
 <div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions</p></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data</p></div>
 </div>
 </div>
 </section>
@@ -243,7 +250,7 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
 <details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
 <details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
-<details><summary>Is the contact form secure?</summary><p>Yes, integrated with EmailJS and HTTPS recommended.</p></details>
+<details><summary>Is the contact form secure?</summary><p>Yes, uses default email client, safe & secure.</p></details>
 <details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
 </div>
 </div>
@@ -272,13 +279,14 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <div>
 <h2>Contact Us</h2>
 <p>Email: rock.earn92@gmail.com</p>
-<p>Use the form to send message directly to Email.</p>
+<p>Click send and your default email client will open with message ready.</p>
 </div>
-<form class="card" id="contact-form">
-<input type="text" name="user_name" placeholder="Your Name" required>
-<input type="email" name="user_email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-<br>
+
+<!-- Direct Email Form -->
+<form class="card" onsubmit="sendEmail(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" rows="5" placeholder="Your Message" required></textarea>
 <button class="btn" type="submit">Send Message</button>
 </form>
 </div>
@@ -300,33 +308,70 @@ footer{background:#020617;padding:50px 0;text-align:center}
 
 <!-- FLOATING SOCIAL -->
 <div class="floating-social">
-  <a href="mailto:rock.earn92@gmail.com" class="email" title="Email"><i class="fa-solid fa-envelope"></i></a>
-  <a href="https://www.instagram.com/mr_nazim073" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="mailto:rock.earn92@gmail.com" class="email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://www.instagram.com/mr_nazim073" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
 // Portfolio slider
-$('.portfolio-slider').slick({slidesToShow:3,slidesToScroll:1,autoplay:true,autoplaySpeed:2000,dots:true,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
-// Testimonial slider
-$('.testimonial-slider').slick({slidesToShow:2,slidesToScroll:1,autoplay:true,autoplaySpeed:2500,dots:true,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
-// Counters
-$('.counter').each(function(){$(this).prop('Counter',0).animate({Counter:$(this).text()},{duration:2000,easing:'swing',step:function(now){$(this).text(Math.ceil(now));}});});
-// EmailJS Contact
-emailjs.init("YOUR_USER_ID"); // replace with your EmailJS userID
-document.getElementById('contact-form').addEventListener('submit',function(event){
-event.preventDefault();
-emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',this)
-.then(function(){alert("Message sent successfully!");},function(err){alert("Error sending message: "+JSON.stringify(err));});
+$('.portfolio-slider').slick({
+slidesToShow:3,
+slidesToScroll:1,
+autoplay:true,
+autoplaySpeed:2000,
+dots:true,
+responsive:[{breakpoint:768,settings:{slidesToShow:1}}]
 });
-// Back to top
-window.onscroll=function(){scrollFunction()};
-function scrollFunction(){document.getElementById("topBtn").style.display=(document.body.scrollTop>300||document.documentElement.scrollTop>300)?"block":"none";}
-function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0;}
-</script>
 
+// Testimonial slider
+$('.testimonial-slider').slick({
+slidesToShow:2,
+slidesToScroll:1,
+autoplay:true,
+autoplaySpeed:2500,
+dots:true,
+responsive:[{breakpoint:768,settings:{slidesToShow:1}}]
+});
+
+// Counters
+$('.counter').each(function(){
+$(this).prop('Counter',0).animate({Counter:$(this).text()},{duration:2000,easing:'swing',step:function(now){$(this).text(Math.ceil(now));}});
+});
+
+// Direct Email JS
+function sendEmail(event){
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Subject aur body encode karte hain
+    const subject = encodeURIComponent(`Message from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+    // Mailto link
+    window.location.href = `mailto:rock.earn92@gmail.com?subject=${subject}&body=${body}`;
+}
+
+// Back-to-top button
+const topBtn = document.getElementById("topBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
 </html>
