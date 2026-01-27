@@ -2,9 +2,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khan Studio | Premium Neon Digital Services</title>
-<meta name="description" content="Khan Studio - Professional website development, video editing, thumbnails & branding services with premium neon design.">
-<meta name="keywords" content="website development, video editing, thumbnail design, branding, neon digital services">
+<title>Khan Studio | Premium Digital Services</title>
+<meta name="description" content="Khan Studio - Professional website development, video editing, thumbnails & branding services with neon effects.">
+<meta name="keywords" content="website development, video editing, thumbnail design, branding, digital services">
 <meta name="author" content="Khan Studio">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="google8073cfacc72a7cb3">
@@ -13,24 +13,24 @@
 <style>
 /* Reset */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{background:linear-gradient(135deg,#0a0a0a,#1a1a1a);color:#fff;scroll-behavior:smooth;}
+body{background: linear-gradient(120deg,#fdfdfd,#e6f0ff); color:#111; scroll-behavior:smooth;}
 
 /* General */
-a{text-decoration:none;color:#00f0ff;}
+a{text-decoration:none;color:#1a73e8;}
 h1,h2,h3{font-weight:700;text-transform:uppercase;}
 section{padding:50px 20px;max-width:1200px;margin:auto;}
-h2{color:#00f0ff;text-align:center;margin-bottom:30px;position:relative;}
-h2::after{content:"";width:60px;height:3px;background:#ff0040;display:block;margin:10px auto;border-radius:2px;}
+h2{color:#1a73e8;text-align:center;margin-bottom:30px;position:relative;}
+h2::after{content:"";width:60px;height:3px;background:#ff4081;display:block;margin:10px auto;border-radius:2px;}
 
 /* Hero */
-header{position:relative;height:70vh;overflow:hidden;background:#000;}
-header video{width:100%;height:100%;object-fit:cover;opacity:0.7;}
-header h1{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3em;color:#00ffff;text-shadow:0 0 15px #ff0040,0 0 30px #00f0ff,0 0 60px #ff0040;animation:fadeInText 2s ease-in-out;}
+header{position:relative;height:70vh;overflow:hidden;background:#f0f0f0;border-radius:10px;}
+header video{width:100%;height:100%;object-fit:cover;opacity:0.7;border-radius:10px;}
+header h1{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3em;color:#ff4081;text-shadow:0 0 15px #1a73e8,0 0 30px #ff4081,0 0 60px #1a73e8;animation:fadeInText 2s ease-in-out;}
 @keyframes fadeInText{0%{opacity:0;transform:translate(-50%,-60%);}100%{opacity:1;transform:translate(-50%,-50%);}}
 
 /* Cards */
-.card{background:#111;padding:20px;border-radius:10px;flex:1 1 250px;text-align:center;box-shadow:0 0 15px #00f0ff;transition:0.3s;}
-.card:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 30px #ff0040,0 0 60px #00ffff;}
+.card{background:#ffffff;padding:20px;border-radius:10px;flex:1 1 250px;text-align:center;box-shadow:0 0 10px rgba(26,115,232,0.3);transition:0.3s;}
+.card:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 20px #ff4081,0 0 40px #1a73e8;}
 .card img{max-width:100%;border-radius:10px;}
 
 /* Layouts */
@@ -38,23 +38,23 @@ header h1{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font
 
 /* Form */
 form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
-input,select,textarea{padding:10px;border-radius:5px;border:none;background:#222;color:#fff;}
-input::placeholder,textarea::placeholder{color:#aaa;}
-button{padding:15px;border:none;border-radius:5px;background:#ff0040;color:#fff;font-weight:bold;cursor:pointer;transition:0.3s;text-transform:uppercase;box-shadow:0 0 10px #00ffff;}
-button:hover{background:#00ffff;color:#000;box-shadow:0 0 15px #ff0040,0 0 30px #00ffff;}
+input,select,textarea{padding:10px;border-radius:5px;border:1px solid #ccc;background:#fff;color:#111;}
+input::placeholder,textarea::placeholder{color:#888;}
+button{padding:15px;border:none;border-radius:5px;background:#ff4081;color:#fff;font-weight:bold;cursor:pointer;transition:0.3s;text-transform:uppercase;box-shadow:0 0 5px #1a73e8;}
+button:hover{background:#1a73e8;color:#fff;box-shadow:0 0 15px #ff4081,0 0 30px #1a73e8;}
 
 /* Footer */
-footer{background:#111;padding:30px 20px;text-align:center;margin-top:50px;color:#aaa;}
-footer a{color:#00ffff;text-decoration:none;transition:0.3s;}
-footer a:hover{color:#ff0040;}
+footer{background:#f0f0f0;padding:30px 20px;text-align:center;margin-top:50px;color:#111;}
+footer a{color:#1a73e8;text-decoration:none;transition:0.3s;}
+footer a:hover{color:#ff4081;}
 
 /* Back to top button */
-#topBtn{position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#00f0ff;color:#000;border:none;border-radius:5px;cursor:pointer;display:none;z-index:1000;transition:0.3s;}
-#topBtn:hover{background:#ff0040;color:#fff;}
+#topBtn{position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#1a73e8;color:#fff;border:none;border-radius:5px;cursor:pointer;display:none;z-index:1000;transition:0.3s;}
+#topBtn:hover{background:#ff4081;color:#fff;}
 
 /* FAQ Accordion */
-.faq-card{background:#111;padding:15px;border-radius:10px;width:100%;cursor:pointer;box-shadow:0 0 15px #00f0ff;transition:0.3s;margin-bottom:10px;}
-.faq-card:hover{box-shadow:0 0 30px #ff0040,0 0 60px #00ffff;}
+.faq-card{background:#ffffff;padding:15px;border-radius:10px;width:100%;cursor:pointer;box-shadow:0 0 10px rgba(26,115,232,0.3);transition:0.3s;margin-bottom:10px;}
+.faq-card:hover{box-shadow:0 0 20px #ff4081,0 0 40px #1a73e8;}
 .faq-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease;}
 .faq-card.active .faq-content{max-height:200px;padding-top:10px;}
 
@@ -76,7 +76,7 @@ Your browser does not support the video tag.
 <!-- About -->
 <section id="about">
 <h2>About Me</h2>
-<p style="text-align:center;">Professional digital services including website development, video editing, thumbnail design, and branding. Trusted by thousands of clients worldwide. Premium neon design & animations.</p>
+<p style="text-align:center;">Professional digital services including website development, video editing, thumbnail design, and branding. Trusted by thousands of clients worldwide. Premium neon animations.</p>
 </section>
 
 <!-- Services -->
@@ -101,7 +101,7 @@ Your browser does not support the video tag.
 <div class="card">
 <img src="assets/images/branding1.jpg" alt="Branding">
 <h3>Branding</h3>
-<p>Logo, social media branding & complete digital identity.</p>
+<p>Logo, social media branding & digital identity.</p>
 </div>
 <div class="card">
 <img src="assets/images/seo.jpg" alt="SEO Services">
@@ -124,8 +124,6 @@ Your browser does not support the video tag.
 <div class="card"><img src="assets/images/web2.jpg" alt="Web Project 2"><p>Website Example 2</p></div>
 <div class="card"><img src="assets/images/video1.jpg" alt="Video Project 1"><p>Video Editing 1</p></div>
 <div class="card"><img src="assets/images/video2.jpg" alt="Video Project 2"><p>Video Editing 2</p></div>
-<div class="card"><img src="assets/images/thumbnail2.jpg" alt="Thumbnail Project 2"><p>Thumbnail 2</p></div>
-<div class="card"><img src="assets/images/branding2.jpg" alt="Branding Project 2"><p>Branding 2</p></div>
 </div>
 </section>
 
@@ -148,7 +146,6 @@ Your browser does not support the video tag.
 <div class="card"><p>"Fast delivery and professional work."</p><p>- Sara</p></div>
 <div class="card"><p>"Creative video editing, loved it!"</p><p>- Hassan</p></div>
 <div class="card"><p>"Website looks great, exactly what I wanted."</p><p>- Fatima</p></div>
-<!-- More reviews can be added -->
 </div>
 </section>
 
