@@ -2,9 +2,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khan Studio | Premium Neon Digital Hub</title>
-<meta name="description" content="Khan Studio - Premium Neon Digital Services: Website Development, Video Editing, Thumbnails, Branding, SEO & Social Media. Modern layout with glowing effects.">
-<meta property="og:title" content="Khan Studio | Premium Neon Digital Hub">
+<title>Khan Studio | Neon Digital Hub</title>
+<meta name="description" content="Khan Studio - Premium Neon Digital Services: Websites, Video Editing, Thumbnails, Branding, SEO & Social Media Marketing.">
+<meta property="og:title" content="Khan Studio | Neon Digital Hub">
 <meta property="og:description" content="Professional Neon Digital Services: Websites, Video Editing, Thumbnails, Branding, SEO & Social Media.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://web-hub-code.github.io/Web-hub/">
@@ -13,9 +13,14 @@
 <style>
 /* ===== General Reset ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;scroll-behavior:smooth;}
-body{background:linear-gradient(135deg,#0f0f0f,#120028,#1a0028,#000000);color:#fff;transition:0.5s;}
+body{background:linear-gradient(135deg,#0f0f0f,#120028,#1a0028,#000000);color:#fff;transition:0.5s;overflow-x:hidden;}
 a{text-decoration:none;color:#00ffff;transition:0.3s;}
 a:hover{color:#ff0040;}
+
+/* ===== Preloader ===== */
+#preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;display:flex;justify-content:center;align-items:center;z-index:10000;}
+#preloader .loader{width:50px;height:50px;border:5px solid #ff0040;border-top:5px solid #00ffff;border-radius:50%;animation:spin 1s linear infinite;}
+@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
 
 /* ===== Header / Hero ===== */
 header{position:relative;height:80vh;display:flex;justify-content:center;align-items:center;text-align:center;overflow:hidden;}
@@ -80,6 +85,9 @@ footer{background:rgba(0,0,0,0.05);padding:30px 20px;text-align:center;color:#ff
 </style>
 </head>
 <body>
+
+<!-- ===== Preloader ===== -->
+<div id="preloader"><div class="loader"></div></div>
 
 <!-- ===== Header / Hero ===== -->
 <header>
@@ -156,10 +164,10 @@ Khan Studio provides **premium neon digital services** including Website Develop
 <button class="slider-btn prev">&#10094;</button>
 <div class="slider-track">
 <!-- Example Reviews -->
-<div class="slider-card" style="display:flex;align-items:center;"><img src="https://picsum.photos/60/60?random=1" class="photo-circle"><div><p>"Excellent service!"</p><p>- Ali</p></div></div>
-<div class="slider-card" style="display:flex;align-items:center;"><img src="https://picsum.photos/60/60?random=2" class="photo-circle"><div><p>"Creative designs and edits!"</p><p>- Sara</p></div></div>
-<div class="slider-card" style="display:flex;align-items:center;"><img src="https://picsum.photos/60/60?random=3" class="photo-circle"><div><p>"Fast and professional!"</p><p>- Hassan</p></div></div>
-<!-- Add up to 25 reviews similarly -->
+<div class="slider-card" style="display:flex;align-items:center;"><img src="https://picsum.photos/60/60?random=1" class="photo-circle"><div><p>"Excellent service!"</p><p>- Ali ⭐⭐⭐⭐⭐</p></div></div>
+<div class="slider-card" style="display:flex;align-items:center;"><img src="https://picsum.photos/60/60?random=2" class="photo-circle"><div><p>"Creative designs and edits!"</p><p>- Sara ⭐⭐⭐⭐⭐</p></div></div>
+<div class="slider-card" style="display:flex;align-items:center;"><img src="https://picsum.photos/60/60?random=3" class="photo-circle"><div><p>"Fast and professional!"</p><p>- Hassan ⭐⭐⭐⭐⭐</p></div></div>
+<!-- Add more reviews similarly up to 25 -->
 </div>
 <button class="slider-btn next">&#10095;</button>
 </div>
@@ -199,6 +207,9 @@ Khan Studio provides **premium neon digital services** including Website Develop
 
 <!-- ===== JS ===== -->
 <script>
+// Preloader
+window.addEventListener('load',()=>{document.getElementById('preloader').style.display='none';});
+
 // FAQ toggle
 const faqCards=document.querySelectorAll('.faq-card');
 faqCards.forEach(card=>{card.addEventListener('click',()=>{let content=card.querySelector('.faq-content');content.style.maxHeight=content.style.maxHeight?null:content.scrollHeight+"px";});});
