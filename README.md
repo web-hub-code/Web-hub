@@ -2,11 +2,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mr Khan Pro Services | Neon Premium</title>
-<meta name="description" content="Professional website, video editing, thumbnails & digital services by Mr Khan. Trusted by thousands of clients worldwide.">
-<meta name="keywords" content="website development, video editing, thumbnail design, branding, digital services">
-<meta name="author" content="Mr Khan Pro Services">
+<title>Khan Studio | Premium Neon Digital Services</title>
+<meta name="description" content="Khan Studio - Professional website development, video editing, thumbnails & branding services with premium neon design.">
+<meta name="keywords" content="website development, video editing, thumbnail design, branding, neon digital services">
+<meta name="author" content="Khan Studio">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="google8073cfacc72a7cb3">
 
@@ -35,7 +34,7 @@ header h1{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font
 .card img{max-width:100%;border-radius:10px;}
 
 /* Layouts */
-.services,.portfolio,.stats-section,.reviews{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+.services,.portfolio,.stats-section,.reviews,.faq-section{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
 
 /* Form */
 form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
@@ -53,8 +52,14 @@ footer a:hover{color:#ff0040;}
 #topBtn{position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#00f0ff;color:#000;border:none;border-radius:5px;cursor:pointer;display:none;z-index:1000;transition:0.3s;}
 #topBtn:hover{background:#ff0040;color:#fff;}
 
+/* FAQ Accordion */
+.faq-card{background:#111;padding:15px;border-radius:10px;width:100%;cursor:pointer;box-shadow:0 0 15px #00f0ff;transition:0.3s;margin-bottom:10px;}
+.faq-card:hover{box-shadow:0 0 30px #ff0040,0 0 60px #00ffff;}
+.faq-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease;}
+.faq-card.active .faq-content{max-height:200px;padding-top:10px;}
+
 /* Responsive */
-@media(max-width:768px){.services,.portfolio,.stats-section,.reviews{flex-direction:column;}header h1{font-size:2em;}}
+@media(max-width:768px){.services,.portfolio,.stats-section,.reviews,.faq-section{flex-direction:column;}header h1{font-size:2em;}}
 </style>
 </head>
 <body>
@@ -65,7 +70,7 @@ footer a:hover{color:#ff0040;}
 <source src="assets/video/hero.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-<h1>Mr Khan Pro Services</h1>
+<h1>Khan Studio</h1>
 </header>
 
 <!-- About -->
@@ -98,6 +103,16 @@ Your browser does not support the video tag.
 <h3>Branding</h3>
 <p>Logo, social media branding & complete digital identity.</p>
 </div>
+<div class="card">
+<img src="assets/images/seo.jpg" alt="SEO Services">
+<h3>SEO Optimization</h3>
+<p>Boost your website's visibility & ranking on Google.</p>
+</div>
+<div class="card">
+<img src="assets/images/social.jpg" alt="Social Media Management">
+<h3>Social Media Management</h3>
+<p>Grow & manage your online presence effectively.</p>
+</div>
 </div>
 </section>
 
@@ -109,6 +124,8 @@ Your browser does not support the video tag.
 <div class="card"><img src="assets/images/web2.jpg" alt="Web Project 2"><p>Website Example 2</p></div>
 <div class="card"><img src="assets/images/video1.jpg" alt="Video Project 1"><p>Video Editing 1</p></div>
 <div class="card"><img src="assets/images/video2.jpg" alt="Video Project 2"><p>Video Editing 2</p></div>
+<div class="card"><img src="assets/images/thumbnail2.jpg" alt="Thumbnail Project 2"><p>Thumbnail 2</p></div>
+<div class="card"><img src="assets/images/branding2.jpg" alt="Branding Project 2"><p>Branding 2</p></div>
 </div>
 </section>
 
@@ -119,6 +136,7 @@ Your browser does not support the video tag.
 <div class="card"><h3>8000+</h3><p>Satisfied Clients</p></div>
 <div class="card"><h3>1200+</h3><p>Websites Delivered</p></div>
 <div class="card"><h3>3500+</h3><p>Videos Edited</p></div>
+<div class="card"><h3>1500+</h3><p>Thumbnails Designed</p></div>
 </div>
 </section>
 
@@ -130,24 +148,26 @@ Your browser does not support the video tag.
 <div class="card"><p>"Fast delivery and professional work."</p><p>- Sara</p></div>
 <div class="card"><p>"Creative video editing, loved it!"</p><p>- Hassan</p></div>
 <div class="card"><p>"Website looks great, exactly what I wanted."</p><p>- Fatima</p></div>
-<!-- Add more reviews here -->
+<!-- More reviews can be added -->
 </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq">
 <h2>FAQ</h2>
-<div class="card">
+<div class="faq-section">
+<div class="faq-card">
 <h3>How can I order a service?</h3>
-<p>You can fill the contact form or reach out via email or social media.</p>
+<div class="faq-content"><p>Fill the contact form or reach out via email/social links.</p></div>
 </div>
-<div class="card">
+<div class="faq-card">
 <h3>How long does delivery take?</h3>
-<p>Delivery depends on service complexity, usually 1-7 days.</p>
+<div class="faq-content"><p>Depends on service, usually 1-7 days.</p></div>
 </div>
-<div class="card">
+<div class="faq-card">
 <h3>Do you provide revisions?</h3>
-<p>Yes, revisions are included until client satisfaction.</p>
+<div class="faq-content"><p>Yes, until client satisfaction is achieved.</p></div>
+</div>
 </div>
 </section>
 
@@ -162,6 +182,8 @@ Your browser does not support the video tag.
 <option>Video Editing</option>
 <option>Thumbnail Design</option>
 <option>Branding</option>
+<option>SEO Optimization</option>
+<option>Social Media Management</option>
 <option>Other</option>
 </select>
 <textarea name="Message" placeholder="Describe your project" required></textarea>
@@ -176,15 +198,23 @@ Your browser does not support the video tag.
 
 <!-- Footer -->
 <footer>
-<h3>Mr Khan Pro Services</h3>
+<h3>Khan Studio</h3>
 <p>Professional digital services including websites, video editing, thumbnails & branding. Trusted by thousands of clients worldwide.</p>
 <p>📧 <a href="mailto:rock.earn92@gmail.com">rock.earn92@gmail.com</a></p>
 <p>🌐 <a href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a> | 📸 <a href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a></p>
-<p>© 2026 Mr Khan Pro Services. All Rights Reserved.</p>
+<p>© 2026 Khan Studio. All Rights Reserved.</p>
 </footer>
 
 <!-- Back to Top Button -->
 <button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="topBtn">Top</button>
+
+<script>
+// FAQ toggle
+const faqCards = document.querySelectorAll('.faq-card');
+faqCards.forEach(card => {
+card.addEventListener('click', ()=>{card.classList.toggle('active');});
+});
+</script>
 
 </body>
 </html>
