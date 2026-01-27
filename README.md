@@ -12,9 +12,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* General Reset */
+/* Reset */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{background:linear-gradient(135deg,#000000,#0a0a0a);color:#fff;scroll-behavior:smooth;}
+body{background:linear-gradient(135deg,#0a0a0a,#1a1a1a);color:#fff;scroll-behavior:smooth;}
+
+/* General */
 a{text-decoration:none;color:#00f0ff;}
 h1,h2,h3{font-weight:700;text-transform:uppercase;}
 section{padding:50px 20px;max-width:1200px;margin:auto;}
@@ -30,12 +32,10 @@ header h1{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font
 /* Cards */
 .card{background:#111;padding:20px;border-radius:10px;flex:1 1 250px;text-align:center;box-shadow:0 0 15px #00f0ff;transition:0.3s;}
 .card:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 30px #ff0040,0 0 60px #00ffff;}
+.card img{max-width:100%;border-radius:10px;}
 
 /* Layouts */
 .services,.portfolio,.stats-section,.reviews{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
-
-/* Images */
-.card img{max-width:100%;border-radius:10px;}
 
 /* Form */
 form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
@@ -48,6 +48,10 @@ button:hover{background:#00ffff;color:#000;box-shadow:0 0 15px #ff0040,0 0 30px 
 footer{background:#111;padding:30px 20px;text-align:center;margin-top:50px;color:#aaa;}
 footer a{color:#00ffff;text-decoration:none;transition:0.3s;}
 footer a:hover{color:#ff0040;}
+
+/* Back to top button */
+#topBtn{position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#00f0ff;color:#000;border:none;border-radius:5px;cursor:pointer;display:none;z-index:1000;transition:0.3s;}
+#topBtn:hover{background:#ff0040;color:#fff;}
 
 /* Responsive */
 @media(max-width:768px){.services,.portfolio,.stats-section,.reviews{flex-direction:column;}header h1{font-size:2em;}}
@@ -130,6 +134,23 @@ Your browser does not support the video tag.
 </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+<h2>FAQ</h2>
+<div class="card">
+<h3>How can I order a service?</h3>
+<p>You can fill the contact form or reach out via email or social media.</p>
+</div>
+<div class="card">
+<h3>How long does delivery take?</h3>
+<p>Delivery depends on service complexity, usually 1-7 days.</p>
+</div>
+<div class="card">
+<h3>Do you provide revisions?</h3>
+<p>Yes, revisions are included until client satisfaction.</p>
+</div>
+</section>
+
 <!-- Contact -->
 <section id="contact">
 <h2>Contact Me</h2>
@@ -161,6 +182,9 @@ Your browser does not support the video tag.
 <p>🌐 <a href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a> | 📸 <a href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a></p>
 <p>© 2026 Mr Khan Pro Services. All Rights Reserved.</p>
 </footer>
+
+<!-- Back to Top Button -->
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="topBtn">Top</button>
 
 </body>
 </html>
