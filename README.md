@@ -4,6 +4,7 @@
 <title>Web-Hub | Pro Digital Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
@@ -11,23 +12,28 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#0b1120;color:#e5e7eb;line-height:1.6}
+body{background:#0b1120;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 section{padding:80px 0}
+
+/* NAVIGATION */
+nav{position:fixed;width:100%;top:0;left:0;background:rgba(2,6,23,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;}
+nav .logo{font-size:28px;color:#22c55e;font-weight:700}
+nav ul{display:flex;gap:25px;list-style:none}
+nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
+nav ul li a:hover{color:#22c55e}
 
 /* HERO */
 .hero{
 background:linear-gradient(to right,rgba(2,6,23,.9),rgba(2,6,23,.6)),
 url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover;
-padding:120px 0;
-text-align:center;
-animation: fadeIn 2s ease;
+padding:140px 0;text-align:center;animation: fadeIn 2s ease;
 }
 .hero h1{font-size:52px;color:#22c55e;animation: slideIn 1.5s ease;}
 .hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
 .btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block}
-.btn:hover{background:#16a34a}
+.btn:hover{background:#16a34a;cursor:pointer}
 
 /* GRID */
 .grid{display:grid;gap:25px}
@@ -43,6 +49,7 @@ border-radius:16px;
 box-shadow:0 10px 25px rgba(0,0,0,.4);
 text-align:center;
 transition:transform .3s;
+cursor:pointer;
 }
 .card:hover{transform:translateY(-10px);}
 .card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
@@ -52,7 +59,7 @@ h2{text-align:center;font-size:38px;margin-bottom:50px}
 .center{text-align:center}
 
 /* IMAGES */
-img{width:100%;border-radius:16px;}
+img{width:100%;border-radius:16px;cursor:pointer;}
 
 /* STATS */
 .stats h3{font-size:40px;color:#22c55e}
@@ -64,6 +71,7 @@ background:#020617;
 padding:18px;
 border-radius:12px;
 margin-bottom:10px;
+cursor:pointer;
 }
 details summary{cursor:pointer;font-weight:600}
 
@@ -114,13 +122,33 @@ footer{background:#020617;padding:50px 0;text-align:center}
 /* Back-to-top */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none;}
 #topBtn:hover{background:#16a34a}
+
+/* ABOUT SECTION */
+#about{background:#0a0f1c;padding:80px 0;text-align:center;color:#e5e7eb}
+#about p{max-width:800px;margin:auto}
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+<div class="logo">Web-Hub</div>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
 <!-- HERO -->
-<section class="hero">
+<section id="hero" class="hero">
 <div class="container">
 <h1>Web-Hub</h1>
 <p>Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions</p>
@@ -128,8 +156,16 @@ footer{background:#020617;padding:50px 0;text-align:center}
 </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>About Web-Hub</h2>
+<p>Web-Hub is a premium digital solutions company offering modern, innovative, and scalable website development, UI/UX design, SEO optimization, and digital marketing services for businesses worldwide.</p>
+</div>
+</section>
+
 <!-- SERVICES -->
-<section>
+<section id="services">
 <div class="container">
 <h2>Our Services</h2>
 <div class="grid grid-4">
@@ -143,8 +179,8 @@ footer{background:#020617;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- PORTFOLIO SLIDER -->
-<section>
+<!-- PORTFOLIO -->
+<section id="portfolio">
 <div class="container">
 <h2>Our Work</h2>
 <div class="portfolio-slider">
@@ -158,8 +194,21 @@ footer{background:#020617;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- TESTIMONIALS SLIDER -->
-<section>
+<!-- PRICING -->
+<section id="pricing">
+<div class="container">
+<h2>Pricing Plans</h2>
+<div class="grid grid-3">
+<div class="card"><h3>Basic</h3><p>$99 / month</p><button class="btn">Get Started</button></div>
+<div class="card"><h3>Standard</h3><p>$199 / month</p><button class="btn">Get Started</button></div>
+<div class="card"><h3>Premium</h3><p>$299 / month</p><button class="btn">Get Started</button></div>
+<div class="card"><h3>Enterprise</h3><p>$499 / month</p><button class="btn">Get Started</button></div>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
 <div class="container">
 <h2>Client Reviews</h2>
 <div class="testimonial-slider">
@@ -184,7 +233,7 @@ footer{background:#020617;padding:50px 0;text-align:center}
 </section>
 
 <!-- FAQ -->
-<section>
+<section id="faq">
 <div class="container">
 <h2>FAQs</h2>
 <div class="grid grid-2">
@@ -200,8 +249,8 @@ footer{background:#020617;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- TECHNOLOGIES / SKILLS -->
-<section>
+<!-- TECHNOLOGIES -->
+<section id="technologies">
 <div class="container">
 <h2>Technologies & Tools</h2>
 <div class="grid grid-4 center">
@@ -249,7 +298,7 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <p>© 2026 Web-Hub. All Rights Reserved.</p>
 </footer>
 
-<!-- FLOATING SOCIAL BUTTONS -->
+<!-- FLOATING SOCIAL -->
 <div class="floating-social">
   <a href="mailto:rock.earn92@gmail.com" class="email" title="Email"><i class="fa-solid fa-envelope"></i></a>
   <a href="https://www.instagram.com/mr_nazim073" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -265,10 +314,10 @@ $('.portfolio-slider').slick({slidesToShow:3,slidesToScroll:1,autoplay:true,auto
 // Testimonial slider
 $('.testimonial-slider').slick({slidesToShow:2,slidesToScroll:1,autoplay:true,autoplaySpeed:2500,dots:true,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
 // Counters
-$('.counter').each(function(){$(this).prop('Counter',0).animate({Counter:$(this).text()}, {duration:2000, easing:'swing', step:function(now){$(this).text(Math.ceil(now));}});});
+$('.counter').each(function(){$(this).prop('Counter',0).animate({Counter:$(this).text()},{duration:2000,easing:'swing',step:function(now){$(this).text(Math.ceil(now));}});});
 // EmailJS Contact
 emailjs.init("YOUR_USER_ID"); // replace with your EmailJS userID
-document.getElementById('contact-form').addEventListener('submit', function(event){
+document.getElementById('contact-form').addEventListener('submit',function(event){
 event.preventDefault();
 emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',this)
 .then(function(){alert("Message sent successfully!");},function(err){alert("Error sending message: "+JSON.stringify(err));});
@@ -278,5 +327,6 @@ window.onscroll=function(){scrollFunction()};
 function scrollFunction(){document.getElementById("topBtn").style.display=(document.body.scrollTop>300||document.documentElement.scrollTop>300)?"block":"none";}
 function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0;}
 </script>
+
 </body>
 </html>
