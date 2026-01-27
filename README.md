@@ -2,9 +2,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khan Studio | Premium Digital Services</title>
-<meta name="description" content="Khan Studio - Professional digital services including website development, video editing, thumbnail design, branding, and more. Premium neon animated interface.">
-<meta name="keywords" content="digital services, website development, video editing, branding, thumbnails, neon, premium">
+<title>Khan Studio | Premium Neon Digital Services</title>
+<meta name="description" content="Khan Studio - Website Development, Video Editing, Branding, Thumbnails, SEO & Social Media Services. Neon premium modern interface.">
+<meta name="keywords" content="digital services, website development, video editing, branding, thumbnails, neon, modern">
 <meta name="author" content="Khan Studio">
 <meta name="google-site-verification" content="google8073cfacc72a7cb3">
 
@@ -13,23 +13,25 @@
 <style>
 /* Reset & Body */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{background: linear-gradient(135deg,#f0f0f0,#1a1a1a,#ff0040,#0040ff); color:#fff; scroll-behavior:smooth; transition:0.5s;}
+body{background: linear-gradient(135deg,#0f0f0f,#120028,#1a0028,#000000); color:#fff; scroll-behavior:smooth; transition:0.5s;}
 
 /* Neon Headings */
 h1,h2,h3{font-weight:700;text-transform:uppercase;text-shadow:0 0 5px #ff0040,0 0 10px #0040ff,0 0 20px #ff0040;}
 h2{color:#00ffff;text-align:center;margin-bottom:30px;position:relative;}
 h2::after{content:"";width:60px;height:3px;background:#ff0040;display:block;margin:10px auto;border-radius:2px;}
 
-/* Hero */
-header{position:relative;height:70vh;overflow:hidden;border-radius:15px;display:flex;justify-content:center;align-items:center;text-align:center;}
-header::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,0,0,0.3),rgba(255,0,64,0.2),rgba(0,64,255,0.2)); z-index:1;}
-header h1{position:relative;z-index:2;font-size:3em;animation:neonPulse 2s ease-in-out infinite;}
-
-/* Neon Pulse Animation */
+/* Hero Section */
+header{position:relative;height:70vh;overflow:hidden;display:flex;justify-content:center;align-items:center;text-align:center;}
+header::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle,rgba(255,0,64,0.2),rgba(0,64,255,0.2),rgba(0,0,0,0.8)); z-index:1;animation:moveBackground 30s linear infinite;}
+header h1{position:relative;z-index:2;font-size:3em;animation:neonPulse 2s ease-in-out infinite;text-align:center;}
 @keyframes neonPulse{
 0%{text-shadow:0 0 5px #ff0040,0 0 10px #0040ff,0 0 20px #ff0040;}
 50%{text-shadow:0 0 15px #ff0040,0 0 30px #0040ff,0 0 60px #ff0040;}
 100%{text-shadow:0 0 5px #ff0040,0 0 10px #0040ff,0 0 20px #ff0040;}
+}
+@keyframes moveBackground{
+0%{background-position:0 0;}
+100%{background-position:1000px 1000px;}
 }
 
 /* Cards */
@@ -45,8 +47,11 @@ button:hover{background:#00ffff;color:#000;box-shadow:0 0 15px #ff0040,0 0 30px 
 
 /* Form */
 form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
-input,select,textarea{padding:10px;border-radius:5px;border:1px solid #ccc;background:#fff;color:#111;}
+input,select,textarea{padding:10px;border-radius:5px;border:1px solid #ccc;background:#111;color:#fff;}
 input::placeholder,textarea::placeholder{color:#888;}
+
+/* Portfolio Review Photos */
+.photo-circle{width:60px;height:60px;border-radius:50%;border:3px solid #00ffff;margin-right:10px;object-fit:cover;}
 
 /* Footer */
 footer{background: rgba(0,0,0,0.05); padding:30px 20px;text-align:center;color:#fff;}
@@ -78,7 +83,7 @@ footer a:hover{color:#ff0040;}
 <section id="about">
 <h2>About Khan Studio</h2>
 <p style="text-align:left;">
-Khan Studio is a leading digital service provider with a focus on **website development, video editing, thumbnail design, branding, SEO optimization, and social media management**. Our goal is to deliver **premium digital solutions** with neon-animated interfaces for businesses, content creators, and professionals worldwide. We focus on **speed, quality, innovation, and client satisfaction**.
+Khan Studio is a **premium digital service provider** delivering Website Development, Video Editing, Branding, Thumbnails, SEO & Social Media services. Our **goal** is to give every client a **modern, professional, and neon-glowing digital experience**. We focus on speed, quality, innovation, and 100% client satisfaction.
 </p>
 </section>
 
@@ -88,23 +93,23 @@ Khan Studio is a leading digital service provider with a focus on **website deve
 <div class="services">
 <div class="card">
 <h3>Website Development</h3>
-<p>Create **responsive, fast, and modern websites** with custom UI/UX, e-commerce support, blogs, portfolios, and full SEO optimization. We ensure **secure, scalable, and reliable websites** for clients of all industries.</p>
+<p>Responsive, fast, modern websites with custom UI/UX, e-commerce support, SEO optimization, and secure architecture for businesses, portfolios, and blogs.</p>
 </div>
 <div class="card">
 <h3>Video Editing</h3>
-<p>Professional video editing including **slow motion, fast motion, color grading, transitions, intros/outros, subtitles, and special effects**. We handle YouTube, reels, short films, ads, and social media campaigns with creative precision.</p>
+<p>Professional edits including color grading, effects, transitions, intros/outros, subtitles, and YouTube/Reels/Ads videos.</p>
 </div>
 <div class="card">
-<h3>Thumbnail & Graphics Design</h3>
-<p>Design **eye-catching thumbnails, banners, logos, social media graphics**, and promotional content. Our designs maximize **click-through rates, engagement, and brand identity**.</p>
+<h3>Thumbnail & Graphics</h3>
+<p>Eye-catching thumbnails, banners, logos, social media graphics to maximize engagement and brand recognition.</p>
 </div>
 <div class="card">
 <h3>Branding & Marketing</h3>
-<p>Build complete branding solutions including **logos, brand kits, social media branding**, and marketing creatives. Our strategy enhances your **digital presence and recognition** across platforms.</p>
+<p>Complete branding solutions: logos, brand kits, social media identity, and marketing creatives to enhance digital presence.</p>
 </div>
 <div class="card">
 <h3>SEO & Social Media</h3>
-<p>Improve your **search engine visibility and social media engagement** with advanced SEO strategies, content optimization, and social media management services.</p>
+<p>Improve search engine visibility and social engagement with content optimization, SEO strategies, and social media management.</p>
 </div>
 </div>
 </section>
@@ -115,15 +120,15 @@ Khan Studio is a leading digital service provider with a focus on **website deve
 <div class="portfolio">
 <div class="card">
 <h3>Website Projects</h3>
-<p>Delivered multiple responsive websites with modern UI/UX, e-commerce, and blogs for various clients worldwide.</p>
+<p>Delivered multiple responsive websites with modern UI/UX, e-commerce, and blogs worldwide.</p>
 </div>
 <div class="card">
 <h3>Video Projects</h3>
-<p>Edited and delivered professional videos for YouTube, Instagram, and ads, including motion graphics, intros, and color grading.</p>
+<p>Edited professional videos with effects, intros/outros, color grading, and motion graphics.</p>
 </div>
 <div class="card">
 <h3>Graphics & Branding</h3>
-<p>Created branding packages, logos, banners, and thumbnail designs, helping clients establish a strong digital identity.</p>
+<p>Created logos, thumbnails, banners, and full branding packages to establish client identity.</p>
 </div>
 </div>
 </section>
@@ -139,13 +144,23 @@ Khan Studio is a leading digital service provider with a focus on **website deve
 </div>
 </section>
 
-<!-- Testimonials -->
+<!-- Testimonials / Reviews -->
 <section id="reviews">
 <h2>Client Reviews</h2>
 <div class="reviews">
-<div class="card"><p>"Amazing service, highly recommended! Professional and fast delivery."</p><p>- Ali</p></div>
-<div class="card"><p>"Khan Studio transformed my YouTube channel branding. Excellent work!"</p><p>- Sara</p></div>
-<div class="card"><p>"Creative video editing and website design. Truly premium services."</p><p>- Hassan</p></div>
+<div class="card" style="display:flex;align-items:center;">
+<img src="https://picsum.photos/60/60?random=1" class="photo-circle" alt="Client Photo">
+<div><p>"Amazing service, highly recommended!"</p><p>- Ali</p></div>
+</div>
+<div class="card" style="display:flex;align-items:center;">
+<img src="https://picsum.photos/60/60?random=2" class="photo-circle" alt="Client Photo">
+<div><p>"Creative video editing and website design. Truly premium services."</p><p>- Sara</p></div>
+</div>
+<div class="card" style="display:flex;align-items:center;">
+<img src="https://picsum.photos/60/60?random=3" class="photo-circle" alt="Client Photo">
+<div><p>"Fast delivery and professional work!"</p><p>- Hassan</p></div>
+</div>
+<!-- Add up to 20-25 reviews similarly -->
 </div>
 </section>
 
@@ -155,15 +170,15 @@ Khan Studio is a leading digital service provider with a focus on **website deve
 <div class="faq-section">
 <div class="faq-card">
 <h3>How can I order a service?</h3>
-<div class="faq-content"><p>You can fill the contact form below or directly reach out via email or social media links.</p></div>
+<div class="faq-content"><p>Fill the contact form below or reach out via email or social media links.</p></div>
 </div>
 <div class="faq-card">
 <h3>How long does delivery take?</h3>
-<div class="faq-content"><p>Delivery depends on the service. Usually between 1-7 days depending on complexity.</p></div>
+<div class="faq-content"><p>Delivery depends on service complexity. Usually 1-7 days.</p></div>
 </div>
 <div class="faq-card">
 <h3>Do you provide revisions?</h3>
-<div class="faq-content"><p>Yes, we provide unlimited revisions until the client is fully satisfied.</p></div>
+<div class="faq-content"><p>Yes, unlimited revisions until satisfaction.</p></div>
 </div>
 </div>
 </section>
@@ -177,7 +192,7 @@ Khan Studio is a leading digital service provider with a focus on **website deve
 <select name="Service">
 <option>Website Development</option>
 <option>Video Editing</option>
-<option>Thumbnail Design</option>
+<option>Thumbnail & Graphics</option>
 <option>Branding & Marketing</option>
 <option>SEO & Social Media</option>
 <option>Other</option>
@@ -195,7 +210,7 @@ Khan Studio is a leading digital service provider with a focus on **website deve
 <!-- Footer -->
 <footer>
 <h3>Khan Studio</h3>
-<p>Professional digital services including websites, video editing, thumbnails & branding. Premium neon animated interface for modern businesses and creators.</p>
+<p>Professional digital services including websites, video editing, thumbnails & branding. Neon premium interface for modern businesses and creators.</p>
 <p>© 2026 Khan Studio. All Rights Reserved.</p>
 </footer>
 
