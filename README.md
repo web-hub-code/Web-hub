@@ -1,11 +1,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Web-Hub | Professional Digital Solutions</title>
+<title>Web-Hub | Pro Digital Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
@@ -20,8 +22,9 @@ background:linear-gradient(to right,rgba(2,6,23,.9),rgba(2,6,23,.6)),
 url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover;
 padding:120px 0;
 text-align:center;
+animation: fadeIn 2s ease;
 }
-.hero h1{font-size:52px}
+.hero h1{font-size:52px;color:#22c55e;animation: slideIn 1.5s ease;}
 .hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
 .btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block}
 .btn:hover{background:#16a34a}
@@ -39,7 +42,9 @@ padding:30px;
 border-radius:16px;
 box-shadow:0 10px 25px rgba(0,0,0,.4);
 text-align:center;
+transition:transform .3s;
 }
+.card:hover{transform:translateY(-10px);}
 .card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
 
 /* TITLES */
@@ -51,6 +56,7 @@ img{width:100%;border-radius:16px;}
 
 /* STATS */
 .stats h3{font-size:40px;color:#22c55e}
+.counter{font-weight:bold;color:#22c55e;font-size:32px}
 
 /* FAQ */
 details{
@@ -100,6 +106,10 @@ footer{background:#020617;padding:50px 0;text-align:center}
 .email {background:#22c55e;}
 .instagram {background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
 .facebook {background:#1877f2;}
+
+/* Animations */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
 </style>
 </head>
 
@@ -127,13 +137,27 @@ footer{background:#020617;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ABOUT -->
+<!-- PORTFOLIO SLIDER -->
 <section>
-<div class="container grid grid-2">
+<div class="container">
+<h2>Our Work</h2>
+<div class="portfolio-slider">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+<img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-<div>
-<h2>About Web-Hub</h2>
-<p>We provide high-quality web solutions like top global agencies. Our goal is to deliver premium results at affordable pricing, with 100% client satisfaction.</p>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS SLIDER -->
+<section>
+<div class="container">
+<h2>Client Reviews</h2>
+<div class="testimonial-slider">
+<div class="card"><p>"Great service! Highly recommended."</p><strong>- John D.</strong></div>
+<div class="card"><p>"Professional & fast delivery."</p><strong>- Sarah K.</strong></div>
+<div class="card"><p>"Our website looks amazing thanks to Web-Hub."</p><strong>- Mike L.</strong></div>
 </div>
 </div>
 </section>
@@ -141,46 +165,10 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <!-- STATS -->
 <section>
 <div class="container grid grid-4 center stats">
-<div><h3>250+</h3><p>Projects</p></div>
-<div><h3>120+</h3><p>Clients</p></div>
-<div><h3>5+</h3><p>Years Experience</p></div>
-<div><h3>24/7</h3><p>Support</p></div>
-</div>
-</section>
-
-<!-- PORTFOLIO -->
-<section>
-<div class="container">
-<h2>Our Work</h2>
-<div class="grid grid-3">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
-<img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
-</div>
-</div>
-</section>
-
-<!-- PRICING -->
-<section>
-<div class="container">
-<h2>Pricing Plans</h2>
-<div class="grid grid-3 center">
-<div class="card"><h3>Basic</h3><h2>$99</h2><p>Landing Page</p></div>
-<div class="card"><h3>Standard</h3><h2>$199</h2><p>Business Website</p></div>
-<div class="card"><h3>Premium</h3><h2>$399</h2><p>Complete Solution</p></div>
-</div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section>
-<div class="container">
-<h2>Client Reviews</h2>
-<div class="grid grid-3">
-<div class="card"><p>"Great service! Highly recommended."</p><strong>- John D.</strong></div>
-<div class="card"><p>"Professional & fast delivery."</p><strong>- Sarah K.</strong></div>
-<div class="card"><p>"Our website looks amazing thanks to Web-Hub."</p><strong>- Mike L.</strong></div>
-</div>
+<div><h3 class="counter">250</h3><p>Projects</p></div>
+<div><h3 class="counter">120</h3><p>Clients</p></div>
+<div><h3 class="counter">5</h3><p>Years Experience</p></div>
+<div><h3 class="counter">24</h3><p>Support</p></div>
 </div>
 </section>
 
@@ -201,14 +189,14 @@ footer{background:#020617;padding:50px 0;text-align:center}
 <div>
 <h2>Contact Us</h2>
 <p>Email: rock.earn92@gmail.com</p>
-<p>Facebook & Instagram links available via floating buttons</p>
+<p>Use the form to send message directly to Email.</p>
 </div>
-<form class="card">
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
+<form class="card" id="contact-form">
+<input type="text" name="user_name" placeholder="Your Name" required>
+<input type="email" name="user_email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 <br>
-<button class="btn">Send Message</button>
+<button class="btn" type="submit">Send Message</button>
 </form>
 </div>
 </section>
@@ -231,5 +219,23 @@ footer{background:#020617;padding:50px 0;text-align:center}
   <a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+// Portfolio slider
+$('.portfolio-slider').slick({slidesToShow:3,slidesToScroll:1,autoplay:true,autoplaySpeed:2000,dots:true,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
+// Testimonial slider
+$('.testimonial-slider').slick({slidesToShow:2,slidesToScroll:1,autoplay:true,autoplaySpeed:2500,dots:true,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
+// Counters
+$('.counter').each(function(){$(this).prop('Counter',0).animate({Counter:$(this).text()}, {duration:2000, easing:'swing', step:function(now){$(this).text(Math.ceil(now));}});});
+// EmailJS Contact
+emailjs.init("YOUR_USER_ID"); // replace with your EmailJS userID
+document.getElementById('contact-form').addEventListener('submit', function(event){
+event.preventDefault();
+emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',this)
+.then(function(){alert("Message sent successfully!");},function(err){alert("Error sending message: "+JSON.stringify(err));});
+});
+</script>
 </body>
 </html>
