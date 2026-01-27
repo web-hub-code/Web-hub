@@ -3,42 +3,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Meta Tags -->
-<title>Mr Khan Pro Services | Website & Video Editing</title>
-<meta name="description" content="Professional website development, video editing, thumbnails & digital services by Mr Khan. Trusted by thousands of clients worldwide.">
-<meta name="keywords" content="website development, video editing, thumbnail design, Pakistan web developer">
+<title>Mr Khan Pro Services | Neon Premium</title>
+<meta name="description" content="Professional website, video editing, thumbnails & digital services by Mr Khan. Trusted by thousands of clients worldwide.">
+<meta name="keywords" content="website development, video editing, thumbnail design, branding, digital services">
 <meta name="author" content="Mr Khan Pro Services">
 <meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="google8073cfacc72a7cb3">
 
-<!-- Google Verification -->
-<meta name="google-site-verification" content="google8073cfacc72a7cb3" />
-
-<!-- Google Fonts + CSS Reset + Animations -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;padding:0;font-family:'Roboto',sans-serif;background:#0a0a0a;color:#fff;}
-header{position:relative;height:70vh;overflow:hidden;}
-header video{width:100%;height:100%;object-fit:cover;}
-header h1{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);font-size:3em;color:#00f0ff;text-shadow:2px 2px 15px #000;animation:fadein 2s ease-in-out;}
-@keyframes fadein{0%{opacity:0;}100%{opacity:1;}}
+/* General Reset */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+body{background:linear-gradient(135deg,#000000,#0a0a0a);color:#fff;scroll-behavior:smooth;}
+a{text-decoration:none;color:#00f0ff;}
+h1,h2,h3{font-weight:700;text-transform:uppercase;}
 section{padding:50px 20px;max-width:1200px;margin:auto;}
-h2{color:#00f0ff;text-align:center;margin-bottom:30px;}
-.services,.portfolio,.stats-section,.reviews{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+h2{color:#00f0ff;text-align:center;margin-bottom:30px;position:relative;}
+h2::after{content:"";width:60px;height:3px;background:#ff0040;display:block;margin:10px auto;border-radius:2px;}
+
+/* Hero */
+header{position:relative;height:70vh;overflow:hidden;background:#000;}
+header video{width:100%;height:100%;object-fit:cover;opacity:0.7;}
+header h1{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3em;color:#00ffff;text-shadow:0 0 15px #ff0040,0 0 30px #00f0ff,0 0 60px #ff0040;animation:fadeInText 2s ease-in-out;}
+@keyframes fadeInText{0%{opacity:0;transform:translate(-50%,-60%);}100%{opacity:1;transform:translate(-50%,-50%);}}
+
+/* Cards */
 .card{background:#111;padding:20px;border-radius:10px;flex:1 1 250px;text-align:center;box-shadow:0 0 15px #00f0ff;transition:0.3s;}
-.card:hover{transform:translateY(-10px) scale(1.05);}
+.card:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 30px #ff0040,0 0 60px #00ffff;}
+
+/* Layouts */
+.services,.portfolio,.stats-section,.reviews{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+
+/* Images */
 .card img{max-width:100%;border-radius:10px;}
+
+/* Form */
 form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
-input,select,textarea{padding:10px;border-radius:5px;border:none;}
-button{padding:15px;border:none;border-radius:5px;background:#00f0ff;color:#000;font-weight:bold;cursor:pointer;transition:0.3s;}
-button:hover{background:#0ff;}
+input,select,textarea{padding:10px;border-radius:5px;border:none;background:#222;color:#fff;}
+input::placeholder,textarea::placeholder{color:#aaa;}
+button{padding:15px;border:none;border-radius:5px;background:#ff0040;color:#fff;font-weight:bold;cursor:pointer;transition:0.3s;text-transform:uppercase;box-shadow:0 0 10px #00ffff;}
+button:hover{background:#00ffff;color:#000;box-shadow:0 0 15px #ff0040,0 0 30px #00ffff;}
+
+/* Footer */
 footer{background:#111;padding:30px 20px;text-align:center;margin-top:50px;color:#aaa;}
-footer a{color:#00f0ff;text-decoration:none;}
+footer a{color:#00ffff;text-decoration:none;transition:0.3s;}
+footer a:hover{color:#ff0040;}
+
+/* Responsive */
 @media(max-width:768px){.services,.portfolio,.stats-section,.reviews{flex-direction:column;}header h1{font-size:2em;}}
 </style>
 </head>
 <body>
 
-<!-- Hero Video -->
+<!-- Hero -->
 <header>
 <video autoplay muted loop>
 <source src="assets/video/hero.mp4" type="video/mp4">
@@ -47,40 +64,40 @@ Your browser does not support the video tag.
 <h1>Mr Khan Pro Services</h1>
 </header>
 
-<!-- About Section -->
-<section id="about-mrkhan-pro-services">
+<!-- About -->
+<section id="about">
 <h2>About Me</h2>
-<p style="text-align:center;">Professional digital services including website development, video editing, thumbnail design, and branding. Trusted by thousands of clients worldwide.</p>
+<p style="text-align:center;">Professional digital services including website development, video editing, thumbnail design, and branding. Trusted by thousands of clients worldwide. Premium neon design & animations.</p>
 </section>
 
-<!-- Services Section -->
+<!-- Services -->
 <section id="services">
-<h2>My Services</h2>
+<h2>Our Services</h2>
 <div class="services">
 <div class="card">
 <img src="assets/images/web1.jpg" alt="Website Development">
 <h3>Website Development</h3>
-<p>Modern, responsive and custom websites for businesses and individuals.</p>
+<p>Responsive, modern & custom websites for all businesses.</p>
 </div>
 <div class="card">
 <img src="assets/images/video1.jpg" alt="Video Editing">
 <h3>Video Editing</h3>
-<p>Professional video editing, effects, and slow/fast motion edits.</p>
+<p>Professional edits, slow/fast motion, effects & more.</p>
 </div>
 <div class="card">
 <img src="assets/images/thumbnail1.jpg" alt="Thumbnail Design">
 <h3>Thumbnail Design</h3>
-<p>Attractive thumbnails that increase clicks & engagement.</p>
+<p>Creative thumbnails to boost clicks & engagement.</p>
 </div>
 <div class="card">
 <img src="assets/images/branding1.jpg" alt="Branding">
 <h3>Branding</h3>
-<p>Logo, social media design, and complete digital branding solutions.</p>
+<p>Logo, social media branding & complete digital identity.</p>
 </div>
 </div>
 </section>
 
-<!-- Portfolio Section -->
+<!-- Portfolio -->
 <section id="portfolio">
 <h2>Portfolio</h2>
 <div class="portfolio">
@@ -91,9 +108,9 @@ Your browser does not support the video tag.
 </div>
 </section>
 
-<!-- Stats Section -->
+<!-- Stats -->
 <section id="stats">
-<h2>Our Achievements</h2>
+<h2>Achievements</h2>
 <div class="stats-section">
 <div class="card"><h3>8000+</h3><p>Satisfied Clients</p></div>
 <div class="card"><h3>1200+</h3><p>Websites Delivered</p></div>
@@ -101,7 +118,7 @@ Your browser does not support the video tag.
 </div>
 </section>
 
-<!-- Testimonials / Reviews -->
+<!-- Testimonials -->
 <section id="reviews">
 <h2>Client Reviews</h2>
 <div class="reviews">
@@ -109,11 +126,11 @@ Your browser does not support the video tag.
 <div class="card"><p>"Fast delivery and professional work."</p><p>- Sara</p></div>
 <div class="card"><p>"Creative video editing, loved it!"</p><p>- Hassan</p></div>
 <div class="card"><p>"Website looks great, exactly what I wanted."</p><p>- Fatima</p></div>
-<!-- Add more 20+ reviews as needed -->
+<!-- Add more reviews here -->
 </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact">
 <h2>Contact Me</h2>
 <form action="mailto:rock.earn92@gmail.com" method="post" enctype="text/plain">
@@ -123,7 +140,8 @@ Your browser does not support the video tag.
 <option>Website Development</option>
 <option>Video Editing</option>
 <option>Thumbnail Design</option>
-<option>Other Service</option>
+<option>Branding</option>
+<option>Other</option>
 </select>
 <textarea name="Message" placeholder="Describe your project" required></textarea>
 <button type="submit">Send Message</button>
@@ -138,7 +156,7 @@ Your browser does not support the video tag.
 <!-- Footer -->
 <footer>
 <h3>Mr Khan Pro Services</h3>
-<p>Providing professional digital services including websites, video editing, thumbnails & branding. Trusted by thousands of clients worldwide.</p>
+<p>Professional digital services including websites, video editing, thumbnails & branding. Trusted by thousands of clients worldwide.</p>
 <p>📧 <a href="mailto:rock.earn92@gmail.com">rock.earn92@gmail.com</a></p>
 <p>🌐 <a href="https://www.facebook.com/share/184Khe9iZu/" target="_blank">Facebook</a> | 📸 <a href="https://www.instagram.com/mr_nazim073?igsh=MXd4d2hmcWNvNjVsdQ==" target="_blank">Instagram</a></p>
 <p>© 2026 Mr Khan Pro Services. All Rights Reserved.</p>
