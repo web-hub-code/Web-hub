@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khan Studio | Neon Digital Hub</title>
+<title>Khan Studio | Premium Neon Digital Hub</title>
 <meta name="description" content="Khan Studio - Premium Neon Digital Services: Websites, Video Editing, Thumbnails, Branding, SEO & Social Media Marketing.">
 <meta property="og:title" content="Khan Studio | Neon Digital Hub">
 <meta property="og:description" content="Professional Neon Digital Services: Websites, Video Editing, Thumbnails, Branding, SEO & Social Media.">
@@ -58,6 +58,7 @@ footer{background:rgba(0,0,0,0.05);padding:30px 20px;text-align:center;color:#ff
 </head>
 <body>
 <div id="preloader"><div class="loader"></div></div>
+
 <header>
 <h1>Khan Studio</h1>
 <div class="cta-buttons">
@@ -164,7 +165,7 @@ Khan Studio provides **premium neon digital services** including Website Develop
 <script>
 window.addEventListener('load',()=>{document.getElementById('preloader').style.display='none';});
 const faqCards=document.querySelectorAll('.faq-card');
-faqCards.forEach(card=>{card.addEventListener('click',()=>{let content=card.querySelector('.faq-content');content.style.maxHeight=content.style.maxHeight?null:content.scrollHeight+"px";});});
+faqCards.forEach(card=>{card.addEventListener('click',()=>{let content=card.querySelector('.faq-content');content.style.maxHeight=content.scrollHeight+"px";});});
 const sliders=document.querySelectorAll('.slider');
 sliders.forEach(slider=>{
 const track=slider.querySelector('.slider-track');
