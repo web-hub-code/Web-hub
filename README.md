@@ -60,20 +60,22 @@ h2{text-align:center;font-size:38px;margin-bottom:50px}
 .portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
 
-/* PRICING */
-#pricing .card p{font-size:16px;margin:15px 0}
+/* STATS */
+.stats h3{font-size:40px;color:#22c55e}
+.counter{font-weight:bold;color:#22c55e;font-size:32px}
 
-/* PAYMENT METHOD CARDS */
-.payment-card{background:#1e293b;padding:20px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;cursor:pointer;transition:.3s}
-.payment-card:hover{background:#273449}
-.copy-btn{background:#22c55e;border:none;padding:6px 12px;border-radius:8px;color:#fff;cursor:pointer;transition:.3s}
-.copy-btn:hover{background:#16a34a;transform:scale(1.05)}
+/* FAQ */
+details{background:#1e293b;padding:18px;border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.3s}
+details:hover{background:#273449}
+details summary{cursor:pointer;font-weight:600}
+
+/* CONTACT FORM */
+input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
 
 /* FOOTER */
-footer{background:#1e293b;padding:50px 0;text-align:center;color:#e5e7eb}
-footer .social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
-footer .social i:hover{transform:scale(1.2)}
-footer p{margin-top:15px}
+footer{background:#1e293b;padding:50px 0;text-align:center}
+.social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
+.social i:hover{transform:scale(1.2)}
 
 /* FLOATING SOCIAL BUTTONS */
 .floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
@@ -83,13 +85,19 @@ footer p{margin-top:15px}
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
 .facebook{background:#1877f2}
 
-/* ANIMATIONS */
+/* Animations */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
 
-/* BACK-TO-TOP */
+/* Back-to-top */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
 #topBtn:hover{background:#16a34a;transform:scale(1.1)}
+
+/* PAYMENT METHOD CARDS */
+.payment-card{background:#1e293b;padding:20px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;cursor:pointer;transition:.3s}
+.payment-card:hover{background:#273449}
+.copy-btn{background:#22c55e;border:none;padding:6px 12px;border-radius:8px;color:#fff;cursor:pointer;transition:.3s}
+.copy-btn:hover{background:#16a34a;transform:scale(1.05)}
 </style>
 </head>
 <body>
@@ -103,7 +111,9 @@ footer p{margin-top:15px}
 <li><a href="#services">Services</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
 <li><a href="#pricing">Pricing</a></li>
-<li><a href="#payments">Payments</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#technologies">Technologies</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -121,7 +131,7 @@ footer p{margin-top:15px}
 <section id="about">
 <div class="container">
 <h2>About Web-Hub</h2>
-<p>Web-Hub provides premium digital solutions including modern website development, responsive UI/UX design, SEO optimization, and full digital marketing services. We deliver fast, scalable, and visually stunning projects for all clients.</p>
+<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. Our goal is to deliver scalable, fast, and visually stunning projects that drive results for every client.</p>
 </div>
 </section>
 
@@ -130,14 +140,14 @@ footer p{margin-top:15px}
 <div class="container">
 <h2>Our Services</h2>
 <div class="grid grid-4">
-<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites.</p></div>
-<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs.</p></div>
-<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Improve search engine rankings.</p></div>
-<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence effectively.</p></div>
-<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Development</h3><p>Android & iOS applications.</p></div>
-<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & custom stores.</p></div>
-<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions.</p></div>
-<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data.</p></div>
+<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites</p></div>
+<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs</p></div>
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Rank higher on search engines</p></div>
+<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
+<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
+<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions</p></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data</p></div>
 </div>
 </div>
 </section>
@@ -147,12 +157,12 @@ footer p{margin-top:15px}
 <div class="container">
 <h2>Our Work</h2>
 <div class="grid grid-3">
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Corporate website with responsive layout & interactive UI elements.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Mobile app design with seamless user experience & custom animations.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">E-commerce platform with full Shopify integration & payment gateways.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">SEO-optimized blog with analytics dashboard for performance tracking.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Digital marketing campaign dashboard with reporting & insights.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Cloud hosting & server setup with security, speed, uptime monitoring.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Corporate Website with full responsive layout and interactive features.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX design with sleek user experience and custom animations.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-commerce platform with Shopify integration, payment gateways, and product management.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO optimized blog website for maximum search engine visibility and traffic.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital marketing campaign dashboard with analytics and reporting tools.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud hosting setup with security, speed, and uptime monitoring for clients.</div></div>
 </div>
 </div>
 </section>
@@ -162,23 +172,52 @@ footer p{margin-top:15px}
 <div class="container">
 <h2>Pricing Plans</h2>
 <div class="grid grid-3">
-<div class="card"><h3>Basic</h3><p>PKR 5,000 / month (≈ $15) – Depends on client demand</p><button class="btn">Get Started</button></div>
-<div class="card"><h3>Standard</h3><p>PKR 15,000 / month (≈ $45) – Depends on client demand</p><button class="btn">Get Started</button></div>
-<div class="card"><h3>Premium</h3><p>PKR 25,000 / month (≈ $75) – Depends on client demand</p><button class="btn">Get Started</button></div>
-<div class="card"><h3>Enterprise</h3><p>PKR 50,000 / month (≈ $150) – Depends on client demand</p><button class="btn">Get Started</button></div>
+<div class="card">
+<h3>Basic</h3>
+<p>PKR 5,000 / month (≈ $15) – Depends on client demand</p>
+<button class="btn">Get Started</button>
+</div>
+<div class="card">
+<h3>Standard</h3>
+<p>PKR 15,000 / month (≈ $45) – Depends on client demand</p>
+<button class="btn">Get Started</button>
+</div>
+<div class="card">
+<h3>Premium</h3>
+<p>PKR 25,000 / month (≈ $75) – Depends on client demand</p>
+<button class="btn">Get Started</button>
+</div>
+<div class="card">
+<h3>Enterprise</h3>
+<p>PKR 50,000 / month (≈ $150) – Depends on client demand</p>
+<button class="btn">Get Started</button>
 </div>
 </div>
-</section>
-
-<!-- PAYMENT METHODS -->
+</div>
+</section><!-- PAYMENT METHODS -->
 <section id="payments">
 <div class="container">
 <h2>Payment Methods</h2>
-<div class="payment-card" onclick="copyText('easypaisa')"><span>Easypaisa: 03379827882</span><button class="copy-btn">Copy</button></div>
-<div class="payment-card" onclick="copyText('jazzcash')"><span>JazzCash: 03705519562</span><button class="copy-btn">Copy</button></div>
-<div class="payment-card" onclick="copyText('sadapay')"><span>SadaPay: 03705519562</span><button class="copy-btn">Copy</button></div>
-<div class="payment-card" onclick="copyText('payoneer')"><span>Payoneer: nazimkhan01123@gmail.com</span><button class="copy-btn">Copy</button></div>
-<div class="payment-card" onclick="copyText('binance')"><span>Binance TRC20: TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR</span><button class="copy-btn">Copy</button></div>
+<div class="payment-card" onclick="copyText('easypaisa')">
+<span>Easypaisa: 03379827882</span>
+<button class="copy-btn">Copy</button>
+</div>
+<div class="payment-card" onclick="copyText('jazzcash')">
+<span>JazzCash: 03705519562</span>
+<button class="copy-btn">Copy</button>
+</div>
+<div class="payment-card" onclick="copyText('sadapay')">
+<span>SadaPay: 03705519562</span>
+<button class="copy-btn">Copy</button>
+</div>
+<div class="payment-card" onclick="copyText('payoneer')">
+<span>Payoneer: nazimkhan01123@gmail.com</span>
+<button class="copy-btn">Copy</button>
+</div>
+<div class="payment-card" onclick="copyText('binance')">
+<span>Binance TRC20: TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR</span>
+<button class="copy-btn">Copy</button>
+</div>
 
 <!-- Hidden spans for copy -->
 <span id="easypaisa" style="display:none;">03379827882</span>
@@ -189,16 +228,11 @@ footer p{margin-top:15px}
 </div>
 </section>
 
-<script>
-function copyText(id){
-  var copyText = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(copyText).then(()=>{alert("Copied: " + copyText);});
-}
-</script><!-- TESTIMONIALS -->
+<!-- TESTIMONIALS -->
 <section id="testimonials">
 <div class="container">
 <h2>Client Reviews</h2>
-<div class="grid grid-3">
+<div class="testimonial-slider">
 <div class="card"><p>"Great service! Highly recommended."</p><strong>- John D.</strong></div>
 <div class="card"><p>"Professional & fast delivery."</p><strong>- Sarah K.</strong></div>
 <div class="card"><p>"Our website looks amazing thanks to Web-Hub."</p><strong>- Mike L.</strong></div>
@@ -210,7 +244,7 @@ function copyText(id){
 </section>
 
 <!-- STATS -->
-<section id="stats">
+<section>
 <div class="container grid grid-4 center stats">
 <div><h3 class="counter" data-target="250">0</h3><p>Projects</p></div>
 <div><h3 class="counter" data-target="120">0</h3><p>Clients</p></div>
@@ -236,73 +270,98 @@ function copyText(id){
 </div>
 </section>
 
-<!-- TECHNOLOGIES & TOOLS -->
+<!-- TECHNOLOGIES -->
 <section id="technologies">
 <div class="container">
 <h2>Technologies & Tools</h2>
 <div class="grid grid-4 center">
 <div class="card"><i class="fa-brands fa-html5"></i><p>HTML5 - Structure & Semantic Markup</p></div>
 <div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3 - Styling & Layout</p></div>
-<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript - Interactive Features</p></div>
-<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Server-Side Programming</p></div>
-<div class="card"><i class="fa-brands fa-react"></i><p>React - Frontend Frameworks</p></div>
-<div class="card"><i class="fa-brands fa-node"></i><p>Node.js - Backend & APIs</p></div>
-<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress - CMS & E-Commerce</p></div>
-<div class="card"><i class="fa-solid fa-database"></i><p>MySQL - Database Management</p></div>
+<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript - Interactivity & Animations</p></div>
+<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Backend Development</p></div>
+<div class="card"><i class="fa-brands fa-react"></i><p>React - Modern Web Apps</p></div>
+<div class="card"><i class="fa-brands fa-node"></i><p>Node.js - Server-side Scripting</p></div>
+<div class="card"><i class="fa-brands fa-bootstrap"></i><p>Bootstrap - Responsive Design</p></div>
+<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress - CMS & Blogs</p></div>
 </div>
 </div>
 </section>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 <section id="contact">
 <div class="container">
 <h2>Contact Us</h2>
-<form action="mailto:webhub262@gmail.com" method="post" enctype="text/plain">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<input type="text" name="subject" placeholder="Subject" required>
-<textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+<form id="contactForm">
+<input type="text" placeholder="Your Name" name="name" required>
+<input type="email" placeholder="Your Email" name="email" required>
+<textarea placeholder="Your Message" name="message" rows="5" required></textarea>
 <button type="submit" class="btn">Send Message</button>
 </form>
+<p>Or contact us directly at <a href="mailto:webhub262@gmail.com">webhub262@gmail.com</a></p>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<div class="container">
+<p>&copy; 2026 Web-Hub. All Rights Reserved.</p>
 <div class="social">
 <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
 <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="mailto:webhub262@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-</div>
-<p>&copy; 2026 Web-Hub. All Rights Reserved.</p>
+<a href="mailto:webhub262@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
 </div>
 </footer>
 
-<!-- FLOATING SOCIAL BUTTONS -->
+<!-- FLOATING SOCIAL -->
 <div class="floating-social">
 <a href="mailto:webhub262@gmail.com" class="email"><i class="fa-solid fa-envelope"></i></a>
 <a href="https://instagram.com" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
 <a href="https://facebook.com" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
 </div>
 
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-// Counter Animation
+// Copy buttons
+function copyText(id){
+var text = document.getElementById(id).innerText;
+navigator.clipboard.writeText(text).then(()=>alert("Copied: "+text));
+}
+
+// Back-to-top
+var topBtn = document.getElementById("topBtn");
+window.onscroll = function() {
+if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+topBtn.style.display="block";
+}else{topBtn.style.display="none";}
+};
+function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0;}
+
+// Counters
 const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-  counter.innerText = '0';
-  const updateCounter = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / 200;
-    if(count < target){
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCounter, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  updateCounter();
+counters.forEach(counter=>{
+counter.innerText = '0';
+const updateCounter = () => {
+const target = +counter.getAttribute('data-target');
+const c = +counter.innerText;
+const increment = target / 200;
+if(c < target){counter.innerText = `${Math.ceil(c+increment)}`;setTimeout(updateCounter,10);}
+else{counter.innerText = target;}
+};
+updateCounter();
+});
+
+// Testimonial Slider
+$('.testimonial-slider').slick({slidesToShow:3,slidesToScroll:1,autoplay:true,autoplaySpeed:2500,dots:true,responsive:[{breakpoint:1024,settings:{slidesToShow:2}},{breakpoint:768,settings:{slidesToShow:1}}]});
+
+// Contact Form Email
+document.getElementById('contactForm').addEventListener('submit',function(e){
+e.preventDefault();
+const name=this.name.value;
+const email=this.email.value;
+const message=this.message.value;
+window.location.href=`mailto:webhub262@gmail.com?subject=Contact%20Form%20Submission%20from%20${name}&body=Name:%20${name}%0AEmail:%20${email}%0AMessage:%20${message}`;
 });
 </script>
 
