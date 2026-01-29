@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Google Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -26,7 +26,7 @@ section{padding:80px 0}
 /* NAVIGATION */
 nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;transition:0.3s}
 nav.scrolled{background:rgba(15,23,42,1)}
-nav .logo{font-size:28px;color:#22c55e;font-weight:700}
+nav .logo{font-size:28px;color:#22c55e;font-weight:700;cursor:pointer}
 nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
 nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
 nav ul li a:hover{color:#22c55e}
@@ -34,8 +34,8 @@ nav ul li a:hover{color:#22c55e}
 /* HERO */
 .hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;padding:140px 0;text-align:center;animation:fadeIn 2s ease}
 .hero h1{font-size:52px;color:#22c55e;animation:slideIn 1.5s ease}
-.hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
-.btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s}
+.hero p{margin:20px 0;max-width:700px;margin-left:auto;margin-right:auto;font-size:18px}
+.btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s;color:#fff}
 .btn:hover{background:#16a34a;cursor:pointer;transform:scale(1.05)}
 
 /* GRID */
@@ -45,7 +45,7 @@ nav ul li a:hover{color:#22c55e}
 .grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 
 /* CARDS */
-.card{background:#1e293b;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.4);text-align:center;transition:transform .3s, box-shadow .3s;cursor:pointer}
+.card{background:#1e293b;padding:25px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.4);text-align:center;transition:transform .3s,box-shadow .3s;cursor:pointer}
 .card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.5)}
 .card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
 
@@ -54,10 +54,10 @@ h2{text-align:center;font-size:38px;margin-bottom:50px}
 .center{text-align:center}
 
 /* PORTFOLIO ITEMS */
-.portfolio-item{position:relative;overflow:hidden;border-radius:16px}
-.portfolio-item img{width:100%;transition:transform .3s}
+.portfolio-item{position:relative;overflow:hidden;border-radius:16px;cursor:pointer}
+.portfolio-item img{width:100%;transition:transform .3s;border-radius:16px}
 .portfolio-item:hover img{transform:scale(1.05)}
-.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
+.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s;font-size:14px}
 .portfolio-item:hover .overlay{opacity:1}
 
 /* STATS */
@@ -70,9 +70,14 @@ details:hover{background:#273449}
 details summary{cursor:pointer;font-weight:600}
 
 /* CONTACT FORM */
-input,textarea,select{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
-button.btn.submit-btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s;color:#fff;border:none;cursor:pointer}
-button.btn.submit-btn:hover{background:#16a34a;transform:scale(1.05)}/* CONTINUATION OF STYLE */
+input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
+
+/* FOOTER */
+footer{background:#1e293b;padding:50px 0;text-align:center}
+.social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
+.social i:hover{transform:scale(1.2)}
+
+/* FLOATING SOCIAL BUTTONS */
 .floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
 .floating-social a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .3s}
 .floating-social a:hover{transform:scale(1.1)}
@@ -80,104 +85,164 @@ button.btn.submit-btn:hover{background:#16a34a;transform:scale(1.05)}/* CONTINUA
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
 .facebook{background:#1877f2}
 
-/* Animations */
+/* ANIMATIONS */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
 
-/* Back-to-top */
+/* BACK-TO-TOP */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
 #topBtn:hover{background:#16a34a;transform:scale(1.1)}
 </style>
-</head>
 <body>
 
-<!-- PRICING -->
+<!-- NAVIGATION -->
+<nav id="navbar">
+<div class="logo">Web-Hub</div>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+<div class="container">
+<h1>Web-Hub</h1>
+<p>Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions. Projects start from 5,000 PKR depends on client demand.</p>
+<a href="#contact" class="btn">Start Your Project</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>About Web-Hub</h2>
+<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. Our goal is to deliver scalable, fast, and visually stunning projects that drive results for every client. We ensure modern design, fast delivery, and full client support.</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<h2>Our Services</h2>
+<div class="grid grid-4">
+<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites, custom solutions, responsive layout.</p></div>
+<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs, creative interfaces, interactive elements.</p></div>
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>On-page & off-page SEO, improve search rankings, analytics integration.</p></div>
+<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Social media marketing, paid ads, content strategy, email campaigns.</p></div>
+<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS apps, responsive design, smooth UX.</p></div>
+<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce, custom online stores, payment integration.</p></div>
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting, domain setup, SSL integration.</p></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Website protection, backups, vulnerability scanning, SSL security.</p></div>
+</div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+<div class="container">
+<h2>Our Work</h2>
+<div class="grid grid-3">
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Website Design<br>HTML, CSS, JS, Responsive, SEO Optimized</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX<br>iOS & Android, Smooth UX, Interactive</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-Commerce Platform<br>Shopify, WooCommerce, Payment Gateway</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO Optimized Blog<br>Content Marketing, Keyword Analysis, Analytics</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital Marketing Campaign<br>Social Media, Ads, Branding</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud Hosting Setup<br>Domain, SSL, Security, Backups</div></div>
+</div>
+</div>
+</section><!-- PRICING -->
 <section id="pricing">
 <div class="container">
 <h2>Pricing Plans</h2>
 <div class="grid grid-3">
 <div class="card">
 <h3>Basic</h3>
-<p>PKR 5,000 / USD 15 <br><small>Depends on client demand</small></p>
-<button class="btn" onclick="manualPayment('Basic', 'PKR 5,000 / USD 15')">Get Started</button>
+<p>5,000 PKR / $15 (depends on client demand)</p>
+<button class="btn" onclick="manualPayment('Basic', '5000 PKR', '$15')">Select</button>
 </div>
 <div class="card">
 <h3>Standard</h3>
-<p>PKR 10,000 / USD 30 <br><small>Depends on client demand</small></p>
-<button class="btn" onclick="manualPayment('Standard', 'PKR 10,000 / USD 30')">Get Started</button>
+<p>10,000 PKR / $30 (depends on client demand)</p>
+<button class="btn" onclick="manualPayment('Standard', '10000 PKR', '$30')">Select</button>
 </div>
 <div class="card">
 <h3>Premium</h3>
-<p>PKR 15,000 / USD 45 <br><small>Depends on client demand</small></p>
-<button class="btn" onclick="manualPayment('Premium', 'PKR 15,000 / USD 45')">Get Started</button>
+<p>20,000 PKR / $60 (depends on client demand)</p>
+<button class="btn" onclick="manualPayment('Premium', '20000 PKR', '$60')">Select</button>
 </div>
 </div>
 </div>
 </section>
 
-<!-- PAYMENT METHODS -->
-<section id="payments">
+<!-- TESTIMONIALS -->
+<section id="testimonials">
 <div class="container">
-<h2>Payment Methods</h2>
-<p>Select your preferred payment method and copy the account details:</p>
+<h2>Client Reviews</h2>
+<div class="testimonial-slider">
+<div class="card"><p>"Great service! Highly recommended."</p><strong>- John D.</strong></div>
+<div class="card"><p>"Professional & fast delivery."</p><strong>- Sarah K.</strong></div>
+<div class="card"><p>"Our website looks amazing thanks to Web-Hub."</p><strong>- Mike L.</strong></div>
+<div class="card"><p>"Excellent communication and support."</p><strong>- Linda P.</strong></div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section>
+<div class="container grid grid-4 center stats">
+<div><h3 class="counter" data-target="250">0</h3><p>Projects</p></div>
+<div><h3 class="counter" data-target="120">0</h3><p>Clients</p></div>
+<div><h3 class="counter" data-target="5">0</h3><p>Years Experience</p></div>
+<div><h3 class="counter" data-target="24">0</h3><p>Support</p></div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+<h2>FAQs</h2>
 <div class="grid grid-2">
-<div class="card">
-<h3>Easypaisa</h3>
-<p id="easypaisaNumber">03379827882 <button onclick="copyToClipboard('easypaisaNumber')">Copy</button></p>
-</div>
-<div class="card">
-<h3>JazzCash</h3>
-<p id="jazzcashNumber">03705519562 <button onclick="copyToClipboard('jazzcashNumber')">Copy</button></p>
-</div>
-<div class="card">
-<h3>SadaPay</h3>
-<p id="sadaPayNumber">03705519562 <button onclick="copyToClipboard('sadaPayNumber')">Copy</button></p>
-</div>
-<div class="card">
-<h3>Payoneer</h3>
-<p id="payoneerEmail">nazimkhan01123@gmail.com <button onclick="copyToClipboard('payoneerEmail')">Copy</button></p>
-</div>
-<div class="card">
-<h3>Binance (TRC20)</h3>
-<p id="binanceWallet">TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR <button onclick="copyToClipboard('binanceWallet')">Copy</button></p>
-</div>
+<details><summary>Is the site mobile-friendly?</summary><p>Yes, fully responsive on all devices.</p></details>
+<details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
+<details><summary>Do you provide SEO services?</summary><p>Yes, we offer full SEO optimization.</p></details>
+<details><summary>Can I request custom designs?</summary><p>Absolutely, custom UI/UX solutions available.</p></details>
 </div>
 </div>
 </section>
 
-<!-- PORTFOLIO (clickable details) -->
-<section id="portfolio">
+<!-- TECHNOLOGIES -->
+<section id="technologies">
 <div class="container">
-<h2>Our Work</h2>
-<div class="grid grid-3">
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="overlay">
-<h3>Project 1: Modern Website Design</h3>
-<p>HTML5, CSS3, JavaScript, Responsive, SEO Optimized</p>
-<a href="#" class="btn">View Project</a>
-</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
-<div class="overlay">
-<h3>Project 2: Mobile App UI/UX</h3>
-<p>Android & iOS, User-friendly UI, Modern Design</p>
-<a href="#" class="btn">View Project</a>
-</div>
-</div>
-<!-- Add more portfolio items as needed -->
+<h2>Technologies & Tools</h2>
+<div class="grid grid-4 center">
+<div class="card"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+<div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
+<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+<div class="card"><i class="fa-brands fa-react"></i><p>React</p></div>
+<div class="card"><i class="fa-brands fa-node"></i><p>Node.js</p></div>
+<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress</p></div>
+<div class="card"><i class="fa-brands fa-shopify"></i><p>Shopify</p></div>
+<div class="card"><i class="fa-brands fa-php"></i><p>PHP</p></div>
 </div>
 </div>
 </section>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 <section id="contact">
 <div class="container grid grid-2">
 <div>
-<h2>Contact Us</h2>
+<h2>Contact & Payment</h2>
 <p>Email: webhub262@gmail.com</p>
-<p>Send your message and payment details; we'll respond ASAP.</p>
+<p>Send your project details, payment proof & transaction ID here:</p>
+<p>Select Payment Method, copy number & attach screenshot or proof.</p>
 </div>
 <form class="card" onsubmit="sendEmail(event)">
 <input type="text" id="name" placeholder="Your Name" required>
@@ -185,14 +250,15 @@ button.btn.submit-btn:hover{background:#16a34a;transform:scale(1.05)}/* CONTINUA
 <select id="paymentMethod" required>
 <option value="">Select Payment Method</option>
 <option value="Easypaisa">Easypaisa</option>
-<option value="JazzCash">JazzCash</option>
+<option value="Jazzcash">Jazzcash</option>
 <option value="SadaPay">SadaPay</option>
 <option value="Payoneer">Payoneer</option>
-<option value="Binance">Binance</option>
+<option value="Binance">Binance (TRC20)</option>
 </select>
-<input type="text" id="transactionID" placeholder="Transaction ID / Screenshot Link" required>
-<textarea id="message" rows="5" placeholder="Additional Message / Request" required></textarea>
-<button class="btn submit-btn" type="submit">Send Message</button>
+<input type="text" id="paymentNumber" placeholder="Number / Wallet Address" readonly>
+<input type="file" id="proof" accept="image/*" required>
+<textarea id="message" rows="5" placeholder="Your Message / Project Details" required></textarea>
+<button class="btn" type="submit">Send Message</button>
 </form>
 </div>
 </section>
@@ -219,45 +285,85 @@ button.btn.submit-btn:hover{background:#16a34a;transform:scale(1.05)}/* CONTINUA
 <button id="topBtn" onclick="topFunction()" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
+// Navbar scroll
+window.addEventListener('scroll',function(){
+document.getElementById('navbar').classList.toggle('scrolled', window.scrollY>50);
+});
+
 // Back to top
-window.onscroll=function(){scrollFunction()};
-function scrollFunction(){document.getElementById("topBtn").style.display=(document.body.scrollTop>20||document.documentElement.scrollTop>20)?"block":"none"}
-function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}
+var topBtn=document.getElementById("topBtn");
+window.onscroll=function(){if(document.body.scrollTop>100||document.documentElement.scrollTop>100){topBtn.style.display="block";}else{topBtn.style.display="none";}};
+function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0;}
 
-// Copy account numbers
-function copyToClipboard(id){
-let copyText=document.getElementById(id).innerText.split(" ")[0];
-navigator.clipboard.writeText(copyText);
-alert(copyText+" copied to clipboard!");
-}
-
-// Counter Animation
-const counters=document.querySelectorAll(".counter");
+// Counter animation
+const counters=document.querySelectorAll('.counter');
 counters.forEach(counter=>{
-counter.innerText="0";
+counter.innerText='0';
 const updateCounter=()=>{
-const target=+counter.getAttribute("data-target");
-const c=+counter.innerText;
+const target=+counter.getAttribute('data-target');
+const count=+counter.innerText;
 const increment=target/200;
-if(c<target){counter.innerText=Math.ceil(c+increment);setTimeout(updateCounter,10);}else{counter.innerText=target;}
+if(count<target){counter.innerText=Math.ceil(count+increment);setTimeout(updateCounter,10);}else{counter.innerText=target;}
 };
 updateCounter();
 });
 
-// Send Email with form
-function sendEmail(event){
-event.preventDefault();
-const name=document.getElementById("name").value;
-const email=document.getElementById("email").value;
-const method=document.getElementById("paymentMethod").value;
-const transaction=document.getElementById("transactionID").value;
-const message=document.getElementById("message").value;
-const subject="Web-Hub Payment / Query from "+name;
-const body=`Name: ${name}%0D%0AEmail: ${email}%0D%0APayment Method: ${method}%0D%0ATransaction ID / Screenshot: ${transaction}%0D%0AMessage: ${message}`;
-window.location.href=`mailto:webhub262@gmail.com?subject=${subject}&body=${body}`;
-alert("Email client opened. Please send the email.");
+// Payment Number copy
+const paymentNumbers={
+"Easypaisa":"03379827882",
+"Jazzcash":"03705519562",
+"SadaPay":"03705519562",
+"Payoneer":"nazimkhan01123@gmail.com",
+"Binance":"TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR"
+};
+$('#paymentMethod').on('change',function(){
+$('#paymentNumber').val(paymentNumbers[$(this).val()]);
+});
+
+// Send email with proof
+function sendEmail(e){
+e.preventDefault();
+const name=document.getElementById('name').value;
+const email=document.getElementById('email').value;
+const method=document.getElementById('paymentMethod').value;
+const number=document.getElementById('paymentNumber').value;
+const message=document.getElementById('message').value;
+const proof=document.getElementById('proof').files[0];
+
+if(!method){alert('Select Payment Method');return;}
+
+const formData=new FormData();
+formData.append('name',name);
+formData.append('email',email);
+formData.append('method',method);
+formData.append('number',number);
+formData.append('message',message);
+formData.append('proof',proof);
+
+// Send via email using formspree or similar
+fetch("https://formspree.io/f/xaykqgla",{
+method:"POST",
+body:formData
+}).then(res=>{if(res.ok){alert("Message sent successfully");document.querySelector('form').reset();}else{alert("Error sending message");}});
 }
+
+// Slick slider
+$(document).ready(function(){
+$('.testimonial-slider').slick({
+infinite:true,
+slidesToShow:2,
+slidesToScroll:1,
+autoplay:true,
+autoplaySpeed:3000,
+arrows:true,
+dots:true,
+responsive:[
+{breakpoint:768,settings:{slidesToShow:1}}
+]
+});
+});
 </script>
 </body>
 </html>
