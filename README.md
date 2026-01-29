@@ -57,7 +57,7 @@ h2{text-align:center;font-size:38px;margin-bottom:50px}
 .portfolio-item{position:relative;overflow:hidden;border-radius:16px}
 .portfolio-item img{width:100%;transition:transform .3s}
 .portfolio-item:hover img{transform:scale(1.05)}
-.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
+.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
 
 /* STATS */
@@ -143,25 +143,17 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites</p></div>
 <div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs</p></div>
 <div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Rank higher on search engines</p></div>
-<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
-<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
-<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
-<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions</p></div>
-<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data</p></div>
-</div>
-</div>
-</section>
-
-<!-- PORTFOLIO -->
+<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div><!-- PORTFOLIO -->
 <section id="portfolio">
 <div class="container">
 <h2>Our Work</h2>
 <div class="grid grid-3">
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Corporate Website with full responsive layout and interactive features, animations, and custom CMS integration.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX design with sleek user experience, custom animations, push notifications, and cross-platform support.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-commerce platform with Shopify/WooCommerce integration, payment gateways, product management, and SEO optimization.</div></div><div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO optimized blog website for maximum search engine visibility and traffic with analytics tracking.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital marketing campaign dashboard with analytics, reporting tools, and performance metrics tracking.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud hosting setup with security, speed, and uptime monitoring for enterprise clients.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Corporate Website with full responsive layout and interactive features.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX design with sleek user experience and custom animations.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-commerce platform with Shopify integration, payment gateways, and product management.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO optimized blog website for maximum search engine visibility and traffic.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital marketing campaign dashboard with analytics and reporting tools.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud hosting setup with security, speed, and uptime monitoring for clients.</div></div>
 </div>
 </div>
 </section>
@@ -229,36 +221,6 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section id="contact">
-<div class="container">
-<h2>Contact Us</h2>
-<form action="mailto:webhub262@gmail.com" method="post" enctype="text/plain">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-<button type="submit" class="btn">Send Message</button>
-</form>
-</div>
-</section>
-
-<!-- TECHNOLOGIES & TOOLS -->
-<section id="technologies">
-<div class="container">
-<h2>Technologies & Tools</h2>
-<div class="grid grid-4 center">
-<div class="card"><i class="fa-brands fa-html5"></i><p>HTML5 - Structure & Semantic Markup</p></div>
-<div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3 - Styling & Layout</p></div>
-<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript - Interactivity & Animations</p></div>
-<div class="card"><i class="fa-brands fa-react"></i><p>React.js - Modern Web Applications</p></div>
-<div class="card"><i class="fa-brands fa-node"></i><p>Node.js - Backend Development</p></div>
-<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Server-side Scripting</p></div>
-<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress - CMS Solutions</p></div>
-<div class="card"><i class="fa-solid fa-database"></i><p>MySQL & MongoDB - Database Management</p></div>
-</div>
-</div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section id="testimonials">
 <div class="container">
@@ -274,53 +236,89 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
+<!-- STATS -->
+<section>
+<div class="container grid grid-4 center stats">
+<div><h3 class="counter" data-target="250">0</h3><p>Projects</p></div>
+<div><h3 class="counter" data-target="120">0</h3><p>Clients</p></div>
+<div><h3 class="counter" data-target="5">0</h3><p>Years Experience</p></div>
+<div><h3 class="counter" data-target="24">0</h3><p>Support</p></div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+<h2>FAQs</h2>
+<div class="grid grid-2">
+<details><summary>Are images showing correctly?</summary><p>Yes, all images are CDN links for guaranteed display.</p></details>
+<details><summary>Is the site mobile-friendly?</summary><p>Yes, fully responsive on all devices.</p></details>
+<details><summary>Do you provide SEO services?</summary><p>Yes, our SEO experts improve your search rankings.</p></details>
+<details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
+<details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
+<details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
+<details><summary>Is the contact form secure?</summary><p>Yes, clicking send will open your default email client safely.</p></details>
+<details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
+</div>
+</div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section id="technologies">
+<div class="container">
+<h2>Technologies & Tools</h2>
+<div class="grid grid-4 center">
+<div class="card"><i class="fa-brands fa-html5"></i><p>HTML5 - Structure & Semantic Markup</p></div>
+<div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3 - Styling & Layout</p></div>
+<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript - Interactive Frontend</p></div>
+<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Backend Development</p></div>
+<div class="card"><i class="fa-brands fa-react"></i><p>React.js - Modern UI Components</p></div>
+<div class="card"><i class="fa-brands fa-node"></i><p>Node.js - Server Side Logic</p></div>
+<div class="card"><i class="fa-brands fa-bootstrap"></i><p>Bootstrap - Responsive Design</p></div>
+<div class="card"><i class="fa-solid fa-database"></i><p>MySQL - Database Management</p></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact Us</h2>
+<form action="mailto:webhub262@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
 <!-- FOOTER -->
 <footer>
-<p>&copy; 2026 Web-Hub | All Rights Reserved</p>
+<p>© 2026 Web-Hub | Pro Digital Solutions</p>
 <div class="social">
-<a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-<a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-<a href="mailto:webhub262@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="mailto:webhub262@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
 </div>
 </footer>
 
-<!-- BACK TO TOP -->
-<button id="topBtn" onclick="scrollToTop()">↑</button>
+<!-- FLOATING BUTTONS -->
+<div class="floating-social">
+<a href="mailto:webhub262@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
+<a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a>
+</div>
 
 <!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-// Copy text function
-function copyText(id){
-  var copyText = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(copyText).then(()=>{alert('Copied: ' + copyText)});
-}
-
-// Scroll to top
-window.onscroll = function() {scrollFunction()};
-function scrollFunction(){
-  var topBtn = document.getElementById("topBtn");
-  if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
-    topBtn.style.display = "block";
-  } else { topBtn.style.display = "none"; }
-}
-function scrollToTop(){document.body.scrollTop = 0;document.documentElement.scrollTop = 0;}
-
-// Testimonial slider
-$('.testimonial-slider').slick({
-  infinite:true,
-  slidesToShow:2,
-  slidesToScroll:1,
-  autoplay:true,
-  autoplaySpeed:4000,
-  arrows:false,
-  dots:true,
-  responsive:[
-    {breakpoint:768,settings:{slidesToShow:1}}
-  ]
-});
+// NAV SCROLL
+window.addEventListener('scroll',function(){document.querySelector('nav').classList.toggle('scrolled',window.scrollY>50)})
+// COUNTER
+const counters=document.querySelectorAll('.counter');counters.forEach(counter=>{counter.innerText='0';const updateCounter=()=>{const target=+counter.getAttribute('data-target');const c=+counter.innerText;const increment=target/200;if(c<target){counter.innerText=Math.ceil(c+increment);setTimeout(updateCounter,10)}else{counter.innerText=target}};updateCounter()})
+// COPY PAYMENT
+function copyText(id){var copyText=document.getElementById(id).innerText;navigator.clipboard.writeText(copyText);alert('Copied: '+copyText)}
 </script>
-
 </body>
 </html>
