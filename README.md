@@ -3,9 +3,9 @@
 <meta charset="UTF-8">
 <title>Web-Hub | Pro Digital Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Web-Hub provides professional web development, UI/UX design, SEO, digital marketing & payment solutions.">
+<meta name="description" content="Web-Hub provides professional web development, UI/UX design, SEO, and digital marketing solutions worldwide.">
 <meta property="og:title" content="Web-Hub | Pro Digital Solutions">
-<meta property="og:description" content="Professional Website Development, UI/UX Design, SEO, Digital Marketing & Payment Solutions.">
+<meta property="og:description" content="Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 <meta property="og:url" content="https://web-hub-code.github.io/Web-hub/">
 <meta name="twitter:card" content="summary_large_image">
@@ -57,10 +57,8 @@ h2{text-align:center;font-size:38px;margin-bottom:50px}
 .portfolio-item{position:relative;overflow:hidden;border-radius:16px}
 .portfolio-item img{width:100%;transition:transform .3s}
 .portfolio-item:hover img{transform:scale(1.05)}
-.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.8);color:#fff;padding:20px;text-align:left;opacity:0;transition:.3s;max-height:100%}
+.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
-.portfolio-item .overlay h4{margin-bottom:5px}
-.portfolio-item .overlay p{font-size:14px;line-height:1.4}
 
 /* STATS */
 .stats h3{font-size:40px;color:#22c55e}
@@ -72,9 +70,7 @@ details:hover{background:#273449}
 details summary{cursor:pointer;font-weight:600}
 
 /* CONTACT FORM */
-input,textarea,select{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
-.copy-btn{background:#22c55e;padding:6px 12px;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:.3s}
-.copy-btn:hover{background:#16a34a;transform:scale(1.05)}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
 
 /* FOOTER */
 footer{background:#1e293b;padding:50px 0;text-align:center}
@@ -96,6 +92,12 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 /* Back-to-top */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
 #topBtn:hover{background:#16a34a;transform:scale(1.1)}
+
+/* PAYMENT METHOD CARDS */
+.payment-card{background:#1e293b;padding:20px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;cursor:pointer;transition:.3s}
+.payment-card:hover{background:#273449}
+.copy-btn{background:#22c55e;border:none;padding:6px 12px;border-radius:8px;color:#fff;cursor:pointer;transition:.3s}
+.copy-btn:hover{background:#16a34a;transform:scale(1.05)}
 </style>
 </head>
 <body>
@@ -129,7 +131,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <section id="about">
 <div class="container">
 <h2>About Web-Hub</h2>
-<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. We focus on delivering scalable, fast, and visually stunning projects that drive results for every client.</p>
+<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. Our goal is to deliver scalable, fast, and visually stunning projects that drive results for every client.</p>
 </div>
 </section>
 
@@ -138,14 +140,14 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="container">
 <h2>Our Services</h2>
 <div class="grid grid-4">
-<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites with responsive design.</p></div>
-<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly interface designs for web & mobile apps.</p></div>
-<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Improve search rankings & increase organic traffic.</p></div>
-<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence with targeted campaigns.</p></div>
-<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Development</h3><p>Android & iOS apps with modern UI/UX.</p></div>
-<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & custom online stores.</p></div>
-<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & secure cloud hosting services.</p></div>
-<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Website & data protection with advanced security.</p></div>
+<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites</p></div>
+<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs</p></div>
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Rank higher on search engines</p></div>
+<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
+<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
+<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions</p></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data</p></div>
 </div>
 </div>
 </section>
@@ -155,50 +157,15 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="container">
 <h2>Our Work</h2>
 <div class="grid grid-3">
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="overlay">
-<h4>Modern Website Design</h4>
-<p>Responsive website with fast load speed, SEO ready, modern UI/UX and full client customization. <a href="#" style="color:#22c55e;">View Demo</a></p>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Corporate Website with full responsive layout and interactive features.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX design with sleek user experience and custom animations.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-commerce platform with Shopify integration, payment gateways, and product management.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO optimized blog website for maximum search engine visibility and traffic.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital marketing campaign dashboard with analytics and reporting tools.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud hosting setup with security, speed, and uptime monitoring for clients.</div></div>
 </div>
 </div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
-<div class="overlay">
-<h4>Mobile App UI/UX</h4>
-<p>Android & iOS app designs with smooth interface and interactive experience. <a href="#" style="color:#22c55e;">View Demo</a></p>
-</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
-<div class="overlay">
-<h4>E-Commerce Platform</h4>
-<p>Custom Shopify/WooCommerce store, product management system, payment integrations. <a href="#" style="color:#22c55e;">View Demo</a></p>
-</div>
-</div><!-- Portfolio continued from Part 1 -->
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-<div class="overlay">
-<h4>SEO Optimized Blog</h4>
-<p>High-performance blog with SEO optimization, fast load time, and easy content management. <a href="#" style="color:#22c55e;">View Demo</a></p>
-</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<div class="overlay">
-<h4>Digital Marketing Campaign</h4>
-<p>Complete social media and Google Ads campaigns, targeted for ROI and growth. <a href="#" style="color:#22c55e;">View Demo</a></p>
-</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<div class="overlay">
-<h4>Cloud Hosting Setup</h4>
-<p>Reliable cloud hosting, fast servers, scalable resources and uptime monitoring. <a href="#" style="color:#22c55e;">View Demo</a></p>
-</div>
-</div>
-</div>
-</div>
+</section>
 
 <!-- PRICING -->
 <section id="pricing">
@@ -207,81 +174,59 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="grid grid-3">
 <div class="card">
 <h3>Basic</h3>
-<p>PKR 5,000 / month <br>USD 25 (approx)</p>
-<p>Small websites, depends on client demand</p>
-<button class="btn" onclick="alert('Contact us for payment')">Get Started</button>
+<p>PKR 5,000 / month (≈ $15) – Depends on client demand</p>
+<button class="btn">Get Started</button>
 </div>
 <div class="card">
 <h3>Standard</h3>
-<p>PKR 10,000 / month <br>USD 50 (approx)</p>
-<p>Medium websites, depends on client demand</p>
-<button class="btn" onclick="alert('Contact us for payment')">Get Started</button>
+<p>PKR 15,000 / month (≈ $45) – Depends on client demand</p>
+<button class="btn">Get Started</button>
 </div>
 <div class="card">
 <h3>Premium</h3>
-<p>PKR 15,000 / month <br>USD 75 (approx)</p>
-<p>Large websites, depends on client demand</p>
-<button class="btn" onclick="alert('Contact us for payment')">Get Started</button>
+<p>PKR 25,000 / month (≈ $75) – Depends on client demand</p>
+<button class="btn">Get Started</button>
 </div>
 <div class="card">
 <h3>Enterprise</h3>
-<p>PKR 25,000 / month <br>USD 125 (approx)</p>
-<p>Custom solutions, depends on client demand</p>
-<button class="btn" onclick="alert('Contact us for payment')">Get Started</button>
+<p>PKR 50,000 / month (≈ $150) – Depends on client demand</p>
+<button class="btn">Get Started</button>
 </div>
 </div>
 </div>
 </section>
 
 <!-- PAYMENT METHODS -->
-<section id="payment">
+<section id="payments">
 <div class="container">
 <h2>Payment Methods</h2>
-<p>Select a method and copy the account or wallet info</p>
-<div class="grid grid-2">
-<div class="card">
-<h3>Easypaisa</h3>
-<p id="easypaisa">03379827882</p>
-<button class="copy-btn" onclick="copyText('easypaisa')">Copy Number</button>
+<div class="payment-card" onclick="copyText('easypaisa')">
+<span>Easypaisa: 03379827882</span>
+<button class="copy-btn">Copy</button>
 </div>
-<div class="card">
-<h3>JazzCash</h3>
-<p id="jazzcash">03705519562</p>
-<button class="copy-btn" onclick="copyText('jazzcash')">Copy Number</button>
+<div class="payment-card" onclick="copyText('jazzcash')">
+<span>JazzCash: 03705519562</span>
+<button class="copy-btn">Copy</button>
 </div>
-<div class="card">
-<h3>SadaPay</h3>
-<p id="sadapay">03705519562</p>
-<button class="copy-btn" onclick="copyText('sadapay')">Copy Number</button>
+<div class="payment-card" onclick="copyText('sadapay')">
+<span>SadaPay: 03705519562</span>
+<button class="copy-btn">Copy</button>
 </div>
-<div class="card">
-<h3>Payoneer</h3>
-<p id="payoneer">nazimkhan01123@gmail.com</p>
-<button class="copy-btn" onclick="copyText('payoneer')">Copy Email</button>
+<div class="payment-card" onclick="copyText('payoneer')">
+<span>Payoneer: nazimkhan01123@gmail.com</span>
+<button class="copy-btn">Copy</button>
 </div>
-<div class="card">
-<h3>Binance (TRC20)</h3>
-<p id="binance">TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR</p>
-<button class="copy-btn" onclick="copyText('binance')">Copy Wallet</button>
+<div class="payment-card" onclick="copyText('binance')">
+<span>Binance TRC20: TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR</span>
+<button class="copy-btn">Copy</button>
 </div>
-</div>
-</div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
-<div class="container grid grid-2">
-<div>
-<h2>Contact Us</h2>
-<p>Email: <strong>webhub262@gmail.com</strong></p>
-<p>Fill the form and click Send, your default email client will open with all details ready.</p>
-</div>
-<form class="card" onsubmit="sendEmail(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-<button class="btn" type="submit">Send Message</button>
-</form>
+<!-- Hidden spans for copy -->
+<span id="easypaisa" style="display:none;">03379827882</span>
+<span id="jazzcash" style="display:none;">03705519562</span>
+<span id="sadapay" style="display:none;">03705519562</span>
+<span id="payoneer" style="display:none;">nazimkhan01123@gmail.com</span>
+<span id="binance" style="display:none;">TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR</span>
 </div>
 </section>
 
@@ -308,21 +253,6 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div><h3 class="counter" data-target="5">0</h3><p>Years Experience</p></div>
 <div><h3 class="counter" data-target="24">0</h3><p>Support</p></div>
 </div>
-</section><!-- TECHNOLOGIES & TOOLS -->
-<section id="technologies">
-<div class="container">
-<h2>Technologies & Tools</h2>
-<div class="grid grid-4 center">
-<div class="card"><i class="fa-brands fa-html5"></i><p>HTML5 - Structure & Semantic Markup</p></div>
-<div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3 - Styling & Layout</p></div>
-<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript - Interactive Features</p></div>
-<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Backend Development</p></div>
-<div class="card"><i class="fa-brands fa-react"></i><p>React.js - Dynamic UI</p></div>
-<div class="card"><i class="fa-brands fa-node"></i><p>Node.js - Server-side JS</p></div>
-<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress - CMS Development</p></div>
-<div class="card"><i class="fa-brands fa-shopify"></i><p>Shopify - E-commerce Setup</p></div>
-</div>
-</div>
 </section>
 
 <!-- FAQ -->
@@ -336,84 +266,123 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
 <details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
 <details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
-<details><summary>Is the contact form secure?</summary><p>Yes, clicking send opens your default email client safely.</p></details>
+<details><summary>Is the contact form secure?</summary><p>Yes, clicking send will open your default email client safely.</p></details>
 <details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
 </div>
 </div>
 </section>
 
+<!-- TECHNOLOGIES -->
+<section id="technologies">
+<div class="container">
+<h2>Technologies & Tools</h2>
+<div class="grid grid-4 center">
+<div class="card"><i class="fa-brands fa-html5"></i><p>HTML5 - Structure & Semantic Markup</p></div>
+<div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3 - Styling & Layout</p></div>
+<div class="card"><i class="fa-js"></i><p>JavaScript - Interactive Features</p></div>
+<div class="card"><i class="fa-brands fa-react"></i><p>React - Modern Web Apps</p></div>
+<div class="card"><i class="fa-brands fa-node-js"></i><p>Node.js - Backend Development</p></div>
+<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Server Side Scripting</p></div>
+<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress - CMS Websites</p></div>
+<div class="card"><i class="fa-brands fa-shopify"></i><p>Shopify - E-Commerce Solutions</p></div>
+<div class="card"><i class="fa-brands fa-github"></i><p>Git & GitHub - Version Control</p></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact Us</h2>
+<p class="center">Send your project details or payment confirmation directly via email</p>
+<form action="mailto:webhub262@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="subject" placeholder="Subject" required>
+<textarea name="message" placeholder="Your Message / Payment Details" rows="6" required></textarea>
+<button type="submit" class="btn">Send Email</button>
+</form>
+</div>
+</section>
+
 <!-- FOOTER -->
 <footer>
-<h3>Web-Hub</h3>
+<div class="container">
+<p>&copy; 2026 Web-Hub. All Rights Reserved.</p>
 <div class="social">
-<a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/mr_nazim073" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="mailto:webhub262@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="mailto:webhub262@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
 </div>
-<p>© 2026 Web-Hub. All Rights Reserved.</p>
+</div>
 </footer>
 
 <!-- FLOATING SOCIAL -->
 <div class="floating-social">
-<a href="mailto:webhub262@gmail.com" class="email" title="Email"><i class="fa-solid fa-envelope"></i></a>
-<a href="https://www.instagram.com/mr_nazim073" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="mailto:webhub262@gmail.com" class="email"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
-<!-- BACK TO TOP BUTTON -->
-<button id="topBtn" onclick="topFunction()" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
 
 <!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
 <script>
-// NAVBAR SCROLL
+// Navbar scroll effect
 window.addEventListener('scroll', function() {
-  const nav = document.getElementById('navbar');
-  if(window.scrollY > 50){ nav.classList.add('scrolled'); }
-  else { nav.classList.remove('scrolled'); }
+document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// COUNTER
+// Counter Animation
 const counters = document.querySelectorAll('.counter');
 counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const speed = 200;
-    const increment = target / speed;
-    if(count < target){
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 20);
-    } else { counter.innerText = target; }
-  }
-  updateCount();
+const updateCount = () => {
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+const increment = target / 200;
+if(count < target){
+counter.innerText = Math.ceil(count + increment);
+setTimeout(updateCount, 15);
+} else { counter.innerText = target; }
+};
+updateCount();
 });
 
-// BACK TO TOP
-const topBtn = document.getElementById('topBtn');
-window.onscroll = function(){ scrollFunction(); };
-function scrollFunction(){
-  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){ topBtn.style.display = "block"; }
-  else{ topBtn.style.display = "none"; }
+// Back to top
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+topBtn.style.display = "block";
+} else { topBtn.style.display = "none"; }
 }
-function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
+function topFunction() {document.body.scrollTop = 0; document.documentElement.scrollTop = 0;}
 
-// COPY BUTTONS
+// Copy Payment Info
 function copyText(id){
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(()=>{ alert('Copied: '+text); });
+let text = document.getElementById(id).innerText;
+navigator.clipboard.writeText(text);
+alert("Copied: "+text);
 }
 
-// EMAIL SEND
-function sendEmail(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  const mailtoLink = `mailto:webhub262@gmail.com?subject=Contact Form from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-  window.location.href = mailtoLink;
-  alert('Your default email client will open. Details copied.');
-}
+// Testimonial Slider
+$('.testimonial-slider').slick({
+dots:true,
+infinite:true,
+speed:600,
+slidesToShow:2,
+slidesToScroll:1,
+autoplay:true,
+autoplaySpeed:3000,
+responsive:[
+{breakpoint:1024, settings:{slidesToShow:2}},
+{breakpoint:768, settings:{slidesToShow:1}}
+]
+});
 </script>
+
+</body>
+</html>
