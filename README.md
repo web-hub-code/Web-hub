@@ -161,15 +161,31 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING (Manual Payment) -->
 <section id="pricing">
 <div class="container">
 <h2>Pricing Plans</h2>
 <div class="grid grid-3">
-<div class="card"><h3>Basic</h3><p>$99 / month</p><button class="btn">Get Started</button></div>
-<div class="card"><h3>Standard</h3><p>$199 / month</p><button class="btn">Get Started</button></div>
-<div class="card"><h3>Premium</h3><p>$299 / month</p><button class="btn">Get Started</button></div>
-<div class="card"><h3>Enterprise</h3><p>$499 / month</p><button class="btn">Get Started</button></div>
+<div class="card">
+<h3>Basic</h3>
+<p>$99 / month</p>
+<button class="btn" onclick="manualPayment('Basic', '$99')">Get Started</button>
+</div>
+<div class="card">
+<h3>Standard</h3>
+<p>$199 / month</p>
+<button class="btn" onclick="manualPayment('Standard', '$199')">Get Started</button>
+</div>
+<div class="card">
+<h3>Premium</h3>
+<p>$299 / month</p>
+<button class="btn" onclick="manualPayment('Premium', '$299')">Get Started</button>
+</div>
+<div class="card">
+<h3>Enterprise</h3>
+<p>$499 / month</p>
+<button class="btn" onclick="manualPayment('Enterprise', '$499')">Get Started</button>
+</div>
 </div>
 </div>
 </section>
@@ -273,66 +289,91 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 
 <!-- JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-// Portfolio slider
-$('.testimonial-slider').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2500,
-  arrows: false,
-  dots: true,
-  responsive: [
-    { breakpoint: 1024, settings: { slidesToShow: 2 } },
-    { breakpoint: 768, settings: { slidesToShow: 1 } }
-  ]
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></<script>
+// NAVBAR SCROLL EFFECT
+window.addEventListener('scroll', function() {
+    const nav = document.getElementById('navbar');
+    if(window.scrollY > 50){
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+
+    // Back to top button
+    const topBtn = document.getElementById('topBtn');
+    if(window.scrollY > 300){
+        topBtn.style.display = 'block';
+    } else {
+        topBtn.style.display = 'none';
+    }
 });
 
-// Counter Animation
-$('.counter').each(function() {
-  var $this = $(this),
-      countTo = $this.text();
-  $({ countNum: 0 }).animate({ countNum: countTo }, {
-    duration: 2000,
-    easing: 'swing',
-    step: function() { $this.text(Math.floor(this.countNum)); },
-    complete: function() { $this.text(this.countNum); }
-  });
-});
-
-// Back to top
-var topBtn = document.getElementById("topBtn");
-window.onscroll = function() { scrollFunction(); navbarScroll(); };
-function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-}
+// BACK TO TOP
 function topFunction() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top:0, behavior:'smooth'});
 }
 
-// Navbar background on scroll
-function navbarScroll() {
-  var navbar = document.getElementById("navbar");
-  if (window.scrollY > 50) { navbar.classList.add("scrolled"); }
-  else { navbar.classList.remove("scrolled"); }
+// TESTIMONIAL SLIDER
+$(document).ready(function(){
+    $('.testimonial-slider').slick({
+        slidesToShow:3,
+        slidesToScroll:1,
+        autoplay:true,
+        autoplaySpeed:2500,
+        arrows:true,
+        responsive:[
+            { breakpoint:1024, settings:{slidesToShow:2}},
+            { breakpoint:768, settings:{slidesToShow:1}}
+        ]
+    });
+});
+
+// COUNTER ANIMATION
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+    counter.innerText = '0';
+    const updateCounter = () => {
+        const target = +counter.getAttribute('class').split(' ')[1] || +counter.textContent;
+        const count = +counter.getAttribute('data-target') || parseInt(counter.textContent);
+        const c = +counter.innerText;
+        const increment = Math.ceil(count / 200);
+        if(c < count){
+            counter.innerText = c + increment;
+            setTimeout(updateCounter, 10);
+        } else {
+            counter.innerText = count;
+        }
+    }
+    updateCounter();
+});
+
+// MANUAL PAYMENT FUNCTION
+function manualPayment(plan, price){
+    let emailBody = `Hello Web-Hub Team,\n\nI want to purchase the ${plan} plan for ${price}.\nPlease guide me for the manual payment process.\n\nThank you.`;
+    let mailtoLink = `mailto:rock.earn92@gmail.com?subject=Purchase: ${plan} Plan&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = mailtoLink;
 }
 
-// Contact Form
-function sendEmail(event){
-  event.preventDefault();
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var message = document.getElementById('message').value;
-  var mailtoLink = `mailto:rock.earn92@gmail.com?subject=Contact from ${name}&body=${message}%0D%0AEmail: ${email}`;
-  window.location.href = mailtoLink;
-  alert("Your default email client will open to send the message!");
+// CONTACT FORM FUNCTION
+function sendEmail(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const mailBody = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const mailtoLink = `mailto:rock.earn92@gmail.com?subject=Contact Form Message&body=${encodeURIComponent(mailBody)}`;
+    window.location.href = mailtoLink;
 }
+
+// OPTIONAL: SMOOTH SCROLL FOR NAV LINKS
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({behavior:'smooth'});
+    });
+});
 </script>
-
 </body>
 </html>
