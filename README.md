@@ -92,12 +92,6 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 /* Back-to-top */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
 #topBtn:hover{background:#16a34a;transform:scale(1.1)}
-
-/* PAYMENT METHOD CARDS */
-.payment-card{background:#1e293b;padding:20px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;cursor:pointer;transition:.3s}
-.payment-card:hover{background:#273449}
-.copy-btn{background:#22c55e;border:none;padding:6px 12px;border-radius:8px;color:#fff;cursor:pointer;transition:.3s}
-.copy-btn:hover{background:#16a34a;transform:scale(1.05)}
 </style>
 </head>
 <body>
@@ -159,8 +153,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="grid grid-3">
 <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Corporate Website with full responsive layout and interactive features.</div></div>
 <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX design with sleek user experience and custom animations.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-commerce platform with Shopify integration, payment gateways, and product management.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO optimized blog website for maximum search engine visibility and traffic.</div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-commerce platform with Shopify integration, payment gateways, and product management.</div></div><div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO optimized blog website for maximum search engine visibility and traffic.</div></div>
 <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital marketing campaign dashboard with analytics and reporting tools.</div></div>
 <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud hosting setup with security, speed, and uptime monitoring for clients.</div></div>
 </div>
@@ -194,7 +187,9 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </div>
 </div>
-</section><!-- PAYMENT METHODS -->
+</section>
+
+<!-- PAYMENT METHODS -->
 <section id="payments">
 <div class="container">
 <h2>Payment Methods</h2>
@@ -228,17 +223,45 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- TESTIMONIALS -->
+<section id="testimonials">
 <div class="container">
-<h2>Contact Us</h2>
-<p>Fill the form below and click Send. All details will open in your email ready to submit.</p>
-<form onsubmit="sendEmail(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" placeholder="Your Message / Payment Details" rows="5" required></textarea>
-<button type="submit" class="btn">Send</button>
-</form>
+<h2>Client Reviews</h2>
+<div class="testimonial-slider">
+<div class="card"><p>"Great service! Highly recommended."</p><strong>- John D.</strong></div>
+<div class="card"><p>"Professional & fast delivery."</p><strong>- Sarah K.</strong></div>
+<div class="card"><p>"Our website looks amazing thanks to Web-Hub."</p><strong>- Mike L.</strong></div>
+<div class="card"><p>"Excellent communication and support."</p><strong>- Linda P.</strong></div>
+<div class="card"><p>"Creative designs, very happy."</p><strong>- Kevin R.</strong></div>
+<div class="card"><p>"Fast, reliable & professional."</p><strong>- Emma W.</strong></div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section>
+<div class="container grid grid-4 center stats">
+<div><h3 class="counter" data-target="250">0</h3><p>Projects</p></div>
+<div><h3 class="counter" data-target="120">0</h3><p>Clients</p></div>
+<div><h3 class="counter" data-target="5">0</h3><p>Years Experience</p></div>
+<div><h3 class="counter" data-target="24">0</h3><p>Support</p></div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+<h2>FAQs</h2>
+<div class="grid grid-2">
+<details><summary>Are images showing correctly?</summary><p>Yes, all images are CDN links for guaranteed display.</p></details>
+<details><summary>Is the site mobile-friendly?</summary><p>Yes, fully responsive on all devices.</p></details>
+<details><summary>Do you provide SEO services?</summary><p>Yes, our SEO experts improve your search rankings.</p></details>
+<details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
+<details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
+<details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
+<details><summary>Is the contact form secure?</summary><p>Yes, clicking send will open your default email client safely.</p></details>
+<details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
+</div>
 </div>
 </section>
 
@@ -249,90 +272,86 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="grid grid-4 center">
 <div class="card"><i class="fa-brands fa-html5"></i><p>HTML5 - Structure & Semantic Markup</p></div>
 <div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3 - Styling & Layout</p></div>
-<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript - Interactive Features</p></div>
-<div class="card"><i class="fa-brands fa-react"></i><p>React JS - Modern Frontend</p></div>
-<div class="card"><i class="fa-brands fa-node"></i><p>Node JS - Backend Development</p></div>
-<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Server-side Scripting</p></div>
-<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress - CMS Integration</p></div>
-<div class="card"><i class="fa-solid fa-database"></i><p>MySQL - Database Management</p></div>
+<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript - Interactivity & Animations</p></div>
+<div class="card"><i class="fa-brands fa-php"></i><p>PHP - Backend Development</p></div>
+<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress - CMS Development</p></div>
+<div class="card"><i class="fa-brands fa-shopify"></i><p>Shopify - E-commerce Platforms</p></div>
+<div class="card"><i class="fa-brands fa-react"></i><p>React JS - Modern Frontend Apps</p></div>
+<div class="card"><i class="fa-solid fa-server"></i><p>Node.js & Hosting Servers</p></div>
 </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact Us</h2>
+<p>Fill the form below or click send to submit details directly to our email.</p>
+<form onsubmit="sendEmail(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+<button class="btn" type="submit">Send</button>
+</form>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<p>&copy; 2026 Web-Hub | All Rights Reserved</p>
+<div class="container">
+<p>&copy; 2026 Web-Hub. All Rights Reserved.</p>
 <div class="social">
-<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="mailto:webhub262@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="mailto:webhub262@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
 </div>
 </footer>
 
-<!-- FLOATING SOCIAL BUTTONS -->
+<!-- FLOATING SOCIAL -->
 <div class="floating-social">
+<a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
 <a href="mailto:webhub262@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
-<a href="https://instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
-<!-- BACK TO TOP -->
-<button id="topBtn" onclick="topFunction()">↑</button>
-
 <!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-// NAV SCROLL
-window.addEventListener('scroll',function(){
-document.querySelector('nav').classList.toggle('scrolled',window.scrollY>50);
-document.getElementById('topBtn').style.display=(window.scrollY>300)?'block':'none';
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  counter.innerText = '0';
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const c = +counter.innerText;
+    const increment = target / 200;
+    if(c < target){counter.innerText = `${Math.ceil(c + increment)}`;setTimeout(updateCounter,10);}
+  };
+  updateCounter();
 });
 
-// BACK TO TOP
-function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
-
-// PAYMENT COPY
+// Copy Payment Details
 function copyText(id){
-var copyText=document.getElementById(id).innerText;
-navigator.clipboard.writeText(copyText);
-alert("Copied: "+copyText);
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert(id.toUpperCase() + ' copied: ' + text);
 }
 
-// TESTIMONIAL SLIDER
-$('.testimonial-slider').slick({
-dots:true,
-infinite:true,
-autoplay:true,
-autoplaySpeed:3500,
-slidesToShow:1,
-slidesToScroll:1,
-arrows:false
-});
-
-// COUNTER
-const counters=document.querySelectorAll('.counter');
-counters.forEach(counter=>{
-counter.innerText='0';
-const updateCounter=()=>{
-const target=+counter.getAttribute('data-target');
-const count=+counter.innerText;
-const increment=target/200;
-if(count<target){counter.innerText=Math.ceil(count+increment);setTimeout(updateCounter,10);}
-else{counter.innerText=target;}
-};
-updateCounter();
-});
-
-// SEND EMAIL FUNCTION
+// Contact Form Email
 function sendEmail(e){
-e.preventDefault();
-var name=document.getElementById('name').value;
-var email=document.getElementById('email').value;
-var message=document.getElementById('message').value;
-window.location.href=`mailto:webhub262@gmail.com?subject=Web-Hub Contact: ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-alert("Email client opened with your message, submit to send!");
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  window.location.href = `mailto:webhub262@gmail.com?subject=Web-Hub Contact Form&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+  alert('Your message is ready to be sent via email!');
 }
+
+// Slick Slider for Testimonials
+document.addEventListener('DOMContentLoaded',function(){
+  $('.testimonial-slider').slick({slidesToShow:2,autoplay:true,autoplaySpeed:3000,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]});
+});
 </script>
 </body>
 </html>
