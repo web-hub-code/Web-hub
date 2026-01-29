@@ -9,65 +9,83 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 <style>
+/* ====== GLOBAL ====== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 section{padding:80px 0;position:relative}
-/* NAV */
+
+/* ====== NAV ====== */
 nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;transition:0.3s}
 nav.scrolled{background:rgba(15,23,42,1)}
 nav .logo{font-size:28px;color:#22c55e;font-weight:700}
 nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
 nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
 nav ul li a:hover{color:#22c55e}
-/* HERO */
+
+/* ====== HERO ====== */
 .hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;padding:140px 0;text-align:center;animation:fadeIn 2s ease}
 .hero h1{font-size:52px;color:#22c55e;animation:slideIn 1.5s ease}
-.hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
+.hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto;opacity:0;animation:fadeText 2s forwards 1.5s}
 .btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s}
 .btn:hover{background:#16a34a;cursor:pointer;transform:scale(1.05)}
-/* GRID */
+
+/* ====== GRID ====== */
 .grid{display:grid;gap:25px}
 .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-/* CARDS */
+
+/* ====== CARDS ====== */
 .card{background:#1e293b;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.4);text-align:center;transition:transform .3s, box-shadow .3s;cursor:pointer}
 .card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.5)}
 .card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
-/* PORTFOLIO */
+
+/* ====== PORTFOLIO ====== */
 .portfolio-item{position:relative;overflow:hidden;border-radius:16px;cursor:pointer;transition:transform .3s}
 .portfolio-item img{width:100%;transition:transform .3s}
 .portfolio-item:hover img{transform:scale(1.05)}
-.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
+.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.85);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
-/* TESTIMONIALS */
+
+/* ====== TESTIMONIALS ====== */
 .testimonial-slider{max-width:900px;margin:auto}
 .testimonial-slider .slick-slide{background:#1e293b;padding:30px;border-radius:16px;text-align:center;color:#e5e7eb;box-shadow:0 10px 20px rgba(0,0,0,.3)}
 .testimonial-slider .slick-slide p{font-style:italic;margin-bottom:10px}
 .testimonial-slider .slick-slide h3{color:#22c55e;margin-top:10px}
-/* FAQ */
+
+/* ====== FAQ ====== */
 details{background:#1e293b;padding:18px;border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.3s}
 details:hover{background:#273449}
 details summary{cursor:pointer;font-weight:600}
-/* CONTACT FORM */
+
+/* ====== CONTACT ====== */
 input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
-/* FOOTER */
+
+/* ====== FOOTER ====== */
 footer{background:#1e293b;padding:50px 0;text-align:center}
 .social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
 .social i:hover{transform:scale(1.2)}
-/* FLOATING SOCIAL */
+
+/* ====== FLOATING SOCIAL ====== */
 .floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
 .floating-social a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .3s}
 .floating-social a:hover{transform:scale(1.1)}
 .email{background:#22c55e}
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
 .facebook{background:#1877f2}
-/* Animations */
+
+/* ====== BACK TO TOP ====== */
+#topBtn{position:fixed;bottom:25px;right:25px;padding:10px 15px;font-size:20px;border:none;background:#22c55e;color:#fff;border-radius:50%;cursor:pointer;display:none;z-index:999;transition:.3s}
+#topBtn:hover{background:#16a34a}
+
+/* ====== ANIMATIONS ====== */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
-/* PAYMENT */
+@keyframes fadeText{from{opacity:0}to{opacity:1}}
+
+/* ====== PAYMENT ====== */
 .payment-dropdown{position:relative;margin-bottom:20px}
 .payment-btn{width:100%;padding:15px;background:#1e293b;border-radius:12px;border:none;color:#e5e7eb;font-size:16px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.3s}
 .payment-btn:hover{background:#273449}
@@ -79,7 +97,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ====== NAV ====== -->
 <nav id="navbar">
 <div class="logo">Web-Hub</div>
 <ul>
@@ -96,7 +114,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </ul>
 </nav>
 
-<!-- HERO -->
+<!-- ====== HERO ====== -->
 <section id="hero" class="hero">
 <div class="container">
 <h1>Web-Hub</h1>
@@ -105,7 +123,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ====== ABOUT ====== -->
 <section id="about">
 <div class="container">
 <h2>About Web-Hub</h2>
@@ -113,7 +131,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- SERVICES -->
+<!-- ====== SERVICES ====== -->
 <section id="services">
 <div class="container">
 <h2>Our Services</h2>
@@ -130,7 +148,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- ====== PORTFOLIO ====== -->
 <section id="portfolio">
 <div class="container">
 <h2>Our Work & Clients</h2>
@@ -163,7 +181,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- PRICING -->
+<!-- ====== PRICING ====== -->
 <section id="pricing">
 <div class="container">
 <h2>Pricing Plans</h2>
@@ -176,7 +194,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- PAYMENT -->
+<!-- ====== PAYMENT ====== -->
 <section id="payments">
 <div class="container">
 <h2>Payment Methods</h2>
@@ -196,7 +214,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ====== TESTIMONIALS ====== -->
 <section id="testimonials">
 <div class="container">
 <h2>Client Testimonials</h2>
@@ -208,7 +226,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- FAQ -->
+<!-- ====== FAQ ====== -->
 <section id="faq">
 <div class="container">
 <h2>Frequently Asked Questions</h2>
@@ -218,7 +236,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- TECHNOLOGIES -->
+<!-- ====== TECHNOLOGIES ====== -->
 <section id="technologies">
 <div class="container">
 <h2>Technologies We Use</h2>
@@ -235,7 +253,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ====== CONTACT ====== -->
 <section id="contact">
 <div class="container">
 <h2>Contact Us</h2>
@@ -251,79 +269,77 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <footer>
 <p>© 2026 Web-Hub. All Rights Reserved.</p>
 <div class="social">
-<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="mailto:webhub262@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
 </div>
 </footer>
 
-<!-- FLOATING SOCIAL -->
+<!-- ====== FLOATING SOCIAL ====== -->
 <div class="floating-social">
-<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="mailto:webhub262@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
+<a href="mailto:rock.earn92@gmail.com" class="email"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://www.instagram.com/mr_nazim073" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/profile.php?id=100084218946114" class="facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
-<!-- BACK TO TOP -->
-<button id="topBtn" onclick="scrollTop()">↑</button>
+<!-- ====== BACK TO TOP ====== -->
+<button id="topBtn" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>
 
+<!-- ====== SCRIPTS ====== -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-// NAV SCROLL EFFECT
+// ====== NAV SCROLL EFFECT ======
 window.addEventListener('scroll', function() {
-  const nav = document.getElementById('navbar');
-  if(window.scrollY > 50){ nav.classList.add('scrolled'); } 
-  else { nav.classList.remove('scrolled'); }
+let nav = document.getElementById('navbar');
+if(window.scrollY > 50){nav.classList.add('scrolled');} 
+else{nav.classList.remove('scrolled');}
+
+// ====== BACK TO TOP BUTTON ======
+let topBtn = document.getElementById("topBtn");
+if(window.scrollY > 300){topBtn.style.display = "block";}
+else{topBtn.style.display = "none";}
 });
 
-// PAYMENT DROPDOWN
+// ====== BACK TO TOP FUNCTION ======
+function topFunction(){window.scrollTo({top:0,behavior:"smooth"});}
+
+// ====== PAYMENT DROPDOWN ======
 function toggleDropdown(){
-  const options = document.querySelector('.payment-options');
-  options.style.display = options.style.display === 'block' ? 'none' : 'block';
+let options = document.querySelector('.payment-options');
+options.style.display = (options.style.display === 'block') ? 'none' : 'block';
 }
 
-function selectPayment(method, value){
-  const display = document.getElementById('paymentDisplay');
-  display.innerHTML = `<strong>${method}:</strong> <span id="paymentValue">${value}</span> <button onclick="copyPayment()">Copy</button>`;
+function selectPayment(name, value){
+document.getElementById('paymentDisplay').innerHTML = `<strong>${name}:</strong> ${value}`;
+navigator.clipboard.writeText(value).then(()=>{
+let notif = document.getElementById('copyNotif');
+notif.style.display = 'block';
+setTimeout(()=>{notif.style.display = 'none';},2000);
+});
 }
 
-function copyPayment(){
-  const value = document.getElementById('paymentValue').innerText;
-  navigator.clipboard.writeText(value);
-  const notif = document.getElementById('copyNotif');
-  notif.style.display = 'block';
-  setTimeout(()=>{ notif.style.display='none'; }, 1500);
-}
-
-// TESTIMONIAL SLIDER
+// ====== TESTIMONIAL SLIDER ======
+$(document).ready(function(){
 $('.testimonial-slider').slick({
-  dots: true,
-  arrows: false,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  slidesToShow: 1,
-  adaptiveHeight: true
+dots:true,
+infinite:true,
+speed:600,
+slidesToShow:1,
+autoplay:true,
+autoplaySpeed:3000,
+arrows:false,
+fade:true
+});
 });
 
-// BACK TO TOP
-function scrollTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
-
-// CONTACT FORM (dummy)
+// ====== CONTACT FORM ======
 function sendEmail(e){
-  e.preventDefault();
-  alert('Thank you! Your message has been sent.');
-  e.target.reset();
+e.preventDefault();
+alert("Thank you! Your message has been sent successfully.");
+e.target.reset();
 }
-
-// SMOOTH SCROLL
-document.querySelectorAll('nav ul li a').forEach(link=>{
-  link.addEventListener('click', function(e){
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-  });
-});
 </script>
 </body>
 </html>
