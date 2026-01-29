@@ -248,34 +248,42 @@ body.dark-mode nav{background:rgba(255,255,255,0.95)}
 <section id="faq">
 <div class="container">
 <h2>Frequently Asked Questions</h2>
-<details><summary>What services does Web-Hub provide?</summary>
-<p>We provide website development, UI/UX design, SEO optimization, digital marketing, mobile app development, e-commerce, cloud hosting, and security services worldwide.</p>
+
+<details>
+<summary>What services does Web-Hub provide?</summary>
+<p>We offer web development, UI/UX design, SEO, digital marketing, e-commerce, mobile apps, and cloud hosting.</p>
 </details>
-<details><summary>How long does it take to complete a project?</summary>
-<p>Project duration depends on complexity. Basic websites take 1-2 weeks, e-commerce or custom apps may take 3-6 weeks.</p>
+
+<details>
+<summary>How long does a project take?</summary>
+<p>Normally 5–14 days depending on project complexity.</p>
 </details>
-<details><summary>Do you provide ongoing support?</summary>
-<p>Yes, we offer 24/7 support and maintenance plans for all projects to ensure your site runs smoothly.</p>
+
+<details>
+<summary>Do you provide support after delivery?</summary>
+<p>Yes, we provide full support and maintenance.</p>
 </details>
-<details><summary>Can I update my website myself?</summary>
-<p>Yes, we provide CMS integration or training for self-updates, depending on the project type.</p>
-</details>
+
 </div>
 </section>
 
 <!-- TECHNOLOGIES -->
 <section id="technologies">
 <div class="container">
-<h2>Technologies We Use</h2>
+<h2>Technologies & Tools</h2>
 <div class="grid grid-4">
-<div class="card"><i class="fa-brands fa-html5"></i><h3>HTML5</h3></div>
-<div class="card"><i class="fa-brands fa-css3-alt"></i><h3>CSS3</h3></div>
-<div class="card"><i class="fa-brands fa-js"></i><h3>JavaScript</h3></div>
-<div class="card"><i class="fa-brands fa-react"></i><h3>React</h3></div>
-<div class="card"><i class="fa-brands fa-node-js"></i><h3>Node.js</h3></div>
-<div class="card"><i class="fa-brands fa-php"></i><h3>PHP</h3></div>
-<div class="card"><i class="fa-brands fa-wordpress"></i><h3>WordPress</h3></div>
-<div class="card"><i class="fa-brands fa-shopify"></i><h3>Shopify</h3></div>
+<div class="card">HTML5</div>
+<div class="card">CSS3</div>
+<div class="card">JavaScript</div>
+<div class="card">React</div>
+<div class="card">Node.js</div>
+<div class="card">PHP</div>
+<div class="card">WordPress</div>
+<div class="card">Shopify</div>
+<div class="card">MongoDB</div>
+<div class="card">MySQL</div>
+<div class="card">AWS</div>
+<div class="card">GitHub</div>
 </div>
 </div>
 </section>
@@ -284,86 +292,69 @@ body.dark-mode nav{background:rgba(255,255,255,0.95)}
 <section id="contact">
 <div class="container">
 <h2>Contact Us</h2>
-<form id="contactForm">
+<form>
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
-<textarea rows="5" placeholder="Your Message" required></textarea>
-<button type="submit" class="btn">Send Message</button>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button class="btn" type="submit">Send Message</button>
 </form>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<div class="container">
-<p>&copy; 2026 Web-Hub. All Rights Reserved.</p>
+<p>© 2026 Web-Hub. All Rights Reserved.</p>
 <div class="social">
-<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="mailto:rock.earn92@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-</div>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fa fa-envelope"></i></a>
 </div>
 </footer>
 
 <!-- FLOATING SOCIAL -->
 <div class="floating-social">
-<a href="mailto:rock.earn92@gmail.com" class="email"><i class="fa-solid fa-envelope"></i></a>
-<a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+<a class="email" href="mailto:nazimkhan01123@gmail.com"><i class="fa fa-envelope"></i></a>
 </div>
 
-<!-- BACK TO TOP -->
-<button id="topBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
-
-<!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<button id="topBtn">↑</button><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 <script>
-// NAV SCROLL
-window.addEventListener('scroll', function(){
-document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// DARK MODE
-const darkBtn = document.getElementById('darkModeToggle');
-darkBtn.addEventListener('click', () => {document.body.classList.toggle('dark-mode');});
-
-// SLICK TESTIMONIALS
+// Testimonials slider
 $('.testimonial-slider').slick({
-dots:true,
-arrows:false,
-infinite:true,
-autoplay:true,
-autoplaySpeed:3000,
-slidesToShow:1,
-slidesToScroll:1
+  autoplay:true,
+  arrows:false,
+  dots:true
 });
 
-// PAYMENT DROPDOWN
+// Payment dropdown
 function toggleDropdown(){
-document.querySelector('.payment-options').classList.toggle('show');
-}
-function selectPayment(name,value){
-document.getElementById('paymentDisplay').innerHTML = `${name}: <strong>${value}</strong>`;
-navigator.clipboard.writeText(value);
-let notif = document.getElementById('copyNotif');
-notif.style.display='block';
-setTimeout(()=>{notif.style.display='none';},2000);
+  const menu=document.querySelector('.payment-options');
+  menu.style.display=menu.style.display==='block'?'none':'block';
 }
 
-// CONTACT FORM
-document.getElementById('contactForm').addEventListener('submit',function(e){
-e.preventDefault();
-alert('Message sent! We will contact you soon.');
-this.reset();
-});
-
-// BACK TO TOP
-window.onscroll = function() {scrollFunction();};
-function scrollFunction(){
-document.getElementById('topBtn').style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+function selectPayment(method,value){
+  navigator.clipboard.writeText(value);
+  document.getElementById('paymentDisplay').innerHTML =
+  `<strong>${method}:</strong> ${value}`;
+  document.getElementById('copyNotif').style.display='block';
+  setTimeout(()=>{document.getElementById('copyNotif').style.display='none'},2000);
+  document.querySelector('.payment-options').style.display='none';
 }
-function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+
+// Back to top
+const topBtn=document.getElementById("topBtn");
+window.onscroll=function(){
+  topBtn.style.display=window.scrollY>300?"block":"none";
+};
+topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+// Dark mode
+document.getElementById("darkModeToggle").onclick=function(){
+  document.body.classList.toggle("dark-mode");
+};
 </script>
 
 </body>
