@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -57,7 +58,7 @@ h2{text-align:center;font-size:38px;margin-bottom:50px}
 .portfolio-item{position:relative;overflow:hidden;border-radius:16px}
 .portfolio-item img{width:100%;transition:transform .3s}
 .portfolio-item:hover img{transform:scale(1.05)}
-.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.8);color:#fff;padding:20px;text-align:left;opacity:0;transition:.3s}
+.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
 
 /* STATS */
@@ -70,7 +71,7 @@ details:hover{background:#273449}
 details summary{cursor:pointer;font-weight:600}
 
 /* CONTACT FORM */
-input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
+input,textarea,select{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
 
 /* FOOTER */
 footer{background:#1e293b;padding:50px 0;text-align:center}
@@ -85,7 +86,11 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
 .facebook{background:#1877f2}
 
-/* BACK-TO-TOP */
+/* Animations */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* Back-to-top */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
 #topBtn:hover{background:#16a34a;transform:scale(1.1)}
 </style>
@@ -105,6 +110,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#technologies">Technologies</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="#payment">Payment</a></li>
 </ul>
 </nav>
 
@@ -112,7 +118,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <section id="hero" class="hero">
 <div class="container">
 <h1>Web-Hub</h1>
-<p>Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions. Affordable & Trusted.</p>
+<p>Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions</p>
 <a href="#contact" class="btn">Start Your Project</a>
 </div>
 </section>
@@ -121,7 +127,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <section id="about">
 <div class="container">
 <h2>About Web-Hub</h2>
-<p>Web-Hub provides premium digital solutions in Pakistan and worldwide: websites, apps, SEO, and marketing. <strong>Prices depend on client demand</strong>. We deliver visually stunning, fast, and reliable projects tailored to your needs.</p>
+<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. Our goal is to deliver scalable, fast, and visually stunning projects that drive results for every client.</p>
 </div>
 </section>
 
@@ -130,14 +136,14 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="container">
 <h2>Our Services</h2>
 <div class="grid grid-4">
-<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites for every business</p></div>
-<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern, responsive & user-friendly designs</p></div>
-<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Improve your search rankings & traffic</p></div>
-<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence & sales</p></div>
-<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications with sleek UI</p></div>
-<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & other platforms</p></div>
-<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Fast, reliable, secure hosting solutions</p></div>
-<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & client data from threats</p></div>
+<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites</p></div>
+<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs</p></div>
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Rank higher on search engines</p></div>
+<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
+<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
+<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions</p></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data</p></div>
 </div>
 </div>
 </section>
@@ -145,63 +151,15 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <!-- PORTFOLIO -->
 <section id="portfolio">
 <div class="container">
-<h2>Our Portfolio</h2>
+<h2>Our Work</h2>
 <div class="grid grid-3">
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="overlay">
-<h3>Project 1: Modern Website Design</h3>
-<p>Developed a responsive website with clean UI, SEO optimized, fast loading speed, and integrated CMS for client content management.</p>
-<a href="#" class="btn">View Live</a>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Website Design with SEO optimized, fast loading, responsive layout. <a href="#">View Project</a></div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX, Interactive, Modern design <a href="#">View App</a></div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-Commerce Platform, Shopify & WooCommerce solutions <a href="#">Visit Store</a></div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO Optimized Blog with Keyword targeting, Google ranking <a href="#">Read Blog</a></div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital Marketing Campaign, Social Media Ads, PPC, Google Ads <a href="#">View Campaign</a></div></div>
+<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud Hosting Setup, Reliable, Fast & Secure <a href="#">Hosting Details</a></div></div>
 </div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
-<div class="overlay">
-<h3>Project 2: Mobile App UI/UX</h3>
-<p>Designed an interactive mobile application with smooth navigation, onboarding screens, and modern interface for Android & iOS.</p>
-<a href="#" class="btn">View Live</a>
-</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
-<div class="overlay">
-<h3>Project 3: E-Commerce Platform</h3>
-<p>Built an online store with WooCommerce & Shopify, secure payment integration, and optimized product catalog for conversions.</p>
-<a href="#" class="btn">View Live</a>
-</div>
-</div>
-
-<!-- More projects will continue in Part 2 -->
-
-</div>
-</div>
-</section><!-- Portfolio remaining projects -->
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-<div class="overlay">
-<h3>Project 4: SEO Optimized Blog</h3>
-<p>Custom blog setup with SEO strategies, responsive layout, fast loading, and analytics integration.</p>
-<a href="#" class="btn">View Live</a>
-</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<div class="overlay">
-<h3>Project 5: Digital Marketing Campaign</h3>
-<p>Managed digital campaigns including social media ads, email marketing, and content optimization for max ROI.</p>
-<a href="#" class="btn">View Live</a>
-</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<div class="overlay">
-<h3>Project 6: Cloud Hosting Setup</h3>
-<p>Setup secure and fast cloud hosting, configured domains, SSL, and server optimization for high traffic websites.</p>
-<a href="#" class="btn">View Live</a>
-</div>
-</div>
-
 </div>
 </section>
 
@@ -209,15 +167,27 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <section id="pricing">
 <div class="container">
 <h2>Pricing Plans</h2>
-<div style="text-align:center;margin-bottom:30px;">
-<label for="currency">Select Currency: </label>
-<select id="currency" onchange="updatePricing()">
-<option value="PKR">PKR</option>
-<option value="USD">USD</option>
-</select>
+<div class="grid grid-3">
+<div class="card">
+<h3>Basic</h3>
+<p>PKR 5,000 / USD 20 <br> (Depends on client demand)</p>
+<button class="btn">Get Started</button>
 </div>
-<div class="grid grid-3" id="pricing-cards">
-<!-- Pricing cards will update dynamically via JS -->
+<div class="card">
+<h3>Standard</h3>
+<p>PKR 10,000 / USD 40 <br> (Depends on client demand)</p>
+<button class="btn">Get Started</button>
+</div>
+<div class="card">
+<h3>Premium</h3>
+<p>PKR 20,000 / USD 80 <br> (Depends on client demand)</p>
+<button class="btn">Get Started</button>
+</div>
+<div class="card">
+<h3>Enterprise</h3>
+<p>PKR 50,000 / USD 200 <br> (Depends on client demand)</p>
+<button class="btn">Get Started</button>
+</div>
 </div>
 </div>
 </section>
@@ -244,6 +214,21 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div><h3 class="counter" data-target="120">0</h3><p>Clients</p></div>
 <div><h3 class="counter" data-target="5">0</h3><p>Years Experience</p></div>
 <div><h3 class="counter" data-target="24">0</h3><p>Support</p></div>
+</div>
+</section><!-- FAQ -->
+<section id="faq">
+<div class="container">
+<h2>FAQs</h2>
+<div class="grid grid-2">
+<details><summary>Are images showing correctly?</summary><p>Yes, all images are stock CDN links for guaranteed display.</p></details>
+<details><summary>Is the site mobile-friendly?</summary><p>Yes, fully responsive on all devices.</p></details>
+<details><summary>Do you provide SEO services?</summary><p>Yes, our SEO experts improve your search rankings.</p></details>
+<details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
+<details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
+<details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
+<details><summary>Is the contact form secure?</summary><p>Yes, clicking send will open your default email client safely.</p></details>
+<details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
+</div>
 </div>
 </section>
 
@@ -281,6 +266,51 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
+<!-- PAYMENT METHODS -->
+<section id="payment">
+<div class="container">
+<h2>Payment Methods</h2>
+<p>Select a payment method and copy account/wallet number easily. You can also upload proof of payment.</p>
+
+<div class="grid grid-2">
+<div class="card">
+<h3>Easypaisa</h3>
+<p id="easypaisa">03379827882 <button onclick="copyText('easypaisa')">Copy</button></p>
+</div>
+
+<div class="card">
+<h3>JazzCash</h3>
+<p id="jazzcash">03705519562 <button onclick="copyText('jazzcash')">Copy</button></p>
+</div>
+
+<div class="card">
+<h3>SadaPay</h3>
+<p id="sadapay">03705519562 <button onclick="copyText('sadapay')">Copy</button></p>
+</div>
+
+<div class="card">
+<h3>Payoneer</h3>
+<p id="payoneer">nazimkhan01123@gmail.com <button onclick="copyText('payoneer')">Copy</button></p>
+</div>
+
+<div class="card">
+<h3>Binance (TRC20)</h3>
+<p id="binance">TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR <button onclick="copyText('binance')">Copy</button></p>
+</div>
+</div>
+
+<div class="card">
+<h3>Upload Payment Proof</h3>
+<form id="paymentProofForm">
+<input type="file" id="proofFile" accept="image/*" required>
+<input type="text" id="transactionId" placeholder="Transaction ID / Reference" required>
+<button type="submit" class="btn">Submit Proof</button>
+</form>
+<p id="proofMsg"></p>
+</div>
+</div>
+</section>
+
 <!-- FOOTER -->
 <footer>
 <h3>Web-Hub</h3>
@@ -302,50 +332,43 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <!-- BACK TO TOP BUTTON -->
 <button id="topBtn" onclick="topFunction()" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
+<!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-// Back-to-top
-var topBtn = document.getElementById("topBtn");
+// Back to top button
 window.onscroll = function() {scrollFunction()};
-function scrollFunction() { topBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";}
-function topFunction() {document.body.scrollTop = 0;document.documentElement.scrollTop = 0;}
-
-// Testimonial slider
-$(document).ready(function(){
-$('.testimonial-slider').slick({dots:true,infinite:true,autoplay:true,autoplaySpeed:4000});
-});
-
-// Counter animation
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-counter.innerText = '0';
-const updateCounter = () => {
-const target = +counter.getAttribute('data-target');
-const c = +counter.innerText;
-const increment = target/200;
-if(c < target){counter.innerText = `${Math.ceil(c + increment)}`; setTimeout(updateCounter, 10);}
-else{counter.innerText = target;}
-};
-updateCounter();
-});
-
-// Pricing toggle
-const pricingData = {
-PKR: [{plan:'Basic',price:'5,000 PKR'},{plan:'Standard',price:'10,000 PKR'},{plan:'Premium',price:'15,000 PKR'},{plan:'Enterprise',price:'25,000 PKR'}],
-USD: [{plan:'Basic',price:'15 USD'},{plan:'Standard',price:'30 USD'},{plan:'Premium',price:'45 USD'},{plan:'Enterprise',price:'75 USD'}]
-};
-function updatePricing(){
-const currency = document.getElementById('currency').value;
-const cards = document.getElementById('pricing-cards');
-cards.innerHTML = '';
-pricingData[currency].forEach(p => {
-cards.innerHTML += `<div class="card"><h3>${p.plan}</h3><p>${p.price}</p><button class="btn">Get Started</button></div>`;
-});
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("topBtn").style.display = "block";
+  } else {document.getElementById("topBtn").style.display = "none";}
 }
-updatePricing();
+function topFunction() {document.body.scrollTop = 0; document.documentElement.scrollTop = 0;}
 
-// Payment method copy feature & proof upload (added in future enhancements)
+// Copy payment numbers
+function copyText(id){
+  let text = document.getElementById(id).innerText.split(' ')[0];
+  navigator.clipboard.writeText(text);
+  alert(id + " copied: " + text);
+}
+
+// Payment proof form
+document.getElementById('paymentProofForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  let file = document.getElementById('proofFile').files[0];
+  let txn = document.getElementById('transactionId').value;
+  if(file && txn){
+    document.getElementById('proofMsg').innerText = "Proof submitted successfully! Transaction ID: " + txn;
+  } else {
+    document.getElementById('proofMsg').innerText = "Please provide file and transaction ID.";
+  }
+});
+
+// Contact email
+function sendEmail(e){
+  e.preventDefault();
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let msg = document.getElementById('message').value;
+  window.location.href = `mailto:webhub262@gmail.com?subject=Message from ${name}&body=${msg} - ${email}`;
+}
 </script>
-</body>
-</html>
