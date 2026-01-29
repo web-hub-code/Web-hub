@@ -22,7 +22,6 @@ body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 section{padding:80px 0}
-
 /* NAVIGATION */
 nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;transition:0.3s}
 nav.scrolled{background:rgba(15,23,42,1)}
@@ -30,53 +29,43 @@ nav .logo{font-size:28px;color:#22c55e;font-weight:700}
 nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
 nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
 nav ul li a:hover{color:#22c55e}
-
 /* HERO */
 .hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;padding:140px 0;text-align:center;animation:fadeIn 2s ease}
 .hero h1{font-size:52px;color:#22c55e;animation:slideIn 1.5s ease}
 .hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
 .btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s}
 .btn:hover{background:#16a34a;cursor:pointer;transform:scale(1.05)}
-
 /* GRID */
 .grid{display:grid;gap:25px}
 .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-
 /* CARDS */
 .card{background:#1e293b;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.4);text-align:center;transition:transform .3s, box-shadow .3s;cursor:pointer}
 .card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.5)}
 .card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
-
 /* TITLES */
 h2{text-align:center;font-size:38px;margin-bottom:50px}
 .center{text-align:center}
-
 /* PORTFOLIO ITEMS */
 .portfolio-item{position:relative;overflow:hidden;border-radius:16px}
 .portfolio-item img{width:100%;transition:transform .3s}
 .portfolio-item:hover img{transform:scale(1.05)}
 .portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
-
 /* STATS */
 .stats h3{font-size:40px;color:#22c55e}
 .counter{font-weight:bold;color:#22c55e;font-size:32px}
-
 /* FAQ */
 details{background:#1e293b;padding:18px;border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.3s}
 details:hover{background:#273449}
 details summary{cursor:pointer;font-weight:600}
-
 /* CONTACT FORM */
 input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
-
 /* FOOTER */
 footer{background:#1e293b;padding:50px 0;text-align:center}
 .social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
 .social i:hover{transform:scale(1.2)}
-
 /* FLOATING SOCIAL BUTTONS */
 .floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
 .floating-social a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .3s}
@@ -84,14 +73,17 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 .email{background:#22c55e}
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
 .facebook{background:#1877f2}
-
 /* Animations */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
-
 /* Back-to-top */
 #topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
 #topBtn:hover{background:#16a34a;transform:scale(1.1)}
+/* PAYMENT METHODS */
+.payment-card{background:#1e293b;padding:20px;border-radius:16px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.4);transition:transform .3s;cursor:pointer;margin-bottom:20px}
+.payment-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,.5)}
+.copy-btn{background:#22c55e;color:#fff;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;transition:.3s}
+.copy-btn:hover{background:#16a34a;transform:scale(1.05)}
 </style>
 </head>
 <body>
@@ -105,9 +97,6 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <li><a href="#services">Services</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
 <li><a href="#pricing">Pricing</a></li>
-<li><a href="#testimonials">Testimonials</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#technologies">Technologies</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -159,7 +148,9 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud Hosting Setup</div></div>
 </div>
 </div>
-</section><!-- PRICING -->
+</section>
+
+<!-- PRICING -->
 <section id="pricing">
 <div class="container">
 <h2>Pricing Plans</h2>
@@ -167,24 +158,83 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="card">
 <h3>Basic</h3>
 <p>$99 / month</p>
-<button class="btn" onclick="manualPayment('Basic', '$99')">Get Started</button>
+<button class="btn" onclick="showPayment('Basic', '$99')">Get Started</button>
 </div>
 <div class="card">
 <h3>Standard</h3>
 <p>$199 / month</p>
-<button class="btn" onclick="manualPayment('Standard', '$199')">Get Started</button>
+<button class="btn" onclick="showPayment('Standard', '$199')">Get Started</button>
 </div>
 <div class="card">
 <h3>Premium</h3>
 <p>$299 / month</p>
-<button class="btn" onclick="manualPayment('Premium', '$299')">Get Started</button>
+<button class="btn" onclick="showPayment('Premium', '$299')">Get Started</button>
 </div>
 <div class="card">
 <h3>Enterprise</h3>
 <p>$499 / month</p>
-<button class="btn" onclick="manualPayment('Enterprise', '$499')">Get Started</button>
+<button class="btn" onclick="showPayment('Enterprise', '$499')">Get Started</button>
 </div>
 </div>
+</div>
+</section>
+
+<!-- PAYMENT METHODS -->
+<section id="payments">
+<div class="container">
+<h2>Payment Methods</h2>
+<div class="grid grid-2">
+<div class="payment-card">
+<h3>EasyPaisa</h3>
+<p id="easypaisaNumber">0300-1234567</p>
+<button class="copy-btn" onclick="copyNumber('easypaisaNumber')">Copy Number</button>
+</div>
+<div class="payment-card">
+<h3>JazzCash</h3>
+<p id="jazzcashNumber">0311-7654321</p>
+<button class="copy-btn" onclick="copyNumber('jazzcashNumber')">Copy Number</button>
+</div>
+<div class="payment-card">
+<h3>Binance</h3>
+<p id="binanceNumber">binance_wallet_123</p>
+<button class="copy-btn" onclick="copyNumber('binanceNumber')">Copy Wallet</button>
+</div>
+<div class="payment-card">
+<h3>Payoneer</h3>
+<p id="payoneerNumber">payoneer_account_123</p>
+<button class="copy-btn" onclick="copyNumber('payoneerNumber')">Copy Account</button>
+</div>
+<div class="payment-card">
+<h3>SADA Pay</h3>
+<p id="sadapayNumber">0302-9876543</p>
+<button class="copy-btn" onclick="copyNumber('sadapayNumber')">Copy Number</button>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+function copyNumber(id){
+  let num = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(num);
+  alert("Copied: " + num);
+}
+function showPayment(plan, price){
+  alert("Selected Plan: " + plan + " (" + price + ").\nScroll down to Payment Proof section to submit transaction details.");
+}
+</script><!-- PAYMENT PROOF SUBMISSION -->
+<section id="payment-proof">
+<div class="container">
+<h2>Submit Payment Proof</h2>
+<p>Upload your transaction screenshot or enter your transaction ID. After submission, we will confirm your payment via email.</p>
+<form class="card" onsubmit="submitPaymentProof(event)">
+<input type="text" id="payerName" placeholder="Your Name" required>
+<input type="email" id="payerEmail" placeholder="Your Email" required>
+<input type="text" id="planName" placeholder="Plan Name (e.g., Basic)" required>
+<input type="text" id="transactionId" placeholder="Transaction ID" required>
+<input type="file" id="screenshot" accept="image/*" required>
+<button class="btn" type="submit">Submit Payment Proof</button>
+</form>
 </div>
 </section>
 
@@ -289,60 +339,60 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script>
-// NAV SCROLL EFFECT
-window.addEventListener('scroll', function(){
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-});
+// Back to top
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  document.getElementById("topBtn").style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+}
+function topFunction() {document.body.scrollTop = 0; document.documentElement.scrollTop = 0;}
 
-// COUNTER
+// Counter
 const counters = document.querySelectorAll('.counter');
 counters.forEach(counter => {
-  counter.innerText = '0';
-  const updateCounter = () => {
+  const updateCount = () => {
     const target = +counter.getAttribute('data-target');
-    const c = +counter.innerText;
-    const increment = target / 200;
-    if(c < target){
-      counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter, 15);
+    const count = +counter.innerText;
+    const inc = target / 200;
+    if(count < target){
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(updateCount, 20);
     } else { counter.innerText = target; }
   }
-  updateCounter();
+  updateCount();
 });
 
-// TESTIMONIAL SLIDER
+// Testimonials slider
 $('.testimonial-slider').slick({
-dots:true,
-infinite:true,
-speed:500,
-slidesToShow:2,
-slidesToScroll:1,
-autoplay:true,
-autoplaySpeed:3000,
-responsive:[
-{breakpoint:768,settings:{slidesToShow:1}}
-]
+  infinite:true,slidesToShow:2,slidesToScroll:1,autoplay:true,autoplaySpeed:3000,responsive:[{breakpoint:768,settings:{slidesToShow:1}}]
 });
 
-// BACK TO TOP
-const topBtn = document.getElementById("topBtn");
-window.onscroll = function() {
-  topBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
-};
-function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
-
-// CONTACT FORM
-function sendEmail(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  window.location.href = `mailto:rock.earn92@gmail.com?subject=Message from ${name}&body=${message}%0A%0AEmail: ${email}`;
+// Email send
+function sendEmail(event){
+  event.preventDefault();
+  const name=document.getElementById('name').value;
+  const email=document.getElementById('email').value;
+  const message=document.getElementById('message').value;
+  window.location.href=`mailto:rock.earn92@gmail.com?subject=Message from ${name}&body=${message}%0AFrom: ${email}`;
+  alert("Email client opened. Send your message.");
 }
 
-// MANUAL PAYMENT ALERT
-function manualPayment(plan, price){
-  alert(`You selected the ${plan} plan with a price of ${price}. Please contact us at rock.earn92@gmail.com to proceed.`);
+// Payment proof submission
+function submitPaymentProof(event){
+  event.preventDefault();
+  const name=document.getElementById('payerName').value;
+  const email=document.getElementById('payerEmail').value;
+  const plan=document.getElementById('planName').value;
+  const txid=document.getElementById('transactionId').value;
+  const file=document.getElementById('screenshot').files[0];
+  if(file){
+    const reader=new FileReader();
+    reader.onload=function(){
+      const imgData=reader.result;
+      window.location.href=`mailto:rock.earn92@gmail.com?subject=Payment Proof: ${plan}&body=Name: ${name}%0AEmail: ${email}%0ATransaction ID: ${txid}%0ASee attached screenshot.&attachment=${imgData}`;
+      alert("Email client opened. Attach your screenshot and send.");
+    }
+    reader.readAsDataURL(file);
+  }else{ alert("Please select screenshot."); }
 }
 </script>
 </body>
