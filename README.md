@@ -161,7 +161,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- PRICING (Manual Payment) -->
+<!-- PRICING -->
 <section id="pricing">
 <div class="container">
 <h2>Pricing Plans</h2>
@@ -208,10 +208,10 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <!-- STATS -->
 <section>
 <div class="container grid grid-4 center stats">
-<div><h3 class="counter">250</h3><p>Projects</p></div>
-<div><h3 class="counter">120</h3><p>Clients</p></div>
-<div><h3 class="counter">5</h3><p>Years Experience</p></div>
-<div><h3 class="counter">24</h3><p>Support</p></div>
+<div><h3 class="counter" data-target="250">0</h3><p>Projects</p></div>
+<div><h3 class="counter" data-target="120">0</h3><p>Clients</p></div>
+<div><h3 class="counter" data-target="5">0</h3><p>Years Experience</p></div>
+<div><h3 class="counter" data-target="24">0</h3><p>Support</p></div>
 </div>
 </section>
 
@@ -284,96 +284,82 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
-<!-- BACK TO TOP -->
-<button id="topBtn" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
+<!-- BACK TO TOP BUTTON -->
+<button id="topBtn" onclick="topFunction()" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
 // NAVBAR SCROLL EFFECT
 window.addEventListener('scroll', function() {
-    const nav = document.getElementById('navbar');
-    if(window.scrollY > 50){
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-
-    // Back to top button
-    const topBtn = document.getElementById('topBtn');
-    if(window.scrollY > 300){
-        topBtn.style.display = 'block';
-    } else {
-        topBtn.style.display = 'none';
-    }
+    const navbar = document.getElementById('navbar');
+    if(window.scrollY > 50){ navbar.classList.add('scrolled'); }
+    else { navbar.classList.remove('scrolled'); }
 });
 
-// BACK TO TOP
-function topFunction() {
-    window.scrollTo({top:0, behavior:'smooth'});
+// BACK TO TOP BUTTON
+const topBtn = document.getElementById("topBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
 }
-
-// TESTIMONIAL SLIDER
-$(document).ready(function(){
-    $('.testimonial-slider').slick({
-        slidesToShow:3,
-        slidesToScroll:1,
-        autoplay:true,
-        autoplaySpeed:2500,
-        arrows:true,
-        responsive:[
-            { breakpoint:1024, settings:{slidesToShow:2}},
-            { breakpoint:768, settings:{slidesToShow:1}}
-        ]
-    });
-});
+function topFunction() {
+  window.scrollTo({top:0, behavior:'smooth'});
+}
 
 // COUNTER ANIMATION
 const counters = document.querySelectorAll('.counter');
 counters.forEach(counter => {
-    counter.innerText = '0';
-    const updateCounter = () => {
-        const target = +counter.getAttribute('class').split(' ')[1] || +counter.textContent;
-        const count = +counter.getAttribute('data-target') || parseInt(counter.textContent);
-        const c = +counter.innerText;
-        const increment = Math.ceil(count / 200);
-        if(c < count){
-            counter.innerText = c + increment;
-            setTimeout(updateCounter, 10);
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200; // speed
+        if(count < target){
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 15);
         } else {
-            counter.innerText = count;
+            counter.innerText = target;
         }
-    }
-    updateCounter();
+    };
+    updateCount();
 });
 
-// MANUAL PAYMENT FUNCTION
-function manualPayment(plan, price){
-    let emailBody = `Hello Web-Hub Team,\n\nI want to purchase the ${plan} plan for ${price}.\nPlease guide me for the manual payment process.\n\nThank you.`;
-    let mailtoLink = `mailto:rock.earn92@gmail.com?subject=Purchase: ${plan} Plan&body=${encodeURIComponent(emailBody)}`;
-    window.location.href = mailtoLink;
-}
+// TESTIMONIAL SLIDER
+$('.testimonial-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    arrows: false,
+    dots: true,
+    responsive:[
+        { breakpoint: 1024, settings:{slidesToShow:2} },
+        { breakpoint: 768, settings:{slidesToShow:1} }
+    ]
+});
 
-// CONTACT FORM FUNCTION
+// CONTACT FORM SEND EMAIL (opens default email client)
 function sendEmail(e){
     e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    const mailBody = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-    const mailtoLink = `mailto:rock.earn92@gmail.com?subject=Contact Form Message&body=${encodeURIComponent(mailBody)}`;
-    window.location.href = mailtoLink;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if(name && email && message){
+        window.location.href = `mailto:rock.earn92@gmail.com?subject=New Message from ${name}&body=${message}%0A%0AFrom: ${name}%0AEmail: ${email}`;
+        alert("Your email client has opened. Please send your message.");
+    } else {
+        alert("Please fill in all fields!");
+    }
 }
 
-// OPTIONAL: SMOOTH SCROLL FOR NAV LINKS
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', function(e){
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({behavior:'smooth'});
-    });
-});
+// MANUAL PAYMENT BUTTON (simple alert)
+function manualPayment(plan, price){
+    alert(`You selected ${plan} plan at ${price}. Payment options will be provided soon!`);
+}
 </script>
 </body>
 </html>
