@@ -4,98 +4,70 @@
 <title>Web-Hub | Pro Digital Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Web-Hub provides professional web development, UI/UX design, SEO, and digital marketing solutions worldwide.">
-<meta property="og:title" content="Web-Hub | Pro Digital Solutions">
-<meta property="og:description" content="Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<meta property="og:url" content="https://web-hub-code.github.io/Web-hub/">
-<meta name="twitter:card" content="summary_large_image">
-
-<!-- Google Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 section{padding:80px 0;position:relative}
-
-/* NAVIGATION */
+/* NAV */
 nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;transition:0.3s}
 nav.scrolled{background:rgba(15,23,42,1)}
 nav .logo{font-size:28px;color:#22c55e;font-weight:700}
 nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
 nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
 nav ul li a:hover{color:#22c55e}
-
 /* HERO */
 .hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;padding:140px 0;text-align:center;animation:fadeIn 2s ease}
 .hero h1{font-size:52px;color:#22c55e;animation:slideIn 1.5s ease}
 .hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto}
 .btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s}
 .btn:hover{background:#16a34a;cursor:pointer;transform:scale(1.05)}
-
 /* GRID */
 .grid{display:grid;gap:25px}
 .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-
 /* CARDS */
 .card{background:#1e293b;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.4);text-align:center;transition:transform .3s, box-shadow .3s;cursor:pointer}
 .card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.5)}
 .card i{font-size:36px;color:#38bdf8;margin-bottom:15px}
-
-/* TITLES */
-h2{text-align:center;font-size:38px;margin-bottom:50px}
-.center{text-align:center}
-
-/* PORTFOLIO ITEMS */
+/* PORTFOLIO */
 .portfolio-item{position:relative;overflow:hidden;border-radius:16px;cursor:pointer;transition:transform .3s}
 .portfolio-item img{width:100%;transition:transform .3s}
 .portfolio-item:hover img{transform:scale(1.05)}
-.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
+.portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
-
-/* TESTIMONIALS SLIDER */
+/* TESTIMONIALS */
 .testimonial-slider{max-width:900px;margin:auto}
 .testimonial-slider .slick-slide{background:#1e293b;padding:30px;border-radius:16px;text-align:center;color:#e5e7eb;box-shadow:0 10px 20px rgba(0,0,0,.3)}
 .testimonial-slider .slick-slide p{font-style:italic;margin-bottom:10px}
 .testimonial-slider .slick-slide h3{color:#22c55e;margin-top:10px}
-
 /* FAQ */
 details{background:#1e293b;padding:18px;border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.3s}
 details:hover{background:#273449}
 details summary{cursor:pointer;font-weight:600}
-
 /* CONTACT FORM */
 input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
-
 /* FOOTER */
 footer{background:#1e293b;padding:50px 0;text-align:center}
 .social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
 .social i:hover{transform:scale(1.2)}
-
-/* FLOATING SOCIAL BUTTONS */
+/* FLOATING SOCIAL */
 .floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
 .floating-social a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .3s}
 .floating-social a:hover{transform:scale(1.1)}
 .email{background:#22c55e}
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
 .facebook{background:#1877f2}
-
 /* Animations */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
-
-/* Back-to-top */
-#topBtn{position:fixed;bottom:90px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:12px 15px;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none}
-#topBtn:hover{background:#16a34a;transform:scale(1.1)}
-
-/* PAYMENT METHOD DROPDOWN */
+/* PAYMENT */
 .payment-dropdown{position:relative;margin-bottom:20px}
 .payment-btn{width:100%;padding:15px;background:#1e293b;border-radius:12px;border:none;color:#e5e7eb;font-size:16px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.3s}
 .payment-btn:hover{background:#273449}
@@ -107,7 +79,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </head>
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav id="navbar">
 <div class="logo">Web-Hub</div>
 <ul>
@@ -137,7 +109,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <section id="about">
 <div class="container">
 <h2>About Web-Hub</h2>
-<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. Our goal is to deliver scalable, fast, and visually stunning projects that drive results for every client.</p>
+<p>We deliver modern websites, SEO, digital marketing, UI/UX, mobile apps, and cloud solutions worldwide. Focused on performance, scalability, and creativity.</p>
 </div>
 </section>
 
@@ -146,13 +118,13 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="container">
 <h2>Our Services</h2>
 <div class="grid grid-4">
-<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites</p></div>
-<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs</p></div>
-<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Rank higher on search engines</p></div>
+<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Secure, scalable, modern websites</p></div>
+<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>User-friendly, modern interface design</p></div>
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Boost your search rankings</p></div>
 <div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
-<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
-<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
-<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions</p></div>
+<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>iOS & Android Apps</p></div>
+<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce</h3><p>Shopify/WooCommerce integration</p></div>
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Secure and fast hosting</p></div>
 <div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data</p></div>
 </div>
 </div>
@@ -161,14 +133,32 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <!-- PORTFOLIO -->
 <section id="portfolio">
 <div class="container">
-<h2>Our Work</h2>
+<h2>Our Work & Clients</h2>
 <div class="grid grid-3">
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Corporate Website with full responsive layout and interactive features.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX design with sleek user experience and custom animations.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-commerce platform with Shopify integration, payment gateways, and product management.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO optimized blog website for maximum search engine visibility and traffic.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital marketing campaign dashboard with analytics and reporting tools.</div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud hosting setup with security, speed, and uptime monitoring for clients.</div></div>
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div class="overlay">Corporate Website: Full responsive layout for a tech company. Interactive elements and modern design.</div>
+</div>
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+<div class="overlay">E-commerce Store: Shopify integration with payment gateways, product management, and responsive design.</div>
+</div>
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
+<div class="overlay">Mobile App UI/UX: Sleek, modern interface design for iOS & Android apps with custom animations.</div>
+</div>
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<div class="overlay">SEO Blog: Optimized for search engines with fast loading and user-friendly layout.</div>
+</div>
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<div class="overlay">Digital Marketing Dashboard: Analytics, reporting, and campaign tracking for multiple clients.</div>
+</div>
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="overlay">Cloud Hosting Setup: Fast, secure, with uptime monitoring and backup services for businesses.</div>
+</div>
 </div>
 </div>
 </section>
@@ -178,31 +168,15 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="container">
 <h2>Pricing Plans</h2>
 <div class="grid grid-3">
-<div class="card">
-<h3>Basic</h3>
-<p>PKR 5,000 / month (≈ $15)</p>
-<button class="btn">Get Started</button>
-</div>
-<div class="card">
-<h3>Standard</h3>
-<p>PKR 15,000 / month (≈ $45)</p>
-<button class="btn">Get Started</button>
-</div>
-<div class="card">
-<h3>Premium</h3>
-<p>PKR 25,000 / month (≈ $75)</p>
-<button class="btn">Get Started</button>
-</div>
-<div class="card">
-<h3>Enterprise</h3>
-<p>PKR 50,000 / month (≈ $150)</p>
-<button class="btn">Get Started</button>
-</div>
+<div class="card"><h3>Basic</h3><p>PKR 5,000 / month (≈ $15) - Depends on client demand</p><button class="btn">Get Started</button></div>
+<div class="card"><h3>Standard</h3><p>PKR 15,000 / month (≈ $45) - Depends on client demand</p><button class="btn">Get Started</button></div>
+<div class="card"><h3>Premium</h3><p>PKR 25,000 / month (≈ $75) - Depends on client demand</p><button class="btn">Get Started</button></div>
+<div class="card"><h3>Enterprise</h3><p>PKR 50,000 / month (≈ $150) - Depends on client demand</p><button class="btn">Get Started</button></div>
 </div>
 </div>
 </section>
 
-<!-- PAYMENT METHODS -->
+<!-- PAYMENT -->
 <section id="payments">
 <div class="container">
 <h2>Payment Methods</h2>
@@ -238,9 +212,9 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <section id="faq">
 <div class="container">
 <h2>Frequently Asked Questions</h2>
-<details><summary>What services does Web-Hub provide?</summary><p>We provide website development, UI/UX design, SEO, digital marketing, mobile apps, and hosting solutions.</p></details>
-<details><summary>How can I contact you?</summary><p>You can contact us via email or social links provided below.</p></details>
-<details><summary>Do you offer support after delivery?</summary><p>Yes, we offer post-delivery support and maintenance packages.</p></details>
+<details><summary>What services does Web-Hub provide?</summary><p>Website, UI/UX, SEO, Digital Marketing, Apps, Hosting.</p></details>
+<details><summary>How can I contact you?</summary><p>Email or social links below.</p></details>
+<details><summary>Do you offer post-delivery support?</summary><p>Yes, 24/7 maintenance packages available.</p></details>
 </div>
 </section>
 
@@ -265,7 +239,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <section id="contact">
 <div class="container">
 <h2>Contact Us</h2>
-<form>
+<form onsubmit="sendEmail(event)">
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
 <textarea placeholder="Message" rows="5" required></textarea>
@@ -274,84 +248,82 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-<div class="container">
-<p>&copy; 2026 Web-Hub. All Rights Reserved.</p>
+<p>© 2026 Web-Hub. All Rights Reserved.</p>
 <div class="social">
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
-</div>
+<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="mailto:webhub262@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
 </div>
 </footer>
 
-<!-- FLOATING SOCIAL BUTTONS -->
+<!-- FLOATING SOCIAL -->
 <div class="floating-social">
-<a href="mailto:rock.earn92@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
-<a href="https://www.instagram.com/mr_nazim073" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="mailto:webhub262@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
 </div>
 
-<!-- BACK TO TOP BUTTON -->
-<button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="scrollTop()">↑</button>
 
-<!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-// NAVBAR SCROLL
-window.onscroll = function() {
-let navbar = document.getElementById("navbar");
-if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-navbar.classList.add("scrolled");
-} else {
-navbar.classList.remove("scrolled");
-}
-
-// BACK TO TOP
-let topBtn = document.getElementById("topBtn");
-if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
-topBtn.style.display = "block";
-} else {
-topBtn.style.display = "none";
-}
-};
-
-function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}
-
-// TESTIMONIAL SLIDER
-$(document).ready(function(){
-$('.testimonial-slider').slick({dots:true,infinite:true,autoplay:true,autoplaySpeed:4000,arrows:false});
+// NAV SCROLL EFFECT
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('navbar');
+  if(window.scrollY > 50){ nav.classList.add('scrolled'); } 
+  else { nav.classList.remove('scrolled'); }
 });
 
 // PAYMENT DROPDOWN
 function toggleDropdown(){
-document.querySelector(".payment-options").classList.toggle("show");
+  const options = document.querySelector('.payment-options');
+  options.style.display = options.style.display === 'block' ? 'none' : 'block';
 }
 
-function selectPayment(name,value){
-document.getElementById("paymentDisplay").innerHTML = name + ": <span id='payValue'>" + value + "</span> <button onclick='copyPayment()' class='btn' style='padding:5px 10px;font-size:14px;margin-left:10px;'>Copy</button>";
-document.querySelector(".payment-options").classList.remove("show");
+function selectPayment(method, value){
+  const display = document.getElementById('paymentDisplay');
+  display.innerHTML = `<strong>${method}:</strong> <span id="paymentValue">${value}</span> <button onclick="copyPayment()">Copy</button>`;
 }
 
 function copyPayment(){
-let payValue = document.getElementById("payValue").innerText;
-navigator.clipboard.writeText(payValue);
-let notif = document.getElementById("copyNotif");
-notif.style.display="block";
-setTimeout(()=>{notif.style.display="none"},1500);
+  const value = document.getElementById('paymentValue').innerText;
+  navigator.clipboard.writeText(value);
+  const notif = document.getElementById('copyNotif');
+  notif.style.display = 'block';
+  setTimeout(()=>{ notif.style.display='none'; }, 1500);
 }
 
-// VISITOR 1 MINUTE NOTIFICATION
-setTimeout(function(){
-alert("Hey! Thanks for visiting Web-Hub! 🎉 Don't miss out on our amazing digital solutions. Contact us now!");
-},60000);
+// TESTIMONIAL SLIDER
+$('.testimonial-slider').slick({
+  dots: true,
+  arrows: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+
+// BACK TO TOP
+function scrollTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
+
+// CONTACT FORM (dummy)
+function sendEmail(e){
+  e.preventDefault();
+  alert('Thank you! Your message has been sent.');
+  e.target.reset();
+}
+
+// SMOOTH SCROLL
+document.querySelectorAll('nav ul li a').forEach(link=>{
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
 </script>
-
-<style>
-.payment-options.show{display:block}
-</style>
-
 </body>
 </html>
