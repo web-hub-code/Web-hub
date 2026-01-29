@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -72,13 +71,8 @@ details summary{cursor:pointer;font-weight:600}
 
 /* CONTACT FORM */
 input,textarea,select{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
-
-/* FOOTER */
-footer{background:#1e293b;padding:50px 0;text-align:center}
-.social i{font-size:22px;margin:0 10px;color:#38bdf8;transition:.3s}
-.social i:hover{transform:scale(1.2)}
-
-/* FLOATING SOCIAL BUTTONS */
+button.btn.submit-btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s;color:#fff;border:none;cursor:pointer}
+button.btn.submit-btn:hover{background:#16a34a;transform:scale(1.05)}/* CONTINUATION OF STYLE */
 .floating-social{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
 .floating-social a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .3s}
 .floating-social a:hover{transform:scale(1.1)}
@@ -97,72 +91,6 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav id="navbar">
-<div class="logo">Web-Hub</div>
-<ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#testimonials">Testimonials</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#technologies">Technologies</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#payment">Payment</a></li>
-</ul>
-</nav>
-
-<!-- HERO -->
-<section id="hero" class="hero">
-<div class="container">
-<h1>Web-Hub</h1>
-<p>Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions</p>
-<a href="#contact" class="btn">Start Your Project</a>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-<div class="container">
-<h2>About Web-Hub</h2>
-<p>Web-Hub provides premium digital solutions: modern website development, UI/UX design, SEO optimization, and digital marketing services worldwide. Our goal is to deliver scalable, fast, and visually stunning projects that drive results for every client.</p>
-</div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-<div class="container">
-<h2>Our Services</h2>
-<div class="grid grid-4">
-<div class="card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Fast, secure & scalable websites</p></div>
-<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>UI/UX Design</h3><p>Modern & user-friendly designs</p></div>
-<div class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO Optimization</h3><p>Rank higher on search engines</p></div>
-<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>Digital Marketing</h3><p>Grow your online presence</p></div>
-<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile App Dev</h3><p>Android & iOS applications</p></div>
-<div class="card"><i class="fa-solid fa-shop"></i><h3>E-Commerce Solutions</h3><p>Shopify, WooCommerce & more</p></div>
-<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3><p>Reliable & fast hosting solutions</p></div>
-<div class="card"><i class="fa-solid fa-shield"></i><h3>Security Services</h3><p>Protect your website & data</p></div>
-</div>
-</div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-<div class="container">
-<h2>Our Work</h2>
-<div class="grid grid-3">
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Project 1: Modern Website Design with SEO optimized, fast loading, responsive layout. <a href="#">View Project</a></div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">Project 2: Mobile App UI/UX, Interactive, Modern design <a href="#">View App</a></div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Project 3: E-Commerce Platform, Shopify & WooCommerce solutions <a href="#">Visit Store</a></div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">Project 4: SEO Optimized Blog with Keyword targeting, Google ranking <a href="#">Read Blog</a></div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Project 5: Digital Marketing Campaign, Social Media Ads, PPC, Google Ads <a href="#">View Campaign</a></div></div>
-<div class="portfolio-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Project 6: Cloud Hosting Setup, Reliable, Fast & Secure <a href="#">Hosting Details</a></div></div>
-</div>
-</div>
-</section>
-
 <!-- PRICING -->
 <section id="pricing">
 <div class="container">
@@ -170,144 +98,102 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="grid grid-3">
 <div class="card">
 <h3>Basic</h3>
-<p>PKR 5,000 / USD 20 <br> (Depends on client demand)</p>
-<button class="btn">Get Started</button>
+<p>PKR 5,000 / USD 15 <br><small>Depends on client demand</small></p>
+<button class="btn" onclick="manualPayment('Basic', 'PKR 5,000 / USD 15')">Get Started</button>
 </div>
 <div class="card">
 <h3>Standard</h3>
-<p>PKR 10,000 / USD 40 <br> (Depends on client demand)</p>
-<button class="btn">Get Started</button>
+<p>PKR 10,000 / USD 30 <br><small>Depends on client demand</small></p>
+<button class="btn" onclick="manualPayment('Standard', 'PKR 10,000 / USD 30')">Get Started</button>
 </div>
 <div class="card">
 <h3>Premium</h3>
-<p>PKR 20,000 / USD 80 <br> (Depends on client demand)</p>
-<button class="btn">Get Started</button>
-</div>
-<div class="card">
-<h3>Enterprise</h3>
-<p>PKR 50,000 / USD 200 <br> (Depends on client demand)</p>
-<button class="btn">Get Started</button>
+<p>PKR 15,000 / USD 45 <br><small>Depends on client demand</small></p>
+<button class="btn" onclick="manualPayment('Premium', 'PKR 15,000 / USD 45')">Get Started</button>
 </div>
 </div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-<div class="container">
-<h2>Client Reviews</h2>
-<div class="testimonial-slider">
-<div class="card"><p>"Great service! Highly recommended."</p><strong>- John D.</strong></div>
-<div class="card"><p>"Professional & fast delivery."</p><strong>- Sarah K.</strong></div>
-<div class="card"><p>"Our website looks amazing thanks to Web-Hub."</p><strong>- Mike L.</strong></div>
-<div class="card"><p>"Excellent communication and support."</p><strong>- Linda P.</strong></div>
-<div class="card"><p>"Creative designs, very happy."</p><strong>- Kevin R.</strong></div>
-<div class="card"><p>"Fast, reliable & professional."</p><strong>- Emma W.</strong></div>
-</div>
-</div>
-</section>
-
-<!-- STATS -->
-<section>
-<div class="container grid grid-4 center stats">
-<div><h3 class="counter" data-target="250">0</h3><p>Projects</p></div>
-<div><h3 class="counter" data-target="120">0</h3><p>Clients</p></div>
-<div><h3 class="counter" data-target="5">0</h3><p>Years Experience</p></div>
-<div><h3 class="counter" data-target="24">0</h3><p>Support</p></div>
-</div>
-</section><!-- FAQ -->
-<section id="faq">
-<div class="container">
-<h2>FAQs</h2>
-<div class="grid grid-2">
-<details><summary>Are images showing correctly?</summary><p>Yes, all images are stock CDN links for guaranteed display.</p></details>
-<details><summary>Is the site mobile-friendly?</summary><p>Yes, fully responsive on all devices.</p></details>
-<details><summary>Do you provide SEO services?</summary><p>Yes, our SEO experts improve your search rankings.</p></details>
-<details><summary>Can I request custom designs?</summary><p>Absolutely, we offer fully custom UI/UX solutions.</p></details>
-<details><summary>How long does a project take?</summary><p>Depends on project size, typically 1–4 weeks.</p></details>
-<details><summary>Do you provide support after delivery?</summary><p>Yes, 24/7 support available.</p></details>
-<details><summary>Is the contact form secure?</summary><p>Yes, clicking send will open your default email client safely.</p></details>
-<details><summary>Can I request revisions?</summary><p>Yes, client revisions are included per project.</p></details>
-</div>
-</div>
-</section>
-
-<!-- TECHNOLOGIES -->
-<section id="technologies">
-<div class="container">
-<h2>Technologies & Tools</h2>
-<div class="grid grid-4 center">
-<div class="card"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
-<div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
-<div class="card"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
-<div class="card"><i class="fa-brands fa-php"></i><p>PHP</p></div>
-<div class="card"><i class="fa-brands fa-react"></i><p>React</p></div>
-<div class="card"><i class="fa-brands fa-node"></i><p>Node.js</p></div>
-<div class="card"><i class="fa-brands fa-wordpress"></i><p>WordPress</p></div>
-<div class="card"><i class="fa-brands fa-shopify"></i><p>Shopify</p></div>
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<div class="container grid grid-2">
-<div>
-<h2>Contact Us</h2>
-<p>Email: <a href="mailto:webhub262@gmail.com">webhub262@gmail.com</a></p>
-<p>Click send and your default email client will open with message ready.</p>
-</div>
-<form class="card" onsubmit="sendEmail(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-<button class="btn" type="submit">Send Message</button>
-</form>
 </div>
 </section>
 
 <!-- PAYMENT METHODS -->
-<section id="payment">
+<section id="payments">
 <div class="container">
 <h2>Payment Methods</h2>
-<p>Select a payment method and copy account/wallet number easily. You can also upload proof of payment.</p>
-
+<p>Select your preferred payment method and copy the account details:</p>
 <div class="grid grid-2">
 <div class="card">
 <h3>Easypaisa</h3>
-<p id="easypaisa">03379827882 <button onclick="copyText('easypaisa')">Copy</button></p>
+<p id="easypaisaNumber">03379827882 <button onclick="copyToClipboard('easypaisaNumber')">Copy</button></p>
 </div>
-
 <div class="card">
 <h3>JazzCash</h3>
-<p id="jazzcash">03705519562 <button onclick="copyText('jazzcash')">Copy</button></p>
+<p id="jazzcashNumber">03705519562 <button onclick="copyToClipboard('jazzcashNumber')">Copy</button></p>
 </div>
-
 <div class="card">
 <h3>SadaPay</h3>
-<p id="sadapay">03705519562 <button onclick="copyText('sadapay')">Copy</button></p>
+<p id="sadaPayNumber">03705519562 <button onclick="copyToClipboard('sadaPayNumber')">Copy</button></p>
 </div>
-
 <div class="card">
 <h3>Payoneer</h3>
-<p id="payoneer">nazimkhan01123@gmail.com <button onclick="copyText('payoneer')">Copy</button></p>
+<p id="payoneerEmail">nazimkhan01123@gmail.com <button onclick="copyToClipboard('payoneerEmail')">Copy</button></p>
 </div>
-
 <div class="card">
 <h3>Binance (TRC20)</h3>
-<p id="binance">TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR <button onclick="copyText('binance')">Copy</button></p>
+<p id="binanceWallet">TTSxm4pBK26RB4vXaa3Uo3hqGa5HdhxBDR <button onclick="copyToClipboard('binanceWallet')">Copy</button></p>
 </div>
 </div>
+</div>
+</section>
 
-<div class="card">
-<h3>Upload Payment Proof</h3>
-<form id="paymentProofForm">
-<input type="file" id="proofFile" accept="image/*" required>
-<input type="text" id="transactionId" placeholder="Transaction ID / Reference" required>
-<button type="submit" class="btn">Submit Proof</button>
-</form>
-<p id="proofMsg"></p>
+<!-- PORTFOLIO (clickable details) -->
+<section id="portfolio">
+<div class="container">
+<h2>Our Work</h2>
+<div class="grid grid-3">
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div class="overlay">
+<h3>Project 1: Modern Website Design</h3>
+<p>HTML5, CSS3, JavaScript, Responsive, SEO Optimized</p>
+<a href="#" class="btn">View Project</a>
 </div>
+</div>
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+<div class="overlay">
+<h3>Project 2: Mobile App UI/UX</h3>
+<p>Android & iOS, User-friendly UI, Modern Design</p>
+<a href="#" class="btn">View Project</a>
+</div>
+</div>
+<!-- Add more portfolio items as needed -->
+</div>
+</div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact">
+<div class="container grid grid-2">
+<div>
+<h2>Contact Us</h2>
+<p>Email: webhub262@gmail.com</p>
+<p>Send your message and payment details; we'll respond ASAP.</p>
+</div>
+<form class="card" onsubmit="sendEmail(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<select id="paymentMethod" required>
+<option value="">Select Payment Method</option>
+<option value="Easypaisa">Easypaisa</option>
+<option value="JazzCash">JazzCash</option>
+<option value="SadaPay">SadaPay</option>
+<option value="Payoneer">Payoneer</option>
+<option value="Binance">Binance</option>
+</select>
+<input type="text" id="transactionID" placeholder="Transaction ID / Screenshot Link" required>
+<textarea id="message" rows="5" placeholder="Additional Message / Request" required></textarea>
+<button class="btn submit-btn" type="submit">Send Message</button>
+</form>
 </div>
 </section>
 
@@ -332,43 +218,46 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <!-- BACK TO TOP BUTTON -->
 <button id="topBtn" onclick="topFunction()" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script>
-// Back to top button
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    document.getElementById("topBtn").style.display = "block";
-  } else {document.getElementById("topBtn").style.display = "none";}
-}
-function topFunction() {document.body.scrollTop = 0; document.documentElement.scrollTop = 0;}
+// Back to top
+window.onscroll=function(){scrollFunction()};
+function scrollFunction(){document.getElementById("topBtn").style.display=(document.body.scrollTop>20||document.documentElement.scrollTop>20)?"block":"none"}
+function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}
 
-// Copy payment numbers
-function copyText(id){
-  let text = document.getElementById(id).innerText.split(' ')[0];
-  navigator.clipboard.writeText(text);
-  alert(id + " copied: " + text);
+// Copy account numbers
+function copyToClipboard(id){
+let copyText=document.getElementById(id).innerText.split(" ")[0];
+navigator.clipboard.writeText(copyText);
+alert(copyText+" copied to clipboard!");
 }
 
-// Payment proof form
-document.getElementById('paymentProofForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  let file = document.getElementById('proofFile').files[0];
-  let txn = document.getElementById('transactionId').value;
-  if(file && txn){
-    document.getElementById('proofMsg').innerText = "Proof submitted successfully! Transaction ID: " + txn;
-  } else {
-    document.getElementById('proofMsg').innerText = "Please provide file and transaction ID.";
-  }
+// Counter Animation
+const counters=document.querySelectorAll(".counter");
+counters.forEach(counter=>{
+counter.innerText="0";
+const updateCounter=()=>{
+const target=+counter.getAttribute("data-target");
+const c=+counter.innerText;
+const increment=target/200;
+if(c<target){counter.innerText=Math.ceil(c+increment);setTimeout(updateCounter,10);}else{counter.innerText=target;}
+};
+updateCounter();
 });
 
-// Contact email
-function sendEmail(e){
-  e.preventDefault();
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-  let msg = document.getElementById('message').value;
-  window.location.href = `mailto:webhub262@gmail.com?subject=Message from ${name}&body=${msg} - ${email}`;
+// Send Email with form
+function sendEmail(event){
+event.preventDefault();
+const name=document.getElementById("name").value;
+const email=document.getElementById("email").value;
+const method=document.getElementById("paymentMethod").value;
+const transaction=document.getElementById("transactionID").value;
+const message=document.getElementById("message").value;
+const subject="Web-Hub Payment / Query from "+name;
+const body=`Name: ${name}%0D%0AEmail: ${email}%0D%0APayment Method: ${method}%0D%0ATransaction ID / Screenshot: ${transaction}%0D%0AMessage: ${message}`;
+window.location.href=`mailto:webhub262@gmail.com?subject=${subject}&body=${body}`;
+alert("Email client opened. Please send the email.");
 }
 </script>
+</body>
+</html>
