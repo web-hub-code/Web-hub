@@ -4,6 +4,10 @@
 <title>Web-Hub | Pro Digital Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Web-Hub provides professional web development, UI/UX design, SEO, and digital marketing solutions worldwide.">
+<meta property="og:title" content="Web-Hub | Pro Digital Solutions">
+<meta property="og:description" content="Professional Website Development, UI/UX Design, SEO & Digital Marketing Solutions">
+<meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<meta property="og:type" content="website">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
@@ -11,21 +15,22 @@
 <style>
 /* ====== GLOBAL ====== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth}
+body{background:#0f172a;color:#e5e7eb;line-height:1.6;scroll-behavior:smooth;transition:all .3s}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 section{padding:80px 0;position:relative}
+h2{color:#22c55e;margin-bottom:25px;text-align:center}
 
 /* ====== NAV ====== */
-nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;transition:0.3s}
+nav{position:fixed;width:100%;top:0;left:0;background:rgba(15,23,42,0.95);display:flex;justify-content:space-between;align-items:center;padding:15px 5%;z-index:999;transition:0.3s;border-bottom:1px solid #1e293b}
 nav.scrolled{background:rgba(15,23,42,1)}
 nav .logo{font-size:28px;color:#22c55e;font-weight:700}
 nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
-nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s}
-nav ul li a:hover{color:#22c55e}
+nav ul li a{color:#e5e7eb;font-weight:500;transition:.3s;position:relative}
+nav ul li a.active::after{content:"";position:absolute;bottom:-5px;left:0;width:100%;height:3px;background:#22c55e;border-radius:3px}
 
 /* ====== HERO ====== */
-.hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;padding:140px 0;text-align:center;animation:fadeIn 2s ease}
+.hero{background:linear-gradient(to right,rgba(15,23,42,.9),rgba(15,23,42,.6)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;padding:140px 0;text-align:center;animation:fadeIn 2s ease;position:relative;overflow:hidden}
 .hero h1{font-size:52px;color:#22c55e;animation:slideIn 1.5s ease}
 .hero p{margin:20px 0;max-width:600px;margin-left:auto;margin-right:auto;opacity:0;animation:fadeText 2s forwards 1.5s}
 .btn{background:#22c55e;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-block;transition:.3s}
@@ -44,8 +49,8 @@ nav ul li a:hover{color:#22c55e}
 
 /* ====== PORTFOLIO ====== */
 .portfolio-item{position:relative;overflow:hidden;border-radius:16px;cursor:pointer;transition:transform .3s}
-.portfolio-item img{width:100%;transition:transform .3s}
-.portfolio-item:hover img{transform:scale(1.05)}
+.portfolio-item img{width:100%;transition:transform .5s;display:block}
+.portfolio-item:hover img{transform:scale(1.1) rotate(1deg)}
 .portfolio-item .overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.85);color:#fff;padding:15px;text-align:center;opacity:0;transition:.3s}
 .portfolio-item:hover .overlay{opacity:1}
 
@@ -61,7 +66,8 @@ details:hover{background:#273449}
 details summary{cursor:pointer;font-weight:600}
 
 /* ====== CONTACT ====== */
-input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;background:#0f172a;color:#e5e7eb;transition:.3s}
+input:focus,textarea:focus{outline:none;border:1px solid #22c55e}
 
 /* ====== FOOTER ====== */
 footer{background:#1e293b;padding:50px 0;text-align:center}
@@ -93,15 +99,20 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 .payment-options button{width:100%;padding:12px;text-align:left;border:none;background:none;color:#e5e7eb;cursor:pointer;transition:.3s}
 .payment-options button:hover{background:#273449}
 .copy-notif{color:#22c55e;font-size:14px;margin-top:5px;display:none}
+
+/* ====== DARK MODE ====== */
+body.dark-mode{background:#f5f5f5;color:#0f172a}
+body.dark-mode .card, body.dark-mode details, body.dark-mode .testimonial-slider .slick-slide, body.dark-mode footer{background:#ffffff;color:#0f172a}
+body.dark-mode nav{background:rgba(255,255,255,0.95)}
 </style>
 </head>
 <body>
 
-<!-- ====== NAV ====== -->
+<!-- NAV -->
 <nav id="navbar">
 <div class="logo">Web-Hub</div>
 <ul>
-<li><a href="#hero">Home</a></li>
+<li><a href="#hero" class="active">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
@@ -111,10 +122,11 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#technologies">Technologies</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><button id="darkModeToggle" class="btn" style="padding:6px 12px;font-size:14px;">🌙</button></li>
 </ul>
 </nav>
 
-<!-- ====== HERO ====== -->
+<!-- HERO -->
 <section id="hero" class="hero">
 <div class="container">
 <h1>Web-Hub</h1>
@@ -123,7 +135,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ====== ABOUT ====== -->
+<!-- ABOUT -->
 <section id="about">
 <div class="container">
 <h2>About Web-Hub</h2>
@@ -131,7 +143,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ====== SERVICES ====== -->
+<!-- SERVICES -->
 <section id="services">
 <div class="container">
 <h2>Our Services</h2>
@@ -148,40 +160,22 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ====== PORTFOLIO ====== -->
+<!-- PORTFOLIO -->
 <section id="portfolio">
 <div class="container">
 <h2>Our Work & Clients</h2>
-<div class="grid grid-3">
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="overlay">Corporate Website: Full responsive layout for a tech company. Interactive elements and modern design.</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
-<div class="overlay">E-commerce Store: Shopify integration with payment gateways, product management, and responsive design.</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
-<div class="overlay">Mobile App UI/UX: Sleek, modern interface design for iOS & Android apps with custom animations.</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-<div class="overlay">SEO Blog: Optimized for search engines with fast loading and user-friendly layout.</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<div class="overlay">Digital Marketing Dashboard: Analytics, reporting, and campaign tracking for multiple clients.</div>
-</div>
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<div class="overlay">Cloud Hosting Setup: Fast, secure, with uptime monitoring and backup services for businesses.</div>
-</div>
+<div class="grid grid-3" id="portfolioGrid">
+<div class="portfolio-item" data-type="web"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div class="overlay">Corporate Website: Full responsive layout for a tech company. Interactive elements and modern design.</div></div>
+<div class="portfolio-item" data-type="ecommerce"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"><div class="overlay">E-commerce Store: Shopify integration with payment gateways, product management, and responsive design.</div></div>
+<div class="portfolio-item" data-type="app"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"><div class="overlay">Mobile App UI/UX: Sleek, modern interface design for iOS & Android apps with custom animations.</div></div>
+<div class="portfolio-item" data-type="seo"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><div class="overlay">SEO Blog: Optimized for search engines with fast loading and user-friendly layout.</div></div>
+<div class="portfolio-item" data-type="marketing"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><div class="overlay">Digital Marketing Dashboard: Analytics, reporting, and campaign tracking for multiple clients.</div></div>
+<div class="portfolio-item" data-type="hosting"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><div class="overlay">Cloud Hosting Setup: Fast, secure, with uptime monitoring and backup services for businesses.</div></div>
 </div>
 </div>
 </section>
 
-<!-- ====== PRICING ====== -->
+<!-- PRICING -->
 <section id="pricing">
 <div class="container">
 <h2>Pricing Plans</h2>
@@ -194,7 +188,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ====== PAYMENT ====== -->
+<!-- PAYMENTS -->
 <section id="payments">
 <div class="container">
 <h2>Payment Methods</h2>
@@ -214,7 +208,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ====== TESTIMONIALS ====== -->
+<!-- TESTIMONIALS -->
 <section id="testimonials">
 <div class="container">
 <h2>Client Testimonials</h2>
@@ -226,7 +220,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ====== FAQ ====== -->
+<!-- FAQ -->
 <section id="faq">
 <div class="container">
 <h2>Frequently Asked Questions</h2>
@@ -236,7 +230,7 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 </div>
 </section>
 
-<!-- ====== TECHNOLOGIES ====== -->
+<!-- TECHNOLOGIES -->
 <section id="technologies">
 <div class="container">
 <h2>Technologies We Use</h2>
@@ -244,102 +238,119 @@ footer{background:#1e293b;padding:50px 0;text-align:center}
 <div class="card"><i class="fa-brands fa-html5"></i><h3>HTML5</h3></div>
 <div class="card"><i class="fa-brands fa-css3-alt"></i><h3>CSS3</h3></div>
 <div class="card"><i class="fa-brands fa-js"></i><h3>JavaScript</h3></div>
-<div class="card"><i class="fa-brands fa-react"></i><h3>React</h3></div>
-<div class="card"><i class="fa-brands fa-node"></i><h3>Node.js</h3></div>
+<div class="card"><i class="fa-brands fa-react"></i><h3>React JS</h3></div>
+<div class="card"><i class="fa-brands fa-node"></i><h3>Node JS</h3></div>
 <div class="card"><i class="fa-brands fa-php"></i><h3>PHP</h3></div>
-<div class="card"><i class="fa-brands fa-sass"></i><h3>SASS</h3></div>
-<div class="card"><i class="fa-brands fa-git-alt"></i><h3>Git</h3></div>
+<div class="card"><i class="fa-brands fa-python"></i><h3>Python</h3></div>
 </div>
 </div>
 </section>
 
-<!-- ====== CONTACT ====== -->
+<!-- CONTACT -->
 <section id="contact">
 <div class="container">
 <h2>Contact Us</h2>
-<form onsubmit="sendEmail(event)">
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Message" rows="5" required></textarea>
-<button class="btn" type="submit">Send Message</button>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+<button type="submit" class="btn">Send Message</button>
 </form>
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Web-Hub. All Rights Reserved.</p>
+<div class="container">
+<p>&copy; 2026 Web-Hub. All rights reserved.</p>
 <div class="social">
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="mailto:rock.earn92@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
 </div>
 </footer>
 
-<!-- ====== FLOATING SOCIAL ====== -->
+<!-- FLOATING SOCIAL -->
 <div class="floating-social">
-<a href="mailto:rock.earn92@gmail.com" class="email"><i class="fa-solid fa-envelope"></i></a>
-<a href="https://www.instagram.com/mr_nazim073" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/profile.php?id=100084218946114" class="facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="mailto:rock.earn92@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
+<a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
-<!-- ====== BACK TO TOP ====== -->
-<button id="topBtn" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="topFunction()">⬆</button>
 
-<!-- ====== SCRIPTS ====== -->
+<!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-// ====== NAV SCROLL EFFECT ======
-window.addEventListener('scroll', function() {
-let nav = document.getElementById('navbar');
-if(window.scrollY > 50){nav.classList.add('scrolled');} 
-else{nav.classList.remove('scrolled');}
+// ===== NAV SCROLL =====
+window.addEventListener('scroll',()=>{
+    const nav = document.getElementById('navbar');
+    if(window.scrollY > 50) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
 
-// ====== BACK TO TOP BUTTON ======
-let topBtn = document.getElementById("topBtn");
-if(window.scrollY > 300){topBtn.style.display = "block";}
-else{topBtn.style.display = "none";}
+    // Back to top button
+    if(window.scrollY > 300) document.getElementById('topBtn').style.display='block';
+    else document.getElementById('topBtn').style.display='none';
 });
 
-// ====== BACK TO TOP FUNCTION ======
-function topFunction(){window.scrollTo({top:0,behavior:"smooth"});}
+// ===== ACTIVE LINK =====
+const sections=document.querySelectorAll('section');
+const navLinks=document.querySelectorAll('nav ul li a');
+window.addEventListener('scroll',()=>{
+    let current='';
+    sections.forEach(section=>{
+        const sectionTop=section.offsetTop-60;
+        if(pageYOffset>=sectionTop) current=section.getAttribute('id');
+    });
+    navLinks.forEach(a=>{
+        a.classList.remove('active');
+        if(a.getAttribute('href')=='#'+current) a.classList.add('active');
+    });
+});
 
-// ====== PAYMENT DROPDOWN ======
+// ===== BACK TO TOP =====
+function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
+
+// ===== DARK MODE =====
+const darkBtn=document.getElementById('darkModeToggle');
+darkBtn.addEventListener('click',()=>{
+    document.body.classList.toggle('dark-mode');
+    if(document.body.classList.contains('dark-mode')) localStorage.setItem('darkMode','true');
+    else localStorage.setItem('darkMode','false');
+});
+if(localStorage.getItem('darkMode')==='true') document.body.classList.add('dark-mode');
+
+// ===== TESTIMONIAL SLIDER =====
+$('.testimonial-slider').slick({dots:true,infinite:true,speed:500,slidesToShow:1,autoplay:true,autoplaySpeed:4000,arrows:false});
+
+// ===== PAYMENT DROPDOWN =====
 function toggleDropdown(){
-let options = document.querySelector('.payment-options');
-options.style.display = (options.style.display === 'block') ? 'none' : 'block';
+    document.querySelector('.payment-options').classList.toggle('show');
+}
+function selectPayment(name,value){
+    const display=document.getElementById('paymentDisplay');
+    display.textContent=name+": "+value;
+    navigator.clipboard.writeText(value).then(()=>{
+        const notif=document.getElementById('copyNotif');
+        notif.style.display='block';
+        setTimeout(()=>{notif.style.display='none';},1500);
+    });
+    document.querySelector('.payment-options').classList.remove('show');
 }
 
-function selectPayment(name, value){
-document.getElementById('paymentDisplay').innerHTML = `<strong>${name}:</strong> ${value}`;
-navigator.clipboard.writeText(value).then(()=>{
-let notif = document.getElementById('copyNotif');
-notif.style.display = 'block';
-setTimeout(()=>{notif.style.display = 'none';},2000);
+// ===== CONTACT FORM =====
+document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    alert('Thank you '+document.getElementById('name').value+', your message has been sent!');
+    this.reset();
 });
-}
-
-// ====== TESTIMONIAL SLIDER ======
-$(document).ready(function(){
-$('.testimonial-slider').slick({
-dots:true,
-infinite:true,
-speed:600,
-slidesToShow:1,
-autoplay:true,
-autoplaySpeed:3000,
-arrows:false,
-fade:true
-});
-});
-
-// ====== CONTACT FORM ======
-function sendEmail(e){
-e.preventDefault();
-alert("Thank you! Your message has been sent successfully.");
-e.target.reset();
-}
 </script>
+<style>
+/* PAYMENT OPTIONS SHOW */
+.payment-options.show{display:block}
+</style>
+
 </body>
 </html>
