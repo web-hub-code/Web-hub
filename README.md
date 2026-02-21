@@ -2,61 +2,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Web-Hub | Muhammad Nazim Official</title>
+    <title>Web-Hub | Muhammad Nazim | Global Agency</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
         :root {
             --primary: #00f2fe; --secondary: #4facfe; --accent: #7000ff;
-            --bg: #010204; --glass: rgba(255, 255, 255, 0.05); --border: rgba(255, 255, 255, 0.1);
+            --success: #00ff88; --bg: #010204; --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(0, 242, 254, 0.25);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
         body { background-color: var(--bg); color: white; overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* Tech Background */
+        /* Background */
         #bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; filter: brightness(0.12); }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent 10%, #000 90%); z-index: -1; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent 0%, #000 100%); z-index: -1; }
 
-        /* Hero Header */
-        .cover-box { width: 100%; height: 280px; position: relative; overflow: hidden; border-bottom: 3px solid var(--primary); }
-        .cover-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
-        .container { width: 100%; max-width: 580px; margin: -80px auto 0; padding: 0 15px 50px; position: relative; z-index: 10; }
+        .container { width: 100%; max-width: 550px; margin: 0 auto; padding: 40px 18px 100px; }
 
-        /* Profile Hub */
-        .p-wrap { text-align: center; margin-bottom: 25px; }
-        .p-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--primary); box-shadow: 0 0 30px rgba(0, 242, 254, 0.4); object-fit: cover; background: #000; }
-        .badge { display: inline-block; padding: 5px 15px; background: rgba(0, 255, 136, 0.1); border: 1px solid #00ff88; color: #00ff88; border-radius: 50px; font-size: 0.7rem; margin-top: 12px; font-weight: 800; }
+        /* Card System */
+        .glass-card { background: var(--glass); backdrop-filter: blur(40px); border: 1px solid var(--border); border-radius: 40px; padding: 35px; margin-bottom: 25px; transition: 0.4s; position: relative; }
+        .glass-card:hover { border-color: var(--primary); transform: translateY(-5px); }
 
-        /* Card Master */
-        .card { background: var(--glass); backdrop-filter: blur(40px); border: 1px solid var(--border); border-radius: 35px; padding: 30px; margin-bottom: 25px; transition: 0.4s; }
-        .card:hover { border-color: var(--primary); }
-        .logo-main { font-size: 3.2rem; font-weight: 900; background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; letter-spacing: -1px; }
+        .brand-logo { font-size: 3.8rem; font-weight: 900; background: linear-gradient(45deg, var(--primary), var(--success)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; letter-spacing: -2px; }
 
-        /* Dynamic Quote Button */
-        .quote-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 18px; background: linear-gradient(45deg, #25d366, #128c7e); border-radius: 20px; color: white; font-weight: 800; text-decoration: none; text-transform: uppercase; margin-top: 10px; transition: 0.3s; }
-        .quote-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
+        /* Interactive Stats */
+        .stats-box { display: flex; justify-content: space-around; margin: 30px 0; text-align: center; }
+        .stat-val { font-size: 1.5rem; font-weight: 900; color: var(--primary); display: block; }
+        .stat-lab { font-size: 0.65rem; opacity: 0.5; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* Corporate Footer (HighLevel Based) */
-        .footer-elite { text-align: left; padding: 40px 25px; background: rgba(0,0,0,0.8); border-radius: 40px; border: 1px solid var(--border); }
-        .hq-title { color: white; font-weight: 800; font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 1px; }
-        .hq-info { font-size: 0.9rem; opacity: 0.7; line-height: 1.8; margin-bottom: 25px; padding-left: 15px; border-left: 2px solid var(--primary); }
+        /* Live Portfolio Slider */
+        .swiper { width: 100%; border-radius: 25px; margin: 20px 0; border: 1px solid var(--border); }
+        .swiper-slide img { width: 100%; height: 250px; object-fit: cover; filter: brightness(0.8); }
+
+        /* Feature List (Clickable) */
+        .feat-item { display: flex; align-items: center; gap: 15px; padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 20px; margin-bottom: 15px; cursor: pointer; transition: 0.3s; }
+        .feat-item:hover { background: rgba(0, 242, 254, 0.1); border-color: var(--primary); }
+        .feat-item i { font-size: 1.5rem; color: var(--success); }
+
+        /* Ultimate Button */
+        .main-btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 22px; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 25px; color: #000; font-weight: 900; text-decoration: none; text-transform: uppercase; margin-top: 15px; box-shadow: 0 10px 30px rgba(0, 242, 254, 0.3); transition: 0.4s; }
+        .main-btn:hover { transform: scale(1.02); box-shadow: 0 15px 40px rgba(0, 242, 254, 0.5); }
+
+        /* Footer (Corporate Elite) */
+        .footer-hq { background: rgba(0,0,0,0.85); border: 1px solid var(--border); border-radius: 45px; padding: 45px 30px; }
+        .hq-line { border-left: 3px solid var(--primary); padding-left: 20px; margin-bottom: 30px; }
         
-        .social-grid { display: flex; gap: 12px; margin-bottom: 30px; }
-        .social-item { width: 48px; height: 48px; background: var(--glass); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; text-decoration: none; font-size: 1.2rem; transition: 0.3s; }
-        .social-item:hover { background: var(--primary); color: #000; transform: scale(1.1); }
+        .social-wrap { display: flex; gap: 12px; margin: 30px 0; flex-wrap: wrap; }
+        .social-btn { width: 50px; height: 50px; background: var(--glass); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.3rem; transition: 0.4s; }
+        .social-btn:hover { background: var(--primary); color: #000; transform: rotate(360deg); }
 
-        /* Interaction Elements */
-        .legal-links { display: flex; justify-content: center; gap: 15px; font-size: 0.8rem; margin-top: 20px; }
-        .legal-links span { color: var(--primary); cursor: pointer; text-decoration: underline; }
+        /* Modal Overlay */
+        .modal { display: none; position: fixed; z-index: 10000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(15px); }
+        .modal-card { background: #0a0a0a; margin: 15% auto; padding: 40px; border: 1px solid var(--primary); width: 90%; max-width: 450px; border-radius: 40px; text-align: center; position: relative; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; color: var(--primary); cursor: pointer; }
 
-        .modal { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); }
-        .modal-content { background: #111; margin: 20% auto; padding: 30px; border: 1px solid var(--primary); width: 85%; max-width: 450px; border-radius: 30px; position: relative; text-align: center; }
-        .close { position: absolute; top: 15px; right: 20px; font-size: 24px; color: var(--primary); cursor: pointer; }
-
-        footer { text-align: center; padding: 30px; opacity: 0.2; font-size: 0.7rem; letter-spacing: 4px; }
+        footer { text-align: center; padding: 50px; opacity: 0.3; font-size: 0.7rem; letter-spacing: 5px; }
     </style>
 </head>
 <body>
@@ -66,54 +71,76 @@
     </video>
     <div class="overlay"></div>
 
-    <div class="cover-box">
-        <img src="FB_IMG_1769869953605.jpg" class="cover-img" alt="Web-Hub Agency">
-    </div>
-
     <div class="container">
-        <div class="p-wrap" data-aos="zoom-in">
-            <img src="Snapchat-2096615446.jpg" class="p-img" alt="Muhammad Nazim">
-            <br><div class="badge">Verified Agency Owner</div>
-        </div>
-
-        <section class="card" data-aos="fade-up">
-            <h1 class="logo-main">Web-Hub</h1>
-            <p style="text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.6;">
-                Expert digital solutions tailored for your business. We specialize in high-performance web apps and creative branding.
-            </p>
-            <div style="margin-top: 25px;">
-                <a href="https://wa.me/923332637235?text=Hi%20Nazim!%20I%20want%20to%20get%20a%20price%20quote%20for%20my%20project." class="quote-btn">
-                    <i class="fab fa-whatsapp"></i> Get A Custom Quote
-                </a>
+        
+        <section class="glass-card" data-aos="zoom-in">
+            <h1 class="brand-logo">Web-Hub</h1>
+            <div class="stats-box">
+                <div><span class="stat-val">150+</span><span class="stat-lab">Projects</span></div>
+                <div><span class="stat-val">99%</span><span class="stat-lab">Trust</span></div>
+                <div><span class="stat-val">24/7</span><span class="stat-lab">Support</span></div>
             </div>
+            <p style="text-align: center; font-size: 0.9rem; opacity: 0.7; line-height: 1.8;">
+                Welcome to the digital era. Web-Hub provides next-gen web development and branding solutions under the leadership of Muhammad Nazim.
+            </p>
         </section>
 
-        <section class="footer-elite card" data-aos="fade-up">
-            <div class="hq-title">CORPORATE HQ</div>
-            <div class="hq-info">
-                Karachi, Pakistan | Web-Hub Center<br>
-                Suite 262, Online Excellence<br>
-                Toll Free: <a href="tel:+923332637235" style="color: var(--primary); text-decoration: none;">+92 333 2637235</a>
+        <div class="swiper mySwiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="FB_IMG_1769869953605.jpg" alt="Work 1"></div>
+                <div class="swiper-slide"><img src="Snapchat-2096615446.jpg" alt="Work 2"></div>
+                <div class="swiper-slide"><img src="FB_IMG_1769869953605.jpg" alt="Work 3"></div>
             </div>
+            <div style="text-align: center; padding: 10px; font-size: 0.7rem; opacity: 0.5;">Swipe to see our work</div>
+        </div>
 
-            <div class="hq-title">SOCIAL CONNECT</div>
-            <div class="social-grid">
-                <a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="social-item"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/923332637235" target="_blank" class="social-item"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:webhub262@gmail.com" class="social-item"><i class="fas fa-envelope"></i></a>
-                <a href="#" class="social-item"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-item"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-
-            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 25px;">
-                <h2 style="font-size: 2rem; font-weight: 900;">Web-Hub</h2>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin: 10px 0;">
-                    © 2026 Web-Hub, Inc. • Muhammad Nazim Signature Project
+        <div data-aos="fade-up">
+            <div class="feat-item" onclick="openDetails('AI Web Solutions', 'Hum websites ko AI features ke sath build karte hain jo customers se khud baat karti hain aur sales barhati hain.')">
+                <i class="fas fa-microchip"></i>
+                <div>
+                    <h4 style="color: var(--primary);">AI Web Solutions</h4>
+                    <p style="font-size: 0.75rem; opacity: 0.6;">Smart websites with automation.</p>
                 </div>
-                <div class="legal-links">
-                    <span onclick="showModal('Privacy Policy', 'Your data is encrypted and never shared with third parties.')">Privacy Policy</span>
-                    <span onclick="showModal('Terms of Service', '50% upfront payment is required. Delivery time varies by project.')">Terms</span>
-                    <span onclick="showModal('Security', 'Our sites use SSL encryption to ensure maximum protection.')">Security</span>
+            </div>
+
+            <div class="feat-item" onclick="openDetails('Digital Branding', 'Logos, Social Media kit, aur complete brand guidelines jo aapke business ko aik international brand banati hain.')">
+                <i class="fas fa-palette"></i>
+                <div>
+                    <h4 style="color: var(--primary);">Full Branding</h4>
+                    <p style="font-size: 0.75rem; opacity: 0.6;">Visuals that tell your story.</p>
+                </div>
+            </div>
+
+            <a href="https://wa.me/923332637235?text=Hi%20Nazim!%20I%20am%20interested%20in%20Web-Hub%20services.%20Let's%20discuss%20pricing." class="main-btn">
+                <i class="fab fa-whatsapp"></i> Chat With Specialist
+            </a>
+        </div>
+
+        <section class="footer-hq" data-aos="fade-up" style="margin-top: 40px;">
+            <div class="hq-line">
+                <h3 style="letter-spacing: 2px;">CORPORATE HEADQUARTERS</h3>
+                <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 10px;">
+                    Suite 262, Online Excellence Towers<br>
+                    Karachi, Pakistan | Web-Hub Global<br>
+                    Toll Free: <a href="tel:+923332637235" style="color: var(--primary); text-decoration: none;">+92 333 2637235</a>
+                </p>
+            </div>
+
+            <div class="social-wrap">
+                <a href="https://www.facebook.com/profile.php?id=100084218946114" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/923332637235" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:webhub262@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                <h2 style="font-weight: 900; font-size: 2.5rem; letter-spacing: -1.5px;">Web-Hub</h2>
+                <p style="font-size: 0.7rem; opacity: 0.4; margin: 10px 0;">© 2026 Web-Hub, Inc. | Muhammad Nazim Signature Project</p>
+                <div style="display: flex; justify-content: center; gap: 15px; font-size: 0.75rem;">
+                    <span style="color: var(--primary); cursor: pointer;" onclick="openDetails('Privacy Policy', 'Aapka data 100% secure hai. Hum koi bhi information third-party ke sath share nahi karte.')">Privacy</span>
+                    <span style="color: var(--primary); cursor: pointer;" onclick="openDetails('Terms', 'Projects 50% advance par start hote hain. Delivery time project ke scope par depend karta hai.')">Terms</span>
+                    <span style="color: var(--primary); cursor: pointer;" onclick="openDetails('Security', 'Our sites use SSL encryption and high-level firewall protection.')">Security</span>
                 </div>
             </div>
         </section>
@@ -122,23 +149,33 @@
     </div>
 
     <div id="infoModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="hideModal()">&times;</span>
-            <h3 id="mTitle" style="color: var(--primary); margin-bottom: 15px;"></h3>
-            <p id="mText" style="font-size: 0.9rem; opacity: 0.8; line-height: 1.5;"></p>
+        <div class="modal-card">
+            <span class="close-btn" onclick="closeDetails()">&times;</span>
+            <h3 id="modalTitle" style="color: var(--primary); margin-bottom: 20px;"></h3>
+            <p id="modalBody" style="font-size: 0.9rem; line-height: 1.8; opacity: 0.8;"></p>
+            <a href="https://wa.me/923332637235" class="main-btn" style="padding: 15px; font-size: 0.8rem; margin-top: 25px;">Book a Session</a>
         </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-        function showModal(t, txt) {
-            document.getElementById('mTitle').innerText = t;
-            document.getElementById('mText').innerText = txt;
+        
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 3000 },
+        });
+
+        function openDetails(t, b) {
+            document.getElementById('modalTitle').innerText = t;
+            document.getElementById('modalBody').innerText = b;
             document.getElementById('infoModal').style.display = "block";
         }
-        function hideModal() { document.getElementById('infoModal').style.display = "none"; }
-        window.onclick = function(e) { if(e.target.className == 'modal') hideModal(); }
+        function closeDetails() {
+            document.getElementById('infoModal').style.display = "none";
+        }
+        window.onclick = function(e) { if(e.target.className == 'modal') closeDetails(); }
     </script>
 </body>
 </html>
