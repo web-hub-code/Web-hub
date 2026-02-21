@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -18,71 +18,63 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
         body { background-color: var(--bg); color: white; overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* Scroll Progress */
-        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--primary); width: 0%; z-index: 20000; }
+        /* Scroll Progress Bar */
+        #scroll-path { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(to right, var(--primary), var(--success)); z-index: 20000; width: 0%; transition: 0.2s; }
 
-        /* Background Visuals */
+        /* Baggrundseffekter */
         #bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; filter: brightness(0.1); }
         .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent 0%, #000 100%); z-index: -1; }
 
-        /* Notifications & Alerts */
-        #notif-box { position: fixed; top: 80px; right: -300px; width: 280px; background: var(--glass); backdrop-filter: blur(20px); border: 1px solid var(--primary); color: white; padding: 15px; border-radius: 20px; z-index: 15000; transition: 0.6s; font-size: 0.8rem; }
+        /* Flydende Notifikationer */
+        .toast { position: fixed; bottom: 30px; left: -400px; width: 300px; background: var(--glass); backdrop-filter: blur(20px); border: 1px solid var(--primary); padding: 15px; border-radius: 20px; z-index: 10005; transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-        /* Navigation */
-        nav { position: fixed; top: 0; width: 100%; padding: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 10000; background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-        .nav-logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; background: linear-gradient(45deg, var(--primary), var(--success)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        /* Glas Navigation */
+        nav { position: fixed; top: 0; width: 100%; padding: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 10000; background: rgba(0,0,0,0.4); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); }
+        .nav-logo { font-weight: 900; font-size: 1.4rem; background: linear-gradient(45deg, var(--primary), var(--success)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
         .container { width: 100%; max-width: 550px; margin: 0 auto; padding: 100px 18px 50px; }
 
-        /* Hero Section */
+        /* Hero Card med Smart Greeting */
         .hero-card { background: var(--glass); border: 1px solid var(--border); border-radius: 40px; padding: 40px 30px; text-align: center; margin-bottom: 30px; }
-        .brand-name { font-size: 4.2rem; font-weight: 900; letter-spacing: -3px; line-height: 1; margin-bottom: 10px; }
-        .live-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,0,0,0.1); color: #ff4444; padding: 5px 15px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; margin-bottom: 20px; }
-        .dot { width: 8px; height: 8px; background: #ff4444; border-radius: 50%; animation: pulse 1s infinite; }
+        .status-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,255,136,0.1); color: var(--success); padding: 6px 16px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; }
+        .pulse { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse-green 1.5s infinite; }
 
-        /* Typing Effect */
-        .typing-text { color: var(--primary); font-weight: 800; }
-
-        /* Partner Marquee */
-        .marquee { overflow: hidden; white-space: nowrap; margin: 30px 0; opacity: 0.4; }
-        .marquee-content { display: inline-block; animation: scroll 20s linear infinite; }
-        .marquee-content span { margin-right: 50px; font-size: 0.8rem; letter-spacing: 3px; font-weight: 800; }
-
-        /* Services Grid (Ultimate) */
-        .service-box { background: var(--glass); border: 1px solid var(--border); border-radius: 30px; padding: 25px; margin-bottom: 15px; cursor: pointer; transition: 0.4s; }
-        .service-box:hover { border-color: var(--primary); background: rgba(0,242,254,0.05); }
-
-        /* FAQ Accordion */
-        .faq-item { background: rgba(255,255,255,0.02); border-radius: 15px; margin-bottom: 10px; overflow: hidden; border: 1px solid var(--border); }
-        .faq-header { padding: 15px 20px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; font-size: 0.9rem; }
-        .faq-body { padding: 0 20px; max-height: 0; transition: 0.3s; opacity: 0; font-size: 0.8rem; color: #ccc; }
-
-        /* Subscription Box */
-        .sub-box { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); padding: 30px; border-radius: 30px; border: 1px solid var(--primary); text-align: center; margin: 40px 0; }
-        .sub-input { width: 100%; padding: 15px; border-radius: 15px; border: none; background: #222; color: white; margin: 15px 0; outline: none; }
+        /* Service Cards */
+        .service-card { background: var(--glass); border: 1px solid var(--border); border-radius: 30px; padding: 25px; margin-bottom: 20px; transition: 0.4s; cursor: pointer; position: relative; overflow: hidden; }
+        .service-card:hover { border-color: var(--primary); transform: translateY(-5px); background: rgba(0, 242, 254, 0.05); }
         
-        .main-cta { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 22px; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 25px; color: #000; font-weight: 900; text-decoration: none; text-transform: uppercase; margin-top: 20px; box-shadow: 0 10px 40px rgba(0, 242, 254, 0.3); }
+        /* FAQ System */
+        .faq-box { background: rgba(255,255,255,0.02); border-radius: 20px; margin-bottom: 12px; border: 1px solid var(--border); }
+        .faq-trigger { padding: 18px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; font-size: 0.9rem; }
+        .faq-content { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s; opacity: 0; font-size: 0.85rem; color: #aaa; }
 
-        /* Footer HQ */
-        .footer-hq { background: #000; border: 1px solid var(--border); border-radius: 45px; padding: 45px 30px; margin-top: 50px; }
+        /* Premium Knapper */
+        .btn-infinity { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 22px; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 25px; color: #000; font-weight: 900; text-decoration: none; text-transform: uppercase; box-shadow: 0 15px 40px rgba(0, 242, 254, 0.3); transition: 0.4s; margin-top: 20px; }
+        .btn-infinity:hover { transform: scale(1.02); box-shadow: 0 20px 50px rgba(0, 242, 254, 0.5); }
+
+        /* Corporate Footer */
+        .footer-elite { background: #000; border: 1px solid var(--border); border-radius: 45px; padding: 45px 30px; margin-top: 60px; }
         
-        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); } }
 
-        footer { text-align: center; padding: 50px; opacity: 0.2; font-size: 0.7rem; letter-spacing: 5px; }
+        footer { text-align: center; padding: 60px; opacity: 0.2; font-size: 0.7rem; letter-spacing: 6px; }
     </style>
 </head>
 <body>
 
-    <div id="progress-bar"></div>
+    <div id="scroll-path"></div>
 
     <nav>
         <div class="nav-logo">WEB-HUB</div>
-        <div id="live-time" style="font-size: 0.7rem; opacity: 0.6; font-weight: 800;">00:00:00</div>
+        <div id="live-clock" style="font-size: 0.75rem; font-weight: 800; color: var(--primary);">00:00:00</div>
     </nav>
 
-    <div id="notif-box">
-        <strong>New Alert:</strong> <span id="notif-text">Incoming client request...</span>
+    <div id="toast-notif" class="toast">
+        <i class="fas fa-check-circle" style="color: var(--success); font-size: 1.5rem;"></i>
+        <div>
+            <div style="font-weight: 900; font-size: 0.8rem;">NY BESKED</div>
+            <div id="toast-msg" style="font-size: 0.75rem; opacity: 0.8;">Nazim er nu online</div>
+        </div>
     </div>
 
     <video autoplay muted loop playsinline id="bg-video">
@@ -92,85 +84,73 @@
 
     <div class="container">
         
-        <section class="hero-card" data-aos="fade-up">
-            <div class="live-tag"><div class="dot"></div> <span id="visitor-count">24</span> ONLINE VISITORS</div>
-            <h4 id="greeting" style="color: var(--success); font-weight: 800; margin-bottom: 5px;">Good Day!</h4>
-            <h1 class="brand-name">WEB-HUB</h1>
-            <p style="font-size: 1.1rem; font-weight: 600;">We Build <span class="typing-text" id="typewriter"></span></p>
+        <section class="hero-card" data-aos="zoom-in">
+            <div class="status-tag"><div class="pulse"></div> <span id="user-count">42</span> Aktive Besøgende</div>
+            <h3 id="greeting" style="color: var(--primary); font-weight: 600; margin-bottom: 10px;">Goddag</h3>
+            <h1 style="font-size: 4rem; font-weight: 900; letter-spacing: -3px; line-height: 1;">WEB-HUB</h1>
+            <p style="margin-top: 20px; font-size: 1rem; opacity: 0.7; line-height: 1.8;">
+                Vi forvandler komplekse idéer til intelligente digitale økosystemer. Oplev fremtidens webudvikling med Muhammad Nazim.
+            </p>
         </section>
 
-        <div class="marquee">
-            <div class="marquee-content">
-                <span>TRUSTED BY 50+ BRANDS</span>
-                <span>GLOBAL CLIENTS</span>
-                <span>SUPREME QUALITY</span>
-                <span>FAST DELIVERY</span>
-                <span>TRUSTED BY 50+ BRANDS</span>
-                <span>GLOBAL CLIENTS</span>
-            </div>
-        </div>
-
         <div data-aos="fade-up">
-            <div class="service-box" onclick="toggleDetails('Web Apps', 'Hum custom dashboard aur SaaS applications banate hain jo scalability ke liye optimized hoti hain.')">
-                <i class="fas fa-layer-group" style="color: var(--primary); font-size: 1.8rem; margin-bottom: 10px;"></i>
+            <h2 style="margin-bottom: 25px; font-weight: 900; letter-spacing: 1px;">EKSKLUSIVE LØSNINGER</h2>
+            
+            <div class="service-card" onclick="openInfo('Enterprise Apps', 'Vi bygger skalerbare SaaS-platforme med avancerede dashboard-funktioner og realtids-data.')">
+                <i class="fas fa-rocket" style="color: var(--primary); font-size: 2rem; margin-bottom: 15px;"></i>
                 <h3>Supreme Web Apps</h3>
-                <p style="font-size: 0.8rem; opacity: 0.6;">Complex problems, simple solutions.</p>
+                <p style="font-size: 0.85rem; opacity: 0.6;">Specialbyggede applikationer til store virksomheder.</p>
             </div>
 
-            <div class="service-box" onclick="toggleDetails('AI Integration', 'Aapki website khud sochegi aur jawab degi. AI-powered chatbots aur tools humari speciality hain.')">
-                <i class="fas fa-brain" style="color: var(--success); font-size: 1.8rem; margin-bottom: 10px;"></i>
-                <h3>AI & Automation</h3>
-                <p style="font-size: 0.8rem; opacity: 0.6;">Future-proof your business today.</p>
-            </div>
-        </div>
-
-        <div style="margin: 40px 0;" data-aos="fade-up">
-            <h3 style="margin-bottom: 20px; font-weight: 900; letter-spacing: 1px;">COMMON QUESTIONS</h3>
-            <div class="faq-item">
-                <div class="faq-header" onclick="toggleFaq(this)">How to start? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-body">Simply click the WhatsApp button, share your idea, and get a custom quote within 30 minutes.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-header" onclick="toggleFaq(this)">Project Timelines? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-body">Depending on complexity, we deliver within 3 to 14 business days.</div>
+            <div class="service-card" onclick="openInfo('AI Integration', 'Vi implementerer maskinlæring og smarte chatbots, der automatiserer din kundeservice 24/7.')">
+                <i class="fas fa-brain" style="color: var(--success); font-size: 2rem; margin-bottom: 15px;"></i>
+                <h3>AI & Automatisering</h3>
+                <p style="font-size: 0.85rem; opacity: 0.6;">Gør din forretning klogere med kunstig intelligens.</p>
             </div>
         </div>
 
-        <div class="sub-box" data-aos="zoom-in">
-            <h3 style="font-weight: 900;">STAY UPDATED</h3>
-            <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 5px;">Join our elite newsletter for tech insights.</p>
-            <input type="email" class="sub-input" placeholder="Enter your email address">
-            <button class="main-cta" style="border: none; cursor: pointer; padding: 15px;">Subscribe Now</button>
+        <div style="margin: 50px 0;" data-aos="fade-up">
+            <h2 style="margin-bottom: 25px; font-weight: 900;">OFTE STILLEDE SPØRGSMÅL</h2>
+            <div class="faq-box">
+                <div class="faq-trigger" onclick="toggleFaq(this)">Hvor hurtigt leverer I? <i class="fas fa-plus"></i></div>
+                <div class="faq-content">Små projekter tager 3-5 dage, mens store enterprise-løsninger tager 2-4 uger.</div>
+            </div>
+            <div class="faq-box">
+                <div class="faq-trigger" onclick="toggleFaq(this)">Er support inkluderet? <i class="fas fa-plus"></i></div>
+                <div class="faq-content">Ja, vi tilbyder 30 dages gratis teknisk support efter hver lancering.</div>
+            </div>
         </div>
 
-        <a href="https://wa.me/923332637235" class="main-cta" data-aos="fade-up">
-            <i class="fab fa-whatsapp"></i> CONNECT WITH NAZIM
+        <a href="https://wa.me/923332637235" class="btn-infinity" data-aos="flip-up">
+            <i class="fab fa-whatsapp"></i> START DIT PROJEKT NU
         </a>
 
-        <section class="footer-hq" data-aos="fade-up">
-            <div style="border-left: 3px solid var(--primary); padding-left: 20px;">
-                <h3 style="font-size: 1.2rem; font-weight: 900;">CORPORATE HQ</h3>
-                <p style="font-size: 0.9rem; opacity: 0.7; line-height: 2; margin-top: 15px;">
-                    Karachi, Pakistan | Web-Hub Global Solutions<br>
-                    Suite 262, Online Excellence Towers<br>
-                    Toll Free: <a href="tel:+923332637235" style="color: var(--primary); text-decoration: none;">+92 333 2637235</a>
+        <section class="footer-elite" data-aos="fade-up">
+            <div style="border-left: 4px solid var(--primary); padding-left: 20px;">
+                <h3 style="font-weight: 900; letter-spacing: 2px;">HOVEDKONTOR</h3>
+                <p style="opacity: 0.7; font-size: 0.95rem; margin-top: 15px; line-height: 2;">
+                    Web-Hub Global | Suite 262<br>
+                    Karachi, Pakistan<br>
+                    Tlf: +92 333 2637235<br>
+                    Email: webhub262@gmail.com
                 </p>
             </div>
 
-            <div style="display: flex; gap: 10px; margin: 30px 0;">
-                <a href="#" class="social-link" style="color: white; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/923332637235" class="social-link" style="color: white; font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="social-link" style="color: white; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+            <div style="display: flex; gap: 15px; margin: 40px 0;">
+                <a href="https://wa.me/923332637235" target="_blank" style="color: white; font-size: 1.8rem;"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" style="color: white; font-size: 1.8rem;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: white; font-size: 1.8rem;"><i class="fab fa-linkedin"></i></a>
             </div>
 
-            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 30px;">
-                <h2 style="font-weight: 900; font-size: 2.5rem; letter-spacing: -2px;">Web-Hub</h2>
-                <div style="display: flex; justify-content: center; gap: 15px; font-size: 0.75rem; margin-top: 10px; opacity: 0.6;">
-                    <span onclick="alert('Privacy Policy: We never share data.')" style="cursor: pointer;">Privacy</span>
-                    <span onclick="alert('Terms: 50% advance required.')" style="cursor: pointer;">Terms</span>
-                    <span onclick="alert('Security: SSL Encrypted.')" style="cursor: pointer;">Security</span>
+            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px;">
+                <h2 style="font-weight: 900; font-size: 3rem; letter-spacing: -3px;">Web-Hub</h2>
+                <p style="font-size: 0.7rem; opacity: 0.4; letter-spacing: 2px; margin-top: 10px;">
+                    © 2026 WEB-HUB INC. | DESIGNED BY MUHAMMAD NAZIM
+                </p>
+                <div style="margin-top: 20px; font-size: 0.8rem; color: var(--primary);">
+                    <span style="cursor:pointer" onclick="alert('Privatlivspolitik: Vi beskytter dine data.')">Privacy</span> | 
+                    <span style="cursor:pointer" onclick="alert('Vilkår: 50% forudbetaling påkrævet.')">Terms</span>
                 </div>
-                <p style="margin-top: 15px; font-size: 0.7rem; opacity: 0.4;">© 2026 WEB-HUB INC. BY MUHAMMAD NAZIM</p>
             </div>
         </section>
 
@@ -181,53 +161,58 @@
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        // 📝 Typewriter Effect
-        const words = ["Websites", "Business Apps", "AI Systems", "Brands"];
-        let i = 0, j = 0, current = "", isDeleting = false;
-        function type() {
-            const speed = isDeleting ? 100 : 200;
-            if (!isDeleting && j <= words[i].length) {
-                current = words[i].substring(0, j++);
-            } else if (isDeleting && j >= 0) {
-                current = words[i].substring(0, j--);
-            }
-            document.getElementById("typewriter").textContent = current;
-            if (j === words[i].length + 1) isDeleting = true;
-            if (j === -1) { isDeleting = false; i = (i + 1) % words.length; }
-            setTimeout(type, speed);
+        // 🕒 Realtids Ur & Scroll Progress
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById("scroll-path").style.width = (winScroll / height) * 100 + "%";
+        };
+
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('live-clock').innerText = now.toLocaleTimeString();
+            
+            let hr = now.getHours();
+            let greet = hr < 12 ? "Godmorgen ☀️" : hr < 18 ? "Goddag 🌤️" : "Godaften 🌙";
+            document.getElementById('greeting').innerText = greet;
         }
-        type();
+        setInterval(updateClock, 1000);
+        updateClock();
 
-        // 🕒 Live Time & Scroll
-        function updateUI() {
-            document.getElementById('live-time').innerText = new Date().toLocaleTimeString();
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
+        // 🔔 Smart Toast Notifikationer
+        const messages = [
+            "Nyt projekt startet i Dubai! 🇦🇪",
+            "5 stjernet anmeldelse modtaget! ⭐",
+            "Nazim er ledig til konsultation! 📞",
+            "Sikkerheds-update fuldført! 🛡️"
+        ];
+        
+        function showToast() {
+            const toast = document.getElementById('toast-notif');
+            document.getElementById('toast-msg').innerText = messages[Math.floor(Math.random()*messages.length)];
+            toast.style.left = "20px";
+            setTimeout(() => { toast.style.left = "-400px"; }, 5000);
         }
-        setInterval(updateUI, 1000);
+        setTimeout(showToast, 3000);
+        setInterval(showToast, 15000);
 
-        // 🔔 Smart Notifications
-        const alerts = ["New Quote Generated 📄", "Nazim is Online 🟢", "Secure Payment Gateway Active 🛡️", "Client from USA joined 🇺🇸"];
-        setInterval(() => {
-            const box = document.getElementById('notif-box');
-            document.getElementById('notif-text').innerText = alerts[Math.floor(Math.random()*alerts.length)];
-            box.style.right = "20px";
-            setTimeout(() => { box.style.right = "-300px"; }, 4000);
-        }, 12000);
-
-        // 👨‍👩‍👧‍👦 Visitor Counter (Fake Real-time)
-        setInterval(() => {
-            let count = parseInt(document.getElementById('visitor-count').innerText);
-            document.getElementById('visitor-count').innerText = count + (Math.random() > 0.5 ? 1 : -1);
-        }, 5000);
-
-        // 📂 Accordion Logic
+        // 📂 FAQ & Info System
         function toggleFaq(el) {
-            const body = el.nextElementSibling;
-            body.style.maxHeight = body.style.maxHeight ? null : body.scrollHeight + "px";
-            body.style.opacity = body.style.opacity == "1" ? "0" : "1";
+            const content = el.nextElementSibling;
+            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+            content.style.opacity = content.style.opacity == "1" ? "0" : "1";
+            el.querySelector('i').classList.toggle('fa-minus');
         }
+
+        function openInfo(t, m) {
+            alert(t + ":\n" + m);
+        }
+
+        // 👥 Live Visitor Counter
+        setInterval(() => {
+            let count = parseInt(document.getElementById('user-count').innerText);
+            document.getElementById('user-count').innerText = count + (Math.random() > 0.5 ? 1 : -1);
+        }, 4000);
     </script>
 </body>
 </html>
